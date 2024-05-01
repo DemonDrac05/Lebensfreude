@@ -1,0 +1,82 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "MainLand.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Basic_Furniture.tsx": {
+            "scaleInDock": 1
+        },
+        "Basic_Grass_Biom_things.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld..tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/OverworldTest.tmx": {
+            "scale": 2.0235,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 198.17148505065484,
+                "y": 146.52829256239193
+            }
+        },
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/The Pond.tmx": {
+            "scale": 1.7527499999999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 199.68620738838968,
+                "y": 319.7831978319783
+            }
+        },
+        "Hills.tsx": {
+            "scaleInDock": 1
+        },
+        "MainLand.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2903,
+                "y": 4170.333333333333
+            }
+        },
+        "Wooden House.tsx": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "C:/Users/Owner/Desktop/Unity Project/PydewProject/Assets/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects",
+    "map.height": 512,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 512,
+    "openFiles": [
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld..tsx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld.tsx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/OverworldTest.tmx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/The Pond.tmx",
+        "MainLand.tmx"
+    ],
+    "project": "PydewProject.tiled-project",
+    "recentFiles": [
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld..tsx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/Overworld.tsx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/OverworldTest.tmx",
+        "C:/Users/Owner/Pelda Unity/Assets/TileMaps/The Pond.tmx",
+        "MainLand.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

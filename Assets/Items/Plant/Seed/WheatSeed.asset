@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a73d903d3f0a459378d9f68742179, type: 3}
+  m_Name: WheatSeed
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  slider: {fileID: 0}
+  itemType: 2
+  actionType: 3
+  stackable: 1
+  image: {fileID: 1416277716, guid: 2015477511693c845bdc57db7e45e518, type: 3}
+  plantPosition: {x: 3.5, y: 0.5, z: 0}
+  plantType: 0
+  harvestCount: 1
+  stages:
+  - {fileID: 8646575058306697189, guid: 762037e285a1e6444acb287db4a5fff8, type: 3}
+  - {fileID: 4089593156310345631, guid: 52a77eb8f988ed242ab94fa2ff7957a6, type: 3}
+  - {fileID: 780961124842746410, guid: ba798435bf8b55844a4735204836caff, type: 3}
+  - {fileID: 4913368077427481081, guid: 97f2022b113626d46899b19cb14b60cd, type: 3}
+  stageDuration:
+  - 5
+  - 10
+  - 15
+  productItem: {fileID: 11400000, guid: e6ec6598ab95d6040ba3b633464605ed, type: 2}
+  product: {fileID: 0}
