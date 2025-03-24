@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670afa42c765ab2489763615d749160e, type: 3}
+  m_Name: Axe-Diamond
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: f5f43f82649439f40a2df50d35e3e3d2, type: 3}
+  buyingPrice: -1
+  sellingPrice: -1
+  isPurchaseable: 0
+  slider: {fileID: 0}
+  gameObj: {fileID: 5645211252463883536, guid: bd27b57bd34ebfb41bccc053d48571f8, type: 3}
+  efficiency: 30
+  actionType: 1
+  feeToUpgrade: 8500
+  timeToUpgrade: 360
+  materialBox:
+    material: {fileID: 11400000, guid: 20a83c5ba6be64c44ba22c3d0c87612e, type: 2}
+    quantity: 10
+  requiredTool: {fileID: 11400000, guid: 55a6fb39eacf96f45b4c23cc0376ff72, type: 2}
+  upgradedTool: {fileID: 11400000, guid: c1f572319a91ff0448137e4ad50caa0b, type: 2}

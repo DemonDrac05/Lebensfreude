@@ -1,27 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static Player;
 
 public class MovementState : PlayerState
 {
-    public Item item;
     public new Player player;
-    public PlantingManager plantingManager;
 
     public MovementState(Player player, PlayerStateMachine playerStateMachine) : base(player, playerStateMachine)
     {
         this.player = player;
-        item = FindObjectOfType<Item>();
-        plantingManager = FindObjectOfType<PlantingManager>();
     }
 
     public override void FrameUpdate()
     {
-        player.movementInput.x = Input.GetAxisRaw("Horizontal");
-        player.movementInput.y = Input.GetAxisRaw("Vertical");
-        player.rb2d.MovePosition(player.rb2d.position + player.movementInput.normalized * player.movementSpeed * Time.fixedDeltaTime);
+        bool freezeAnimation = !InventoryManager.Instance.toolbar.activeSelf;
+        if (!freezeAnimation)
+        {
+            player.movementInput.x = Input.GetAxisRaw("Horizontal");
+            player.movementInput.y = Input.GetAxisRaw("Vertical");
+            player.rb2d.MovePosition(player.rb2d.position + player.movementInput.normalized * player.movementSpeed * Time.fixedDeltaTime);
 
+            UsingToolState();
+        }
         if (player.movementInput != Vector2.zero)
         {
             CheckFacialDirection();
@@ -35,14 +34,24 @@ public class MovementState : PlayerState
 
             if (animation != null) player.animator.Play(animation);
         }
+    }
 
-        InventorySlot slot = InventoryManager.Instance.InventorySlots[InventoryManager.Instance.selectedSlot];
+    private void UsingToolState()
+    {
+        ToolbarSlot slot = InventoryManager.Instance.ToolbarSlots[InventoryManager.Instance.selectedSlot];
         InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
 
         if (Input.GetMouseButtonDown(0) && itemInSlot != null)
         {
-            UpdateDirectionWithHitBox();
-            player.stateMachine.ChangeState(player.waterState);
+            bool allowToChangeState = ToolUsedManager.Instance.isReadyToUse;
+            if (allowToChangeState)
+            {
+                UpdateDirectionWithHitBox();
+                if (itemInSlot.GetItem<Tool>() != null)
+                {
+                    player.stateMachine.ChangeState(player.waterState);
+                }
+            }
         }
     }
 

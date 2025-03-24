@@ -11,15 +11,14 @@ public class Player : MonoBehaviour
 
     #region State Machine
     public PlayerStateMachine stateMachine;
-
     public MovementState movementState;
-
     public UsingTool waterState;
     #endregion
 
     #region Direction
     public enum FacialDirection { None, Right, Left, Up, Down }
     public FacialDirection FacingDirection { get; set; } = FacialDirection.None;
+
     public Vector3 mousePosition = new();
     public Vector3Int Position = new();
     #endregion
@@ -44,6 +43,8 @@ public class Player : MonoBehaviour
     {
         this.mousePosition = playerController.mousePosUpdate;
         this.Position = playerController.playerPosUpdate;
+
+        stateMachine.playerState.PhysicsUpdate();
     }
     private void Update()
     {

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8488e4c9fa9f08488f88995b85cbb80, type: 3}
+  m_Name: TomatoSeed
+  m_EditorClassIdentifier: 
+  image: {fileID: -230124507, guid: 2015477511693c845bdc57db7e45e518, type: 3}
+  buyingPrice: 35
+  sellingPrice: 15
+  isPurchaseable: 1
+  gameObj: {fileID: 5190919918188562371, guid: ab7f879595ceddb409538eceabe6e7be, type: 3}
+  season: 0000000001000000
+  durability: 0
+  stages:
+  - {fileID: 2178163487768373019, guid: 1d9a49e86d18bcf4b9be596ccc049903, type: 3}
+  - {fileID: 7748727506158671124, guid: 10b7acab1e57e99498ac3aabd4db412a, type: 3}
+  - {fileID: 5265273201769563522, guid: 8fb489789247b704399c7aa6494c481c, type: 3}
+  - {fileID: 5544439007875605215, guid: 038807fea1e860d48b72e9a079b38aae, type: 3}
+  stageDuration: 020000000100000001000000
+  plantPosition: {x: 2.5, y: -0.5, z: 0}
+  productList:
+  - harvestType: 1
+    cropType: 2
+    product: {fileID: 11400000, guid: 30bf26fc83134c246b704ed5b23d1a44, type: 2}
+    quantity: 3

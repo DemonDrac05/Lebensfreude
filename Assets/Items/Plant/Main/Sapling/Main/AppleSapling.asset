@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9839f25f4275b44bbba2451c2e618c, type: 3}
+  m_Name: AppleSapling
+  m_EditorClassIdentifier: 
+  image: {fileID: 1424578911, guid: 58bbfe44a42af0c4a90754bfabfe47dd, type: 3}
+  buyingPrice: 150
+  sellingPrice: 55
+  isPurchaseable: 1
+  gameObj: {fileID: 795496286861172561, guid: b8e7f815f42826446942f4a6f9912774, type: 3}
+  season: 00000000010000000200000003000000
+  durability: 150
+  stages:
+  - {fileID: 795496286861172561, guid: b8e7f815f42826446942f4a6f9912774, type: 3}
+  - {fileID: 259653261567406869, guid: 0dee7504771b66c47a3cf4b573b723b9, type: 3}
+  stageDuration:
+  - 30
+  plantPosition: {x: 6.5, y: -0.5, z: 0}
+  productList:
+  - harvestType: 1
+    cropType: 1
+    product: {fileID: 11400000, guid: a1ca0156eeec5034aa3fe2c4c1e7da36, type: 2}
+    quantity: 3
+  - harvestType: 0
+    cropType: 0
+    product: {fileID: 11400000, guid: c329df1fcf4b4594ca41a9e088c40c65, type: 2}
+    quantity: 17

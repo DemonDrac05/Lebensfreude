@@ -1,38 +1,61 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public SpriteRenderer playerSprite;
-    public Category category;
+    private ItemCategory category;
 
     private void Awake()
     {
-        category = FindObjectOfType<Category>();
+        category = FindObjectOfType<ItemCategory>();
     }
-    private void Start()
-    {
-        playerSprite = GetComponent<SpriteRenderer>();
-    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Seed"))
+        if (collision.gameObject.CompareTag("CollectibleItem"))
         {
-            SpriteRenderer image = collision.gameObject.GetComponent<SpriteRenderer>();
-            category.PlantSeedCollected(image.sprite);
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("Resource"))
-        {
-            playerSprite.sortingLayerName = "Player";
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Resource"))
-        {
-            playerSprite.sortingLayerName = "Resource";
+            CategorizeItem(collision);
         }
     }
 
+    private void CategorizeItem(Collider2D collision)
+    {
+        SpriteRenderer itemImageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+        if (itemImageRenderer != null)
+        {
+            Sprite itemImage = itemImageRenderer.sprite;
+
+            if (TryCategorizeItem(itemImage, category.products, out Product product))
+            {
+                InventoryManager.Instance.AddItem(product);
+            }
+            else if (TryCategorizeItem(itemImage, category.plants, out Plant plant))
+            {
+                InventoryManager.Instance.AddItem(plant);
+            }
+            else if (TryCategorizeItem(itemImage, category.tools, out Tool tool))
+            {
+                InventoryManager.Instance.AddItem(tool);
+            }
+            else if (TryCategorizeItem(itemImage, category.others, out CraftingItem craftingItem))
+            {
+                InventoryManager.Instance.AddItem(craftingItem);
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private bool TryCategorizeItem<T>(Sprite itemImage, T[] items, out T foundItem) where T : BaseItem
+    {
+        foreach (T item in items)
+        {
+            if (item.image == itemImage)
+            {
+                foundItem = item;
+                return true;
+            }
+        }
+        foundItem = null;
+        return false;
+    }
 }

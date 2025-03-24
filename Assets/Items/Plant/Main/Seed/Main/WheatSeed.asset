@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8488e4c9fa9f08488f88995b85cbb80, type: 3}
+  m_Name: WheatSeed
+  m_EditorClassIdentifier: 
+  image: {fileID: 1416277716, guid: 2015477511693c845bdc57db7e45e518, type: 3}
+  buyingPrice: 20
+  sellingPrice: 1
+  isPurchaseable: 1
+  gameObj: {fileID: 8689398269696226021, guid: 8ebd8beab39731c4eab5f7d3895473d1, type: 3}
+  season: 01000000
+  stages:
+  - {fileID: 8646575058306697189, guid: 762037e285a1e6444acb287db4a5fff8, type: 3}
+  - {fileID: 4089593156310345631, guid: 52a77eb8f988ed242ab94fa2ff7957a6, type: 3}
+  - {fileID: 780961124842746410, guid: ba798435bf8b55844a4735204836caff, type: 3}
+  - {fileID: 4913368077427481081, guid: 97f2022b113626d46899b19cb14b60cd, type: 3}
+  stageDuration:
+  - 5
+  - 10
+  - 15
+  plantPosition: {x: 0, y: 0, z: 0}
+  productList:
+  - harvestType: 0
+    cropType: 2
+    product: {fileID: 11400000, guid: 5abeb310eea696a4fb1d1dc9e2cf26cc, type: 2}
+    quantity: 1

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670afa42c765ab2489763615d749160e, type: 3}
+  m_Name: Axe-Basic
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: f1a61bfe00444a146a45445dfbcf274a, type: 3}
+  buyingPrice: -1
+  sellingPrice: -1
+  isPurchaseable: 0
+  slider: {fileID: 0}
+  gameObj: {fileID: 5645211252463883536, guid: 6acad8c5c11665444a80dbcc4b945e69, type: 3}
+  efficiency: 10
+  actionType: 1
+  feeToUpgrade: 0
+  materialBox:
+    material: {fileID: 0}
+    quantity: 0
+  requiredTool: {fileID: 0}
+  upgradedTool: {fileID: 11400000, guid: 9311215699800ec4382544ed744da192, type: 2}
