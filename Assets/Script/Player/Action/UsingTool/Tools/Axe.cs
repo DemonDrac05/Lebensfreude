@@ -70,13 +70,9 @@ public class Axe
         
         yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f);
 
-        if (treeProduct != null)
+        if (treeProduct is { harvestType: HarvestType.MultipleProduction })
         {
-
-            if (treeProduct.harvestType == HarvestType.MultipleProduction)
-            {
-                plantingManager.RegrowPlant(plant);
-            }
+            plantingManager.RegrowPlant(plant);
         }
         if (plant != null)
         {

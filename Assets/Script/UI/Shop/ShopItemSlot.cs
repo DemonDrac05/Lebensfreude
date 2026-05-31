@@ -122,17 +122,17 @@ public class ShopItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
         {
             Sprite itemImage = itemImageRenderer.sprite;
 
-            if (TryCategorizeItem(itemImage, category.products, out Product product))
+            if (TryCategorizeItem(itemImage, category.products, out var product))
             {
                 InventoryManager.Instance.AddItem(product);
                 sellItem = product;
             }
-            else if (TryCategorizeItem(itemImage, category.plants, out Plant plant))
+            else if (TryCategorizeItem(itemImage, category.plants, out var plant))
             {
                 InventoryManager.Instance.AddItem(plant);
                 sellItem = plant;
             }
-            else if (TryCategorizeItem(itemImage, category.tools, out Tool tool))
+            else if (TryCategorizeItem(itemImage, category.tools, out var tool))
             {
                 InventoryManager.Instance.AddItem(tool);
                 sellItem = tool;

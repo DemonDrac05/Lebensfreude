@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class ItemCategory : MonoBehaviour
 {
-    [Header("Tools")]
+    [Header(
+        "// ─────────────────────────────────────────\n    // TOOLS\n    // ─────────────────────────────────────────")]
     public Tool[] tools;
 
-    [Header("Plants")]
+    [Header(
+        "// ─────────────────────────────────────────\n    // PLANTS\n    // ─────────────────────────────────────────")]
     public Plant[] plants;
 
-    [Header("Products")]
+    
+    [Header(
+        "// ─────────────────────────────────────────\n    // PRODUCTS\n    // ─────────────────────────────────────────")]
     public Product[] products;
-
-    [Header("Others")]
-    public CraftingItem[] others;
 }

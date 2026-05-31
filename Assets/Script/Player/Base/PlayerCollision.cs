@@ -19,41 +19,33 @@ public class PlayerCollision : MonoBehaviour
 
     private void CategorizeItem(Collider2D collision)
     {
-        SpriteRenderer itemImageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
-        if (itemImageRenderer != null)
+        var itemImageRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+        if (itemImageRenderer == null) return;
+        var itemImage = itemImageRenderer.sprite;
+
+        if (TryCategorizeItem(itemImage, category.products, out var product))
         {
-            Sprite itemImage = itemImageRenderer.sprite;
-
-            if (TryCategorizeItem(itemImage, category.products, out Product product))
-            {
-                InventoryManager.Instance.AddItem(product);
-            }
-            else if (TryCategorizeItem(itemImage, category.plants, out Plant plant))
-            {
-                InventoryManager.Instance.AddItem(plant);
-            }
-            else if (TryCategorizeItem(itemImage, category.tools, out Tool tool))
-            {
-                InventoryManager.Instance.AddItem(tool);
-            }
-            else if (TryCategorizeItem(itemImage, category.others, out CraftingItem craftingItem))
-            {
-                InventoryManager.Instance.AddItem(craftingItem);
-            }
-
-            Destroy(collision.gameObject);
+            InventoryManager.Instance.AddItem(product);
         }
+        else if (TryCategorizeItem(itemImage, category.plants, out var plant))
+        {
+            InventoryManager.Instance.AddItem(plant);
+        }
+        else if (TryCategorizeItem(itemImage, category.tools, out var tool))
+        {
+            InventoryManager.Instance.AddItem(tool);
+        }
+
+        Destroy(collision.gameObject);
     }
 
-    private bool TryCategorizeItem<T>(Sprite itemImage, T[] items, out T foundItem) where T : BaseItem
+    private static bool TryCategorizeItem<T>(Sprite itemImage, T[] items, out T foundItem) where T : BaseItem
     {
-        foreach (T item in items)
+        foreach (var item in items)
         {
-            if (item.image == itemImage)
-            {
-                foundItem = item;
-                return true;
-            }
+            if (item.image != itemImage) continue;
+            foundItem = item;
+            return true;
         }
         foundItem = null;
         return false;
