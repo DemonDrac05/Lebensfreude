@@ -12,19 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: ArchitectureKit
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
-  buyingPrice: 0
-  sellingPrice: 0
+  image: {fileID: 21300000, guid: fb2ef9505b549474eb8a0190c28aaec8, type: 3}
+  buyingPrice: -1
+  sellingPrice: 1400
   isPurchaseable: 1
   recipe:
-    station: 2
-    inputs: []
+    station: 1
+    inputs:
+    - material: {fileID: 11400000, guid: 0678420d953d1cd43bd5dadf15e0b13e, type: 2}
+      quantity: 2
+    - material: {fileID: 11400000, guid: efb2b8a7651c4d7488ef32cf741dc416, type: 2}
+      quantity: 2
+    - material: {fileID: 11400000, guid: f44a6da7c7cca024ebd98b2525039d65, type: 2}
+      quantity: 2
+    - material: {fileID: 11400000, guid: 9a4af48e24680954699f4f8eea2cd01d, type: 2}
+      quantity: 1
     outputAmount: 1
-    craftTimeSeconds: 0
-    fuel: {fileID: 0}
-    fuelAmount: 0
-    successRate: 1
-    failByproduct: {fileID: 0}
+    craftTimeSeconds: 90
+    fuel: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}
+    fuelAmount: 9
+    successRate: 0.82
+    failByproduct: {fileID: 11400000, guid: 274a43a739477f94696d4dc5c567e5b8, type: 2}
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0

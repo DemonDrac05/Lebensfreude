@@ -12,19 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: LegendaryBlade
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
-  buyingPrice: 0
-  sellingPrice: 0
+  image: {fileID: 21300000, guid: 3ed59c26e8e775643b425ea80bc9727b, type: 3}
+  buyingPrice: -1
+  sellingPrice: 1250
   isPurchaseable: 1
   recipe:
-    station: 2
-    inputs: []
+    station: 1
+    inputs:
+    - material: {fileID: 11400000, guid: 0678420d953d1cd43bd5dadf15e0b13e, type: 2}
+      quantity: 3
+    - material: {fileID: 11400000, guid: 6e8a7fb11db901b49a8830ef1ad0353f, type: 2}
+      quantity: 1
+    - material: {fileID: 11400000, guid: a5a1f8c20e7d4ed4e8ba731a964342cc, type: 2}
+      quantity: 1
     outputAmount: 1
-    craftTimeSeconds: 0
-    fuel: {fileID: 0}
-    fuelAmount: 0
-    successRate: 1
-    failByproduct: {fileID: 0}
+    craftTimeSeconds: 100
+    fuel: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}
+    fuelAmount: 10
+    successRate: 0.8
+    failByproduct: {fileID: 11400000, guid: 274a43a739477f94696d4dc5c567e5b8, type: 2}
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0

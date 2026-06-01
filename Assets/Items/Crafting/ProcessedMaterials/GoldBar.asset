@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: GoldBar
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
-  buyingPrice: 0
-  sellingPrice: 0
+  image: {fileID: 21300000, guid: 1ba9cfeb9f1eeab44859522dfb68af71, type: 3}
+  buyingPrice: -1
+  sellingPrice: 120
   isPurchaseable: 1
   recipe:
     station: 2
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: 08772dde84d7d5244b28f4fe504828b6, type: 2}
+      quantity: 5
     outputAmount: 1
-    craftTimeSeconds: 0
-    fuel: {fileID: 0}
-    fuelAmount: 0
-    successRate: 1
-    failByproduct: {fileID: 0}
+    craftTimeSeconds: 60
+    fuel: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}
+    fuelAmount: 4
+    successRate: 0.88
+    failByproduct: {fileID: 11400000, guid: 274a43a739477f94696d4dc5c567e5b8, type: 2}
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0

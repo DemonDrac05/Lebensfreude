@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: Smelter
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 5c99927583e860341b53bdc91e5825fe, type: 3}
   buyingPrice: -1
   sellingPrice: -1
-  isPurchaseable: 1
+  isPurchaseable: 0
   recipe:
     station: 5
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: 1c570b3373281774ca9663fac4e9bc9a, type: 2}
+      quantity: 15
+    - material: {fileID: 11400000, guid: 490c140c00102e84a88026403a2f68b8, type: 2}
+      quantity: 5
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}
@@ -28,8 +32,8 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 0}
-  column: 1
-  row: 1
+  gameObj: {fileID: 2407939669826792595, guid: 42aac370b7d2ee04087463806a36a31f, type: 3}
+  column: 2
+  row: 2
   placeable: 1
   stackableAmount: 1

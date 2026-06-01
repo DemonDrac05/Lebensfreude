@@ -57,6 +57,8 @@ public class InputManager : MonoBehaviour
     // Dùng trong: InputManager.Update().
     private void KeyPressMethod(GameObject UIInput)
     {
+        // Đóng CraftingStationUI nếu đang mở (mở bằng click world, không qua keyMappings)
+        CraftingStationUI.CloseIfOpen();
         GameObject uiToToggle = UIInput;
 
         // Đang mở đúng panel này -> đóng lại

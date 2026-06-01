@@ -23,7 +23,7 @@ public class TimeManager : MonoBehaviour
     const int MAX_TIME_IN_DAY = 24;
     const int MAX_DAY_IN_MONTH = 28;
     const int MAX_TIME_IN_PERIOD = 12;
-    const float SECONDS_IN_DAY = 1440f;
+    const float SECONDS_IN_DAY = 600f;
 
     public static int hours = 0;
     public static bool isNewDay = false;

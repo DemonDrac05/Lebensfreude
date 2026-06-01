@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: IronBar
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
-  buyingPrice: 0
-  sellingPrice: 0
+  image: {fileID: 21300000, guid: 0ad61af8ea062e949b7ae59f28c8691e, type: 3}
+  buyingPrice: -1
+  sellingPrice: 38
   isPurchaseable: 1
   recipe:
     station: 2
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: a26ad93abc1c09045b27c591d377a685, type: 2}
+      quantity: 3
     outputAmount: 1
-    craftTimeSeconds: 0
-    fuel: {fileID: 0}
-    fuelAmount: 0
-    successRate: 1
-    failByproduct: {fileID: 0}
+    craftTimeSeconds: 20
+    fuel: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}
+    fuelAmount: 2
+    successRate: 0.95
+    failByproduct: {fileID: 11400000, guid: 274a43a739477f94696d4dc5c567e5b8, type: 2}
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0

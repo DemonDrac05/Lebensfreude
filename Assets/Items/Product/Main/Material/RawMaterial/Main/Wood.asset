@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   image: {fileID: 1946452051, guid: 81acb9b95eb861b4888c55dd24d7a61d, type: 3}
-  buyingPrice: 10
-  sellingPrice: 1
+  buyingPrice: -1
+  sellingPrice: 2
   isPurchaseable: 1
-  gameObj: {fileID: 3001856166080126415, guid: 882624b787954b0428745601c78c0562, type: 3}
+  recipe:
+    station: 0
+    inputs: []
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
+  gameObj: {fileID: 0}
   productType: 1

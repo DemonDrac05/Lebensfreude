@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: HerbalExtract
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
-  buyingPrice: 0
-  sellingPrice: 0
+  image: {fileID: 21300000, guid: 01c58e7551e6bb148926e2b2a64199e6, type: 3}
+  buyingPrice: -1
+  sellingPrice: 72
   isPurchaseable: 1
   recipe:
     station: 1
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: fe2617ccfb20bed4c84cb57240788fa7, type: 2}
+      quantity: 2
+    - material: {fileID: 11400000, guid: 056d952bca2e2fd4f966349422ae9cdc, type: 2}
+      quantity: 1
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}

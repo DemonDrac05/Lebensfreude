@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f853370d75eb97d47a8b6dbd78a55e44, type: 3}
+  m_Name: Apple
+  m_EditorClassIdentifier: Assembly-CSharp::Consumable
+  image: {fileID: 1567800519, guid: 58bbfe44a42af0c4a90754bfabfe47dd, type: 3}
+  buyingPrice: -1
+  sellingPrice: 4
+  isPurchaseable: 1
+  recipe:
+    station: 0
+    inputs: []
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
+  staminaRestore: 15

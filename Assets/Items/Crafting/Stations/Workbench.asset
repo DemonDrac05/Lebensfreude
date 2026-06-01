@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: Workbench
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 638f675b175333f46a9113a0a4a1189f, type: 3}
   buyingPrice: -1
   sellingPrice: -1
-  isPurchaseable: 1
+  isPurchaseable: 0
   recipe:
     station: 5
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: c329df1fcf4b4594ca41a9e088c40c65, type: 2}
+      quantity: 10
+    - material: {fileID: 11400000, guid: e0c86381f9f5c2149971ad9578ba1399, type: 2}
+      quantity: 5
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}
@@ -28,8 +32,8 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 0}
-  column: 1
-  row: 1
+  gameObj: {fileID: 2407939669826792595, guid: e979f183980a5ae44ad56662813d0ab8, type: 3}
+  column: 2
+  row: 2
   placeable: 1
   stackableAmount: 1

@@ -232,7 +232,9 @@ public class Chest : MonoBehaviour
         }
         if (sourceSlot.transform.childCount > 0)
         {
-            var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>();
+            // includeInactive=true: cùng lý do như InventoryManager.MirrorSlots —
+            // slot nguồn có thể nằm trong panel đang inactive → phải tìm cả inactive.
+            var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>(true);
 
             if (sourceItem != null)
             {

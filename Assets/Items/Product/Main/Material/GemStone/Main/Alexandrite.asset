@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2026a686ac078448756f3d32eac366, type: 3}
+  m_Name: Alexandrite
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: c7e3aad81f42d8f418736570b4752baf, type: 3}
+  buyingPrice: -1
+  sellingPrice: 350
+  isPurchaseable: 1
+  recipe:
+    station: 0
+    inputs: []
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
+  gameObj: {fileID: 0}
+  productType: 1

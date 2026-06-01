@@ -12,8 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909eea086be25854d848db6916718667, type: 3}
   m_Name: ForestArtifact
   m_EditorClassIdentifier: Assembly-CSharp::Artifact
-  image: {fileID: 659827145, guid: 9f9f2f8e7ca0bbb48b8891904148397d, type: 3}
+  image: {fileID: 21300000, guid: 9dc6e257f8f63b64fb09d3a0519071fb, type: 3}
   buyingPrice: -1
   sellingPrice: -1
   isPurchaseable: 0
+  recipe:
+    station: 0
+    inputs: []
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
   type: 1

@@ -13,10 +13,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     [Header("=== Initial Items ==========")]
-    public Product[] startProducts;
-    public Plant[] startPlants;
-    public Tool[] startTools;
-    public CraftingItem[] startCraftingItems;
+    public BaseItem[] initialItems;
 
     [Header("=== Inventory Slots ==========")]
     public ToolbarSlot[] ToolbarSlots;
@@ -45,10 +42,7 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         ChangeSelectedSlot(0);
-        AddItems(startProducts);
-        AddItems(startPlants);
-        AddItems(startTools);
-        AddItems(startCraftingItems);
+        AddItems(initialItems);
     }
 
     private void Update()
@@ -268,7 +262,10 @@ public class InventoryManager : MonoBehaviour
         }
         if (sourceSlot.transform.childCount > 0)
         {
-            var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>();
+            // includeInactive=true: toolbar hoặc mainInventory có thể đang inactive khi mirror chạy
+            // (vd toolbar ẩn khi mở chest/shop → GetComponentInChildren mặc định bỏ qua → trả null
+            // → slot đích bị xóa mà không tạo mới → item MẤT). Luôn dùng true để an toàn.
+            var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>(true);
 
             if (sourceItem != null)
             {

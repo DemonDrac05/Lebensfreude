@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: MerchantJournal
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: e4a37804840d35a4796694d6683fbf0b, type: 3}
   buyingPrice: -1
   sellingPrice: -1
-  isPurchaseable: 1
+  isPurchaseable: 0
   recipe:
     station: 5
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: efb2b8a7651c4d7488ef32cf741dc416, type: 2}
+      quantity: 5
+    - material: {fileID: 11400000, guid: 0218020d8362265488cba126025686c7, type: 2}
+      quantity: 3
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}
@@ -26,10 +30,10 @@ MonoBehaviour:
     successRate: 1
     failByproduct: {fileID: 0}
     failByproductAmount: 1
-    craftOnce: 0
-    unlocksMerchantJournal: 0
+    craftOnce: 1
+    unlocksMerchantJournal: 1
   gameObj: {fileID: 0}
-  column: 1
-  row: 1
-  placeable: 1
+  column: 0
+  row: 0
+  placeable: 0
   stackableAmount: 1

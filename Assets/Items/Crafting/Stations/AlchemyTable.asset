@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
   m_Name: AlchemyTable
   m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 80e1fd5b6f80b77488901638c41d8c49, type: 3}
   buyingPrice: -1
   sellingPrice: -1
-  isPurchaseable: 1
+  isPurchaseable: 0
   recipe:
     station: 5
-    inputs: []
+    inputs:
+    - material: {fileID: 11400000, guid: efb2b8a7651c4d7488ef32cf741dc416, type: 2}
+      quantity: 10
+    - material: {fileID: 11400000, guid: d4c021ba3c0a0da4187571e54ffd7523, type: 2}
+      quantity: 5
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}
@@ -28,8 +32,8 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 0}
-  column: 1
-  row: 1
+  gameObj: {fileID: 2407939669826792595, guid: d3c44d59e2efae44fbcea199d17e27a0, type: 3}
+  column: 2
+  row: 2
   placeable: 1
   stackableAmount: 1

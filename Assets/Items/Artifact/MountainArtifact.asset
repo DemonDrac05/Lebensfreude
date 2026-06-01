@@ -12,8 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909eea086be25854d848db6916718667, type: 3}
   m_Name: MountainArtifact
   m_EditorClassIdentifier: Assembly-CSharp::Artifact
-  image: {fileID: -437606690, guid: 9f9f2f8e7ca0bbb48b8891904148397d, type: 3}
+  image: {fileID: 21300000, guid: ae1755d084ce2d2418b8e74d4fabc279, type: 3}
   buyingPrice: -1
   sellingPrice: -1
   isPurchaseable: 0
-  type: 1
+  recipe:
+    station: 0
+    inputs: []
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
+  type: 2

@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public Vector3Int playerPosUpdate;
     public Vector3 surroundingPlayerTile;
 
-    private void Awake() 
+    private void Awake()
     {
         currentHitBoxPrefab = redHitBoxPrefab;
     }
@@ -39,7 +39,14 @@ public class PlayerController : MonoBehaviour
         UpdateHitbox(snappedMousePos, initialMousePos);
 
         itemPosUpdate = snappedMousePos;
-        itemPosUpdate.y -= 0.5f;
+        // Căn tâm sprite theo số tile chiếm (pivot = center): row mở sang phải, column mở xuống.
+        // Ví dụ 2×2: x += 0.5, y -= 0.5 → sprite ở tâm 4 tile thay vì tile đầu tiên.
+        if (currentCraftingItem != null)
+        {
+            itemPosUpdate.x += (currentCraftingItem.row    - 1) * 0.5f;
+            itemPosUpdate.y -= (currentCraftingItem.column - 1) * 0.5f;
+        }
+        itemPosUpdate.y -= 0.5f; // visual offset: pivot center → dịch xuống nửa tile
 
         if (currentItem != null)
         {
@@ -195,7 +202,7 @@ public class PlayerController : MonoBehaviour
             itemTiles.Remove(tilePos);
 
             GameObject newTile = Instantiate(GetHitBoxPrefab(tilePos), tilePos, Quaternion.identity);
-            itemTiles.Add(tilePos,newTile);
+            itemTiles.Add(tilePos, newTile);
         }
     }
 
@@ -203,7 +210,7 @@ public class PlayerController : MonoBehaviour
     {
         if (itemTile[0][0] == surroundingPlayerTile)
         {
-            Vector3 itemOffSet = new Vector3(position.x, position.y - 0.5f,position.z);
+            Vector3 itemOffSet = new Vector3(position.x, position.y - 0.5f, position.z);
             if (position == tilemap.GetCellCenterWorld(tilemap.WorldToCell(transform.position))
                 || itemsOnGround.Contains(itemOffSet))
                 return redHitBoxPrefab;
@@ -213,12 +220,17 @@ public class PlayerController : MonoBehaviour
         return redHitBoxPrefab;
     }
 
+    // Kiểm tra item CraftingItem đang cầm → tạo/đổi ghost prefab tương ứng.
+    // Sửa bug: thêm điều kiện currentCraftingItem != itemInHand → scroll sang item KHÁC
+    // (vd Workbench → Chest) sẽ destroy ghost cũ và tạo ghost mới ngay lập tức.
+    // Dùng trong: PlayerController.Update().
     private void CheckForItemPrefab()
     {
         var itemInHand = InventoryManager.Instance.GetSelectedItem<CraftingItem>(false);
         if (itemInHand != null && itemInHand.placeable)
         {
-            if (itemPrefab == null || currentItem == null)
+            // Tạo mới khi: chưa có prefab, hoặc item trong tay VỪA ĐỔI sang loại khác
+            if (itemPrefab == null || currentItem == null || currentCraftingItem != itemInHand)
             {
                 currentCraftingItem = itemInHand;
                 itemPrefab = itemInHand.gameObj;
@@ -273,7 +285,7 @@ public class PlayerController : MonoBehaviour
 
             InventoryManager.Instance.GetSelectedItem<CraftingItem>(true);
             itemTile.Clear();
-            foreach( var hitboxPos in itemTiles.Values) Destroy(hitboxPos);
+            foreach (var hitboxPos in itemTiles.Values) Destroy(hitboxPos);
             itemTiles.Clear();
 
             ResetItemPrefabs();

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Silver
   m_EditorClassIdentifier: 
   image: {fileID: 4867794069187047327, guid: a04cfdab9fd1e084f97924b1fe3e03da, type: 3}
-  buyingPrice: 50
-  sellingPrice: 1
+  buyingPrice: -1
+  sellingPrice: 15
   isPurchaseable: 1
   recipe:
     station: 0
@@ -28,5 +28,5 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 2549877012668460062, guid: 848232853a61def4388e9cab43140385, type: 3}
+  gameObj: {fileID: 0}
   productType: 1
