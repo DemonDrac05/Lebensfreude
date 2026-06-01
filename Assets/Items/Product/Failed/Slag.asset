@@ -9,20 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
-  m_Name: CopperBar
-  m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
-  image: {fileID: 21300000, guid: 511a228f23b87224e84c96d3306eae44, type: 3}
+  m_Script: {fileID: 11500000, guid: 80903dc95a979d04297e3f0ff0034bc9, type: 3}
+  m_Name: Slag
+  m_EditorClassIdentifier: Assembly-CSharp::RawMaterial
+  image: {fileID: 0}
   buyingPrice: 0
   sellingPrice: 0
   isPurchaseable: 1
   recipe:
-    station: 2
-    inputs:
-    - material: {fileID: 11400000, guid: 87c0d11c47ae1674393a165a19bfb5c4, type: 2}
-      quantity: 3
-    - material: {fileID: 11400000, guid: 87c0d11c47ae1674393a165a19bfb5c4, type: 2}
-      quantity: 3
+    station: 0
+    inputs: []
     outputAmount: 1
     craftTimeSeconds: 0
     fuel: {fileID: 0}
@@ -33,7 +29,4 @@ MonoBehaviour:
     craftOnce: 0
     unlocksMerchantJournal: 0
   gameObj: {fileID: 0}
-  column: 0
-  row: 0
-  placeable: 0
-  stackableAmount: 999
+  productType: 0
