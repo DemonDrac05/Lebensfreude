@@ -31,6 +31,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        if (InputBlocker.IsBlocked) return; // đang ngủ/dream/intro -> chặn toggle panel
+
         foreach (var key in keyMappings)
         {
             if (key.keyMethod == KeyInputMethod.Press)
@@ -48,25 +50,34 @@ public class InputManager : MonoBehaviour
         ChangeBackgroundColor();
     }
 
+    // Bật/tắt panel theo phím nhấn. Xử lý 3 trường hợp:
+    //  - Chưa mở gì             -> mở panel, ẩn toolbar
+    //  - Đang mở đúng panel này -> đóng panel, hiện lại toolbar
+    //  - Đang mở panel KHÁC     -> đóng panel cũ rồi mở panel mới (trước đây bị kẹt, không chuyển được)
+    // Dùng trong: InputManager.Update().
     private void KeyPressMethod(GameObject UIInput)
     {
         GameObject uiToToggle = UIInput;
-        if (activeUI == null)
-        {
-            uiToToggle.SetActive(true);
-            activeUI = uiToToggle;
-            toolBar.SetActive(false);
-        }
-        else if (activeUI == uiToToggle)
+
+        // Đang mở đúng panel này -> đóng lại
+        if (activeUI == uiToToggle)
         {
             activeUI.SetActive(false);
             activeUI = null;
             toolBar.SetActive(true);
+            return;
         }
-        else
+
+        // Đang mở panel khác -> đóng panel cũ trước khi mở panel mới
+        if (activeUI != null)
         {
-            toolBar.SetActive(false);
+            activeUI.SetActive(false);
         }
+
+        // Mở panel mới, ẩn toolbar
+        uiToToggle.SetActive(true);
+        activeUI = uiToToggle;
+        toolBar.SetActive(false);
     }
     private void KeyHoldMethod(KeyCode keyCode,GameObject UIInput)
     {
@@ -101,6 +112,17 @@ public class InputManager : MonoBehaviour
         Color color = background.GetComponent<Image>().color;
         color.a = toolBar.activeSelf ? (0f / 255f) : (200f / 255f);
         background.GetComponent<Image>().color = color;
+    }
+
+    // Đóng panel đang mở (nếu có) + hiện lại toolbar. Dùng trong: SleepManager.BeginOverlay().
+    public void ForceCloseActivePanel()
+    {
+        if (activeUI != null)
+        {
+            activeUI.SetActive(false);
+            activeUI = null;
+        }
+        if (toolBar != null) toolBar.SetActive(true);
     }
 
     [System.Serializable]

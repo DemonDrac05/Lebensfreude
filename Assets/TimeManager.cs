@@ -28,7 +28,16 @@ public class TimeManager : MonoBehaviour
     public static int hours = 0;
     public static bool isNewDay = false;
 
+    // Tổng số ngày đã trải qua từ đầu game (KHÔNG reset theo tháng).
+    // Dùng cho: EconomicSimulator (daysSinceSale), DemandEventManager, EndingManager.
+    public static int TotalDays = 1;
+
+    // Tham chiếu tĩnh để SleepManager gọi SleepToNextMorning().
+    public static TimeManager Instance;
+
     public static Season currentSeason = Season.Spring;
+
+    private void Awake() => Instance = this;
 
     private void Start() => SetDayText();
 
@@ -114,6 +123,29 @@ public class TimeManager : MonoBehaviour
         dayProcessed = false;
     }
 
+    // ─────────────────────────────────────────
+    // SLEEP -> NEXT MORNING  (ngủ nhảy tới 6:00 AM hôm sau)
+    // ─────────────────────────────────────────
+    // +1 ngày (tái dùng IncrementDate/IncrementDay), nhảy đồng hồ về 6AM, bắn OnNewDay.
+    // RESET cờ isNewDay/dayProcessed để hệ đếm ngày tự động (trigger ở 2AM) KHÔNG cộng thêm 1 ngày nữa.
+    // Dùng trong: SleepManager.FinishSleep().
+    public void SleepToNextMorning()
+    {
+        IncrementDate();
+        IncrementDay();
+        SetDayText();
+
+        // Đặt đồng hồ về 6:00 AM: cần (Time.time + offsetTime) % SECONDS_IN_DAY == 360 (6h*60).
+        const float MORNING = 360f;
+        offsetTime = (MORNING - (Time.time % SECONDS_IN_DAY) + SECONDS_IN_DAY) % SECONDS_IN_DAY;
+
+        // Dọn cờ để Update() không tự trigger StartNewDay lần nữa.
+        isNewDay = false;
+        dayProcessed = false;
+
+        OnNewDay?.Invoke();
+    }
+
     private void IncrementDate()
     {
         currentDate = (Date)(((int)currentDate + 1) % System.Enum.GetValues(typeof(Date)).Length);
@@ -121,6 +153,7 @@ public class TimeManager : MonoBehaviour
 
     private void IncrementDay()
     {
+        TotalDays++;        // đếm tổng ngày cho kinh tế & ending
         currentDay++;
         if (currentDay > MAX_DAY_IN_MONTH)
         {

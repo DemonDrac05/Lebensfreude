@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767a83d44c47a7145a713456603a25af, type: 3}
+  m_Name: CopperBar
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingItem
+  image: {fileID: -6013394907827396827, guid: 511a228f23b87224e84c96d3306eae44, type: 3}
+  buyingPrice: 0
+  sellingPrice: 0
+  isPurchaseable: 1
+  recipe:
+    station: 2
+    inputs:
+    - material: {fileID: 11400000, guid: 87c0d11c47ae1674393a165a19bfb5c4, type: 2}
+      quantity: 3
+    - material: {fileID: 11400000, guid: 87c0d11c47ae1674393a165a19bfb5c4, type: 2}
+      quantity: 3
+    outputAmount: 1
+    craftTimeSeconds: 0
+    fuel: {fileID: 0}
+    fuelAmount: 0
+    successRate: 1
+    failByproduct: {fileID: 0}
+    failByproductAmount: 1
+    craftOnce: 0
+    unlocksMerchantJournal: 0
+  gameObj: {fileID: 0}
+  column: 0
+  row: 0
+  placeable: 0
+  stackableAmount: 999

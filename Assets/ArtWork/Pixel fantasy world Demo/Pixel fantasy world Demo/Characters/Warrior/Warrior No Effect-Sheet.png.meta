@@ -1,0 +1,2860 @@
+fileFormatVersion: 2
+guid: 29c7ae26ff2a8164881af7c1f5bdbbd2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -833563007950555939
+    second: Warrior No Effect-Sheet_0
+  - first:
+      213: 2155011422190709268
+    second: Warrior No Effect-Sheet_1
+  - first:
+      213: -5770560647081796909
+    second: Warrior No Effect-Sheet_2
+  - first:
+      213: -6818028658945964396
+    second: Warrior No Effect-Sheet_3
+  - first:
+      213: 7803883168211767148
+    second: Warrior No Effect-Sheet_4
+  - first:
+      213: -6715382327254126909
+    second: Warrior No Effect-Sheet_5
+  - first:
+      213: -2668027075611404949
+    second: Warrior No Effect-Sheet_6
+  - first:
+      213: 6623102476569146791
+    second: Warrior No Effect-Sheet_7
+  - first:
+      213: -1721968790236623462
+    second: Warrior No Effect-Sheet_8
+  - first:
+      213: 558636995953400317
+    second: Warrior No Effect-Sheet_9
+  - first:
+      213: -9217815647691057579
+    second: Warrior No Effect-Sheet_10
+  - first:
+      213: -3824074782024621815
+    second: Warrior No Effect-Sheet_11
+  - first:
+      213: -8025405723049770004
+    second: Warrior No Effect-Sheet_12
+  - first:
+      213: 1076737050912862517
+    second: Warrior No Effect-Sheet_13
+  - first:
+      213: -8353591526385300286
+    second: Warrior No Effect-Sheet_14
+  - first:
+      213: 1243124393297708487
+    second: Warrior No Effect-Sheet_15
+  - first:
+      213: -394984674318884687
+    second: Warrior No Effect-Sheet_16
+  - first:
+      213: -8421002354835073706
+    second: Warrior No Effect-Sheet_17
+  - first:
+      213: 1414537658850120397
+    second: Warrior No Effect-Sheet_18
+  - first:
+      213: -6554180485391584293
+    second: Warrior No Effect-Sheet_19
+  - first:
+      213: 7485696700317726329
+    second: Warrior No Effect-Sheet_20
+  - first:
+      213: 5716472074236759509
+    second: Warrior No Effect-Sheet_21
+  - first:
+      213: -6094826415912389120
+    second: Warrior No Effect-Sheet_22
+  - first:
+      213: -540269680818962397
+    second: Warrior No Effect-Sheet_23
+  - first:
+      213: 7077650504235864347
+    second: Warrior No Effect-Sheet_24
+  - first:
+      213: 850444837950954181
+    second: Warrior No Effect-Sheet_25
+  - first:
+      213: 8394402010746030210
+    second: Warrior No Effect-Sheet_26
+  - first:
+      213: 8076425050976383845
+    second: Warrior No Effect-Sheet_27
+  - first:
+      213: -2658523990134457609
+    second: Warrior No Effect-Sheet_28
+  - first:
+      213: -7260958754049063684
+    second: Warrior No Effect-Sheet_29
+  - first:
+      213: 4715216569642740854
+    second: Warrior No Effect-Sheet_30
+  - first:
+      213: -7481772126651532319
+    second: Warrior No Effect-Sheet_31
+  - first:
+      213: -3032469630361721233
+    second: Warrior No Effect-Sheet_32
+  - first:
+      213: 5197650453894591311
+    second: Warrior No Effect-Sheet_33
+  - first:
+      213: 5415235197350696535
+    second: Warrior No Effect-Sheet_34
+  - first:
+      213: 7060419216190868189
+    second: Warrior No Effect-Sheet_35
+  - first:
+      213: -1801466205256605778
+    second: Warrior No Effect-Sheet_36
+  - first:
+      213: -7071906304193587294
+    second: Warrior No Effect-Sheet_37
+  - first:
+      213: -5124863720228384512
+    second: Warrior No Effect-Sheet_38
+  - first:
+      213: -6214754016930854260
+    second: Warrior No Effect-Sheet_39
+  - first:
+      213: 8862016729305250673
+    second: Warrior No Effect-Sheet_40
+  - first:
+      213: 1859927967897569392
+    second: Warrior No Effect-Sheet_41
+  - first:
+      213: -9045412911429656540
+    second: Warrior No Effect-Sheet_42
+  - first:
+      213: 7606287226123143288
+    second: Warrior No Effect-Sheet_43
+  - first:
+      213: -7086947329831049194
+    second: Warrior No Effect-Sheet_44
+  - first:
+      213: -7727271528287468830
+    second: Warrior No Effect-Sheet_45
+  - first:
+      213: 1367823975431391492
+    second: Warrior No Effect-Sheet_46
+  - first:
+      213: -2717469517010470160
+    second: Warrior No Effect-Sheet_47
+  - first:
+      213: -3400705290701074912
+    second: Warrior No Effect-Sheet_48
+  - first:
+      213: 5658759824360817742
+    second: Warrior No Effect-Sheet_49
+  - first:
+      213: 3836010483050074254
+    second: Warrior No Effect-Sheet_50
+  - first:
+      213: 8231092802540826816
+    second: Warrior No Effect-Sheet_51
+  - first:
+      213: 5676467191450488179
+    second: Warrior No Effect-Sheet_52
+  - first:
+      213: -5297809753809398525
+    second: Warrior No Effect-Sheet_53
+  - first:
+      213: 8018546145697250338
+    second: Warrior No Effect-Sheet_54
+  - first:
+      213: -5017430319268641079
+    second: Warrior No Effect-Sheet_55
+  - first:
+      213: -971002868236199244
+    second: Warrior No Effect-Sheet_56
+  - first:
+      213: 6591927040199320448
+    second: Warrior No Effect-Sheet_57
+  - first:
+      213: -1206500986889785811
+    second: Warrior No Effect-Sheet_58
+  - first:
+      213: 1422166291644333716
+    second: Warrior No Effect-Sheet_59
+  - first:
+      213: -7793942624570152706
+    second: Warrior No Effect-Sheet_60
+  - first:
+      213: 4935973630305678098
+    second: Warrior No Effect-Sheet_61
+  - first:
+      213: -7024890194934486313
+    second: Warrior No Effect-Sheet_62
+  - first:
+      213: -3826588456444446072
+    second: Warrior No Effect-Sheet_63
+  - first:
+      213: 3985875382553169377
+    second: Warrior No Effect-Sheet_64
+  - first:
+      213: 7470082213321931213
+    second: Warrior No Effect-Sheet_65
+  - first:
+      213: -5303874652902087755
+    second: Warrior No Effect-Sheet_66
+  - first:
+      213: -6609562134448980520
+    second: Warrior No Effect-Sheet_67
+  - first:
+      213: -4965221153881269386
+    second: Warrior No Effect-Sheet_68
+  - first:
+      213: 7754208578121214238
+    second: Warrior No Effect-Sheet_69
+  - first:
+      213: -394958958455965720
+    second: Warrior No Effect-Sheet_70
+  - first:
+      213: -6953324518360394102
+    second: Warrior No Effect-Sheet_71
+  - first:
+      213: -600078797007819636
+    second: Warrior No Effect-Sheet_72
+  - first:
+      213: -5888559009263398665
+    second: Warrior No Effect-Sheet_73
+  - first:
+      213: -2702576607778514374
+    second: Warrior No Effect-Sheet_74
+  - first:
+      213: -250406259285503306
+    second: Warrior No Effect-Sheet_75
+  - first:
+      213: 6383973231450575996
+    second: Warrior No Effect-Sheet_76
+  - first:
+      213: -7275822999252030279
+    second: Warrior No Effect-Sheet_77
+  - first:
+      213: 55434285449142815
+    second: Warrior No Effect-Sheet_78
+  - first:
+      213: -1029325168780509062
+    second: Warrior No Effect-Sheet_79
+  - first:
+      213: 3376096840348930672
+    second: Warrior No Effect-Sheet_80
+  - first:
+      213: -1650263293441762048
+    second: Warrior No Effect-Sheet_81
+  - first:
+      213: -2912559637476558892
+    second: Warrior No Effect-Sheet_82
+  - first:
+      213: -9068875030389287010
+    second: Warrior No Effect-Sheet_83
+  - first:
+      213: 6567025422057662501
+    second: Warrior No Effect-Sheet_84
+  - first:
+      213: 4038447505624844833
+    second: Warrior No Effect-Sheet_85
+  - first:
+      213: -7028627192379253299
+    second: Warrior No Effect-Sheet_86
+  - first:
+      213: -7789401765311454658
+    second: Warrior No Effect-Sheet_87
+  - first:
+      213: 6455892080203224358
+    second: Warrior No Effect-Sheet_88
+  - first:
+      213: 7831005945941727218
+    second: Warrior No Effect-Sheet_89
+  - first:
+      213: -2243543948977381680
+    second: Warrior No Effect-Sheet_90
+  - first:
+      213: 4996934615111547972
+    second: Warrior No Effect-Sheet_91
+  - first:
+      213: -8010492159742043801
+    second: Warrior No Effect-Sheet_92
+  - first:
+      213: -4780348169685887801
+    second: Warrior No Effect-Sheet_93
+  - first:
+      213: 4984429411371381027
+    second: Warrior No Effect-Sheet_94
+  - first:
+      213: -5231864981038013001
+    second: Warrior No Effect-Sheet_95
+  - first:
+      213: -6612390338277371904
+    second: Warrior No Effect-Sheet_96
+  - first:
+      213: -1433398539264247244
+    second: Warrior No Effect-Sheet_97
+  - first:
+      213: 3098470951188354855
+    second: Warrior No Effect-Sheet_98
+  - first:
+      213: 8322312804183699395
+    second: Warrior No Effect-Sheet_99
+  - first:
+      213: 178318825549713158
+    second: Warrior No Effect-Sheet_100
+  - first:
+      213: -2445737775773195026
+    second: Warrior No Effect-Sheet_101
+  - first:
+      213: 3018548563772538901
+    second: Warrior No Effect-Sheet_102
+  - first:
+      213: 6647054063884047720
+    second: Warrior No Effect-Sheet_103
+  - first:
+      213: 5736286980215739213
+    second: Warrior No Effect-Sheet_104
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 719
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd473355cd69e64f0800000000000000
+      internalID: -833563007950555939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a2692887328ed10800000000000000
+      internalID: 2155011422190709268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da57db4aa9daefa0800000000000000
+      internalID: -5770560647081796909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496c713ee0f7161a0800000000000000
+      internalID: -6818028658945964396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f89ed0566fc4c60800000000000000
+      internalID: 7803883168211767148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cee41d5a5b2ec2a0800000000000000
+      internalID: -6715382327254126909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65de03b28349fad0800000000000000
+      internalID: -2668027075611404949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 719
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5f9ea9c9cf9eb50800000000000000
+      internalID: 6623102476569146791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 719
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d03a732865a18e0800000000000000
+      internalID: -1721968790236623462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 655
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df99136536da0c700800000000000000
+      internalID: 558636995953400317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 655
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556565aa18db31080800000000000000
+      internalID: -9217815647691057579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 655
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901a4ee1f382eeac0800000000000000
+      internalID: -3824074782024621815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce34b3be30800a090800000000000000
+      internalID: -8025405723049770004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531b92c94a651fe00800000000000000
+      internalID: 1076737050912862517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc471714c4121c80800000000000000
+      internalID: -8353591526385300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c50222ac07704110800000000000000
+      internalID: 1243124393297708487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0ef7b088bb48af0800000000000000
+      internalID: -394984674318884687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 655
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655d35389f6922b80800000000000000
+      internalID: -8421002354835073706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 655
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc29c25918271a310800000000000000
+      internalID: 1414537658850120397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 591
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3ff66f29fda05a0800000000000000
+      internalID: -6554180485391584293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97670ceec7982e760800000000000000
+      internalID: 7485696700317726329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd8259701df45f40800000000000000
+      internalID: 5716472074236759509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006ffdf9aa3da6ba0800000000000000
+      internalID: -6094826415912389120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3204fd776939088f0800000000000000
+      internalID: -540269680818962397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11d75572add83260800000000000000
+      internalID: 7077650504235864347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 591
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca912303136dcb00800000000000000
+      internalID: 850444837950954181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 591
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28887504728ee7470800000000000000
+      internalID: 8394402010746030210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 527
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563738a0bc9351070800000000000000
+      internalID: 8076425050976383845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa7e2534860b1bd0800000000000000
+      internalID: -2658523990134457609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf48420cb74eb3b90800000000000000
+      internalID: -7260958754049063684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c6790ec70df6140800000000000000
+      internalID: 4715216569642740854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb348414e76b2890800000000000000
+      internalID: -7481772126651532319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66212a10f08ae5d0800000000000000
+      internalID: -3032469630361721233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 527
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43f80bac83c12840800000000000000
+      internalID: 5197650453894591311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 527
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756d74988b7c62b40800000000000000
+      internalID: 5415235197350696535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 462
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda06629ed5abf160800000000000000
+      internalID: 7060419216190868189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf1fc8e708eff6e0800000000000000
+      internalID: -1801466205256605778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a712b55faa8bdd90800000000000000
+      internalID: -7071906304193587294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00110816993d0e8b0800000000000000
+      internalID: -5124863720228384512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a87661622c0c9a0800000000000000
+      internalID: -6214754016930854260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bfec723453cfa70800000000000000
+      internalID: 8862016729305250673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078495ae1aacfc910800000000000000
+      internalID: 1859927967897569392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 462
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420e087b1ec387280800000000000000
+      internalID: -9045412911429656540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 462
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87849acaee5fe8960800000000000000
+      internalID: 7606287226123143288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 399
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6186487a3fa16ad90800000000000000
+      internalID: -7086947329831049194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 399
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e28f616c7733c490800000000000000
+      internalID: -7727271528287468830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 399
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409c9da98ac7bf210800000000000000
+      internalID: 1367823975431391492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa73ae3fdb994ad0800000000000000
+      internalID: -2717469517010470160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e88f94e844ec0d0800000000000000
+      internalID: -3400705290701074912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4447403414f78e40800000000000000
+      internalID: 5658759824360817742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80dfd4d53f3c3530800000000000000
+      internalID: 3836010483050074254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c078b03b47ba3270800000000000000
+      internalID: 8231092802540826816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 398
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dc09dd5dcd6ce40800000000000000
+      internalID: 5676467191450488179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 398
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305579019166a76b0800000000000000
+      internalID: -5297809753809398525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 335
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cbc554c39974f60800000000000000
+      internalID: 8018546145697250338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6c7b645b18e5ab0800000000000000
+      internalID: -5017430319268641079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba55e2390e4682f0800000000000000
+      internalID: -971002868236199244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0836f50b7ba3b7b50800000000000000
+      internalID: 6591927040199320448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ea647aeb5a14fe0800000000000000
+      internalID: -1206500986889785811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ebef015bc8cb310800000000000000
+      internalID: 1422166291644333716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef868be1a7a56d390800000000000000
+      internalID: -7793942624570152706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 335
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213b0176dd9108440800000000000000
+      internalID: 4935973630305678098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 271
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da2ec05693928e90800000000000000
+      internalID: -7024890194934486313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ab400b21a35eac0800000000000000
+      internalID: -3826588456444446072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed4e08da8ca05730800000000000000
+      internalID: 3985875382553169377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc97400e1301ba760800000000000000
+      internalID: 7470082213321931213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3a294ba1ad466b0800000000000000
+      internalID: -5303874652902087755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddbb47f14e1644a0800000000000000
+      internalID: -6609562134448980520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 271
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bd6abdaadf71bb0800000000000000
+      internalID: -4965221153881269386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 271
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19a3354e9b7c9b60800000000000000
+      internalID: 7754208578121214238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 207
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7bf5c7be2d48af0800000000000000
+      internalID: -394958958455965720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a865d1bd034d08f90800000000000000
+      internalID: -6953324518360394102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cea1373871ca7f0800000000000000
+      internalID: -600078797007819636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0ddeda7c2a74ea0800000000000000
+      internalID: -5888559009263398665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ad413e4e48e7ad0800000000000000
+      internalID: -2702576607778514374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2d0c975d0668cf0800000000000000
+      internalID: -250406259285503306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74d63c84dd689850800000000000000
+      internalID: 6383973231450575996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 207
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc27f8f785170b90800000000000000
+      internalID: -7275822999252030279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 207
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12e29c5031f4c000800000000000000
+      internalID: 55434285449142815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 142
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70087c663a17b1f0800000000000000
+      internalID: -1029325168780509062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 141
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0721150603e4ade20800000000000000
+      internalID: 3376096840348930672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 141
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d998037461919e0800000000000000
+      internalID: -1650263293441762048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7b11de0728497d0800000000000000
+      internalID: -2912559637476558892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e979c357532e42280800000000000000
+      internalID: -9068875030389287010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528e4b8e3d2c22b50800000000000000
+      internalID: 6567025422057662501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ac4d81c927b0830800000000000000
+      internalID: 4038447505624844833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd559bcecc457e90800000000000000
+      internalID: -7028627192379253299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 141
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e326fcd4d5c76e390800000000000000
+      internalID: -7789401765311454658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 141
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62555c464afe79950800000000000000
+      internalID: 6455892080203224358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 79
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f714d9da625dac60800000000000000
+      internalID: 7831005945941727218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ded93b4aa45dd0e0800000000000000
+      internalID: -2243543948977381680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44cb39bbe8da85540800000000000000
+      internalID: 4996934615111547972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769168672d305d090800000000000000
+      internalID: -8010492159742043801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c41f23caaac8adb0800000000000000
+      internalID: -4780348169685887801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321fcc814204c2540800000000000000
+      internalID: 4984429411371381027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 79
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b56c64f48ea467b0800000000000000
+      internalID: -5231864981038013001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 79
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00090c275021c34a0800000000000000
+      internalID: -6612390338277371904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a379d7f9b8b1ce0800000000000000
+      internalID: -1433398539264247244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727d278e9eafffa20800000000000000
+      internalID: 3098470951188354855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cfed03e66bce7370800000000000000
+      internalID: 8322312804183699395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fc7ade604897200800000000000000
+      internalID: 178318825549713158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4e845737efe0ed0800000000000000
+      internalID: -2445737775773195026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5108de00de904e920800000000000000
+      internalID: 3018548563772538901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 15
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86510a814741f3c50800000000000000
+      internalID: 6647054063884047720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior No Effect-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 15
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d431579cd926b9f40800000000000000
+      internalID: 5736286980215739213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warrior No Effect-Sheet_0: -833563007950555939
+      Warrior No Effect-Sheet_1: 2155011422190709268
+      Warrior No Effect-Sheet_10: -9217815647691057579
+      Warrior No Effect-Sheet_100: 178318825549713158
+      Warrior No Effect-Sheet_101: -2445737775773195026
+      Warrior No Effect-Sheet_102: 3018548563772538901
+      Warrior No Effect-Sheet_103: 6647054063884047720
+      Warrior No Effect-Sheet_104: 5736286980215739213
+      Warrior No Effect-Sheet_11: -3824074782024621815
+      Warrior No Effect-Sheet_12: -8025405723049770004
+      Warrior No Effect-Sheet_13: 1076737050912862517
+      Warrior No Effect-Sheet_14: -8353591526385300286
+      Warrior No Effect-Sheet_15: 1243124393297708487
+      Warrior No Effect-Sheet_16: -394984674318884687
+      Warrior No Effect-Sheet_17: -8421002354835073706
+      Warrior No Effect-Sheet_18: 1414537658850120397
+      Warrior No Effect-Sheet_19: -6554180485391584293
+      Warrior No Effect-Sheet_2: -5770560647081796909
+      Warrior No Effect-Sheet_20: 7485696700317726329
+      Warrior No Effect-Sheet_21: 5716472074236759509
+      Warrior No Effect-Sheet_22: -6094826415912389120
+      Warrior No Effect-Sheet_23: -540269680818962397
+      Warrior No Effect-Sheet_24: 7077650504235864347
+      Warrior No Effect-Sheet_25: 850444837950954181
+      Warrior No Effect-Sheet_26: 8394402010746030210
+      Warrior No Effect-Sheet_27: 8076425050976383845
+      Warrior No Effect-Sheet_28: -2658523990134457609
+      Warrior No Effect-Sheet_29: -7260958754049063684
+      Warrior No Effect-Sheet_3: -6818028658945964396
+      Warrior No Effect-Sheet_30: 4715216569642740854
+      Warrior No Effect-Sheet_31: -7481772126651532319
+      Warrior No Effect-Sheet_32: -3032469630361721233
+      Warrior No Effect-Sheet_33: 5197650453894591311
+      Warrior No Effect-Sheet_34: 5415235197350696535
+      Warrior No Effect-Sheet_35: 7060419216190868189
+      Warrior No Effect-Sheet_36: -1801466205256605778
+      Warrior No Effect-Sheet_37: -7071906304193587294
+      Warrior No Effect-Sheet_38: -5124863720228384512
+      Warrior No Effect-Sheet_39: -6214754016930854260
+      Warrior No Effect-Sheet_4: 7803883168211767148
+      Warrior No Effect-Sheet_40: 8862016729305250673
+      Warrior No Effect-Sheet_41: 1859927967897569392
+      Warrior No Effect-Sheet_42: -9045412911429656540
+      Warrior No Effect-Sheet_43: 7606287226123143288
+      Warrior No Effect-Sheet_44: -7086947329831049194
+      Warrior No Effect-Sheet_45: -7727271528287468830
+      Warrior No Effect-Sheet_46: 1367823975431391492
+      Warrior No Effect-Sheet_47: -2717469517010470160
+      Warrior No Effect-Sheet_48: -3400705290701074912
+      Warrior No Effect-Sheet_49: 5658759824360817742
+      Warrior No Effect-Sheet_5: -6715382327254126909
+      Warrior No Effect-Sheet_50: 3836010483050074254
+      Warrior No Effect-Sheet_51: 8231092802540826816
+      Warrior No Effect-Sheet_52: 5676467191450488179
+      Warrior No Effect-Sheet_53: -5297809753809398525
+      Warrior No Effect-Sheet_54: 8018546145697250338
+      Warrior No Effect-Sheet_55: -5017430319268641079
+      Warrior No Effect-Sheet_56: -971002868236199244
+      Warrior No Effect-Sheet_57: 6591927040199320448
+      Warrior No Effect-Sheet_58: -1206500986889785811
+      Warrior No Effect-Sheet_59: 1422166291644333716
+      Warrior No Effect-Sheet_6: -2668027075611404949
+      Warrior No Effect-Sheet_60: -7793942624570152706
+      Warrior No Effect-Sheet_61: 4935973630305678098
+      Warrior No Effect-Sheet_62: -7024890194934486313
+      Warrior No Effect-Sheet_63: -3826588456444446072
+      Warrior No Effect-Sheet_64: 3985875382553169377
+      Warrior No Effect-Sheet_65: 7470082213321931213
+      Warrior No Effect-Sheet_66: -5303874652902087755
+      Warrior No Effect-Sheet_67: -6609562134448980520
+      Warrior No Effect-Sheet_68: -4965221153881269386
+      Warrior No Effect-Sheet_69: 7754208578121214238
+      Warrior No Effect-Sheet_7: 6623102476569146791
+      Warrior No Effect-Sheet_70: -394958958455965720
+      Warrior No Effect-Sheet_71: -6953324518360394102
+      Warrior No Effect-Sheet_72: -600078797007819636
+      Warrior No Effect-Sheet_73: -5888559009263398665
+      Warrior No Effect-Sheet_74: -2702576607778514374
+      Warrior No Effect-Sheet_75: -250406259285503306
+      Warrior No Effect-Sheet_76: 6383973231450575996
+      Warrior No Effect-Sheet_77: -7275822999252030279
+      Warrior No Effect-Sheet_78: 55434285449142815
+      Warrior No Effect-Sheet_79: -1029325168780509062
+      Warrior No Effect-Sheet_8: -1721968790236623462
+      Warrior No Effect-Sheet_80: 3376096840348930672
+      Warrior No Effect-Sheet_81: -1650263293441762048
+      Warrior No Effect-Sheet_82: -2912559637476558892
+      Warrior No Effect-Sheet_83: -9068875030389287010
+      Warrior No Effect-Sheet_84: 6567025422057662501
+      Warrior No Effect-Sheet_85: 4038447505624844833
+      Warrior No Effect-Sheet_86: -7028627192379253299
+      Warrior No Effect-Sheet_87: -7789401765311454658
+      Warrior No Effect-Sheet_88: 6455892080203224358
+      Warrior No Effect-Sheet_89: 7831005945941727218
+      Warrior No Effect-Sheet_9: 558636995953400317
+      Warrior No Effect-Sheet_90: -2243543948977381680
+      Warrior No Effect-Sheet_91: 4996934615111547972
+      Warrior No Effect-Sheet_92: -8010492159742043801
+      Warrior No Effect-Sheet_93: -4780348169685887801
+      Warrior No Effect-Sheet_94: 4984429411371381027
+      Warrior No Effect-Sheet_95: -5231864981038013001
+      Warrior No Effect-Sheet_96: -6612390338277371904
+      Warrior No Effect-Sheet_97: -1433398539264247244
+      Warrior No Effect-Sheet_98: 3098470951188354855
+      Warrior No Effect-Sheet_99: 8322312804183699395
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

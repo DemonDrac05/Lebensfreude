@@ -15,6 +15,9 @@ public class BaseItem : ScriptableObject
     [Header("=== Status Flags ==========")]
     [HideInInspector] public bool isPurchaseable;
 
+    [Header("=== Crafting Recipe (station đọc để chế tạo món này) ==========")]
+    public CraftingRecipe recipe = new();
+
     private void OnEnable() => isPurchaseable = buyingPrice != -1 || sellingPrice != -1;
 
     public virtual int MaxStackable => 999;

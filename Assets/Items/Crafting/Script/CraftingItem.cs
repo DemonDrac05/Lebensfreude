@@ -13,11 +13,7 @@ public class CraftingItem : BaseItem
     public int row;
 
     [Header("=== Properties Settings ==========")]
-    [TextArea] public string instructionText;
     public bool placeable;
-
-    [Header("=== Crafting Materials =========")]
-    public List<MaterialRequirement> materialBox;
 
     [Header("=== Max Stackable Amount ==========")]
     public int stackableAmount;

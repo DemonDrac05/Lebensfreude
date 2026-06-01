@@ -12,12 +12,15 @@ public class MovementState : PlayerState
 
     public override void FrameUpdate()
     {
+        if (InputBlocker.IsBlocked) return; // đang ngủ/overlay -> đứng yên, không nhận input di chuyển
+
         bool freezeAnimation = !InventoryManager.Instance.toolbar.activeSelf;
         if (!freezeAnimation)
         {
             player.movementInput.x = Input.GetAxisRaw("Horizontal");
             player.movementInput.y = Input.GetAxisRaw("Vertical");
-            player.rb2d.MovePosition(player.rb2d.position + player.movementInput.normalized * player.movementSpeed * Time.fixedDeltaTime);
+            float staminaMult = StaminaManager.Instance != null ? StaminaManager.Instance.MoveSpeedMultiplier : 1f;
+            player.rb2d.MovePosition(player.rb2d.position + player.movementInput.normalized * player.movementSpeed * staminaMult * Time.fixedDeltaTime);
 
             UsingToolState();
         }

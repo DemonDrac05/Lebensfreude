@@ -1,0 +1,3718 @@
+fileFormatVersion: 2
+guid: e4f210a38d9b49c49b89661e34232447
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1450060616576101788
+    second: Slime Blue -Sheet_0
+  - first:
+      213: -2589604778969199557
+    second: Slime Blue -Sheet_1
+  - first:
+      213: -1248214168344853552
+    second: Slime Blue -Sheet_2
+  - first:
+      213: -2422883192431386206
+    second: Slime Blue -Sheet_3
+  - first:
+      213: 8410798392912717752
+    second: Slime Blue -Sheet_4
+  - first:
+      213: 1827086895186854858
+    second: Slime Blue -Sheet_5
+  - first:
+      213: -5374954513885490236
+    second: Slime Blue -Sheet_6
+  - first:
+      213: -2541757817452060430
+    second: Slime Blue -Sheet_7
+  - first:
+      213: 9072406499328950891
+    second: Slime Blue -Sheet_8
+  - first:
+      213: 4604622758810378875
+    second: Slime Blue -Sheet_9
+  - first:
+      213: 3389590848350728707
+    second: Slime Blue -Sheet_10
+  - first:
+      213: -4926346524230994169
+    second: Slime Blue -Sheet_11
+  - first:
+      213: -1209003602879855478
+    second: Slime Blue -Sheet_12
+  - first:
+      213: 2008375619127757840
+    second: Slime Blue -Sheet_13
+  - first:
+      213: 213550338856535169
+    second: Slime Blue -Sheet_14
+  - first:
+      213: 51122157212469655
+    second: Slime Blue -Sheet_15
+  - first:
+      213: -2739443220028329367
+    second: Slime Blue -Sheet_16
+  - first:
+      213: -6259232390815097742
+    second: Slime Blue -Sheet_17
+  - first:
+      213: 5415606574313986449
+    second: Slime Blue -Sheet_18
+  - first:
+      213: 1884488616720368638
+    second: Slime Blue -Sheet_19
+  - first:
+      213: 7279806569971720676
+    second: Slime Blue -Sheet_20
+  - first:
+      213: -5715098602059239042
+    second: Slime Blue -Sheet_21
+  - first:
+      213: -5243148526252741048
+    second: Slime Blue -Sheet_22
+  - first:
+      213: -6827505711679912336
+    second: Slime Blue -Sheet_23
+  - first:
+      213: 5664862825265820195
+    second: Slime Blue -Sheet_24
+  - first:
+      213: 6242039733432146689
+    second: Slime Blue -Sheet_25
+  - first:
+      213: 3410697647175385762
+    second: Slime Blue -Sheet_26
+  - first:
+      213: -2774985894618701730
+    second: Slime Blue -Sheet_27
+  - first:
+      213: -1111811566582386175
+    second: Slime Blue -Sheet_28
+  - first:
+      213: 7069931531031611793
+    second: Slime Blue -Sheet_29
+  - first:
+      213: 6161213315927221566
+    second: Slime Blue -Sheet_30
+  - first:
+      213: 2022522271074940084
+    second: Slime Blue -Sheet_31
+  - first:
+      213: -3153713878084345072
+    second: Slime Blue -Sheet_32
+  - first:
+      213: 4861151733507906968
+    second: Slime Blue -Sheet_33
+  - first:
+      213: 8682307278845963846
+    second: Slime Blue -Sheet_34
+  - first:
+      213: -3707741366164021798
+    second: Slime Blue -Sheet_35
+  - first:
+      213: 9075251855095138251
+    second: Slime Blue -Sheet_36
+  - first:
+      213: 2297378743294091002
+    second: Slime Blue -Sheet_37
+  - first:
+      213: -1888489594974122994
+    second: Slime Blue -Sheet_38
+  - first:
+      213: 801795431864907461
+    second: Slime Blue -Sheet_39
+  - first:
+      213: -848855264272443549
+    second: Slime Blue -Sheet_40
+  - first:
+      213: 69910573309478472
+    second: Slime Blue -Sheet_41
+  - first:
+      213: -146082211613675777
+    second: Slime Blue -Sheet_42
+  - first:
+      213: 4103156256263051846
+    second: Slime Blue -Sheet_43
+  - first:
+      213: 9199536898953598995
+    second: Slime Blue -Sheet_44
+  - first:
+      213: -8989091551809049375
+    second: Slime Blue -Sheet_45
+  - first:
+      213: 3276058742407085488
+    second: Slime Blue -Sheet_46
+  - first:
+      213: -7577362083818811019
+    second: Slime Blue -Sheet_47
+  - first:
+      213: -1439261428186579513
+    second: Slime Blue -Sheet_48
+  - first:
+      213: 7282726963083799990
+    second: Slime Blue -Sheet_49
+  - first:
+      213: -6079024553856450758
+    second: Slime Blue -Sheet_50
+  - first:
+      213: 5424825591051868332
+    second: Slime Blue -Sheet_51
+  - first:
+      213: -6139599348707681090
+    second: Slime Blue -Sheet_52
+  - first:
+      213: 5516812499689032265
+    second: Slime Blue -Sheet_53
+  - first:
+      213: -3752489258658647307
+    second: Slime Blue -Sheet_54
+  - first:
+      213: -1009856276857551896
+    second: Slime Blue -Sheet_55
+  - first:
+      213: -1100865445125020832
+    second: Slime Blue -Sheet_56
+  - first:
+      213: -1271791408222209859
+    second: Slime Blue -Sheet_57
+  - first:
+      213: -5534743705323284436
+    second: Slime Blue -Sheet_58
+  - first:
+      213: -2338337959280841676
+    second: Slime Blue -Sheet_59
+  - first:
+      213: -7308897837381938073
+    second: Slime Blue -Sheet_60
+  - first:
+      213: -1946196450217498453
+    second: Slime Blue -Sheet_61
+  - first:
+      213: 1345072220662652623
+    second: Slime Blue -Sheet_62
+  - first:
+      213: -8091800504507136574
+    second: Slime Blue -Sheet_63
+  - first:
+      213: 8282013106562339077
+    second: Slime Blue -Sheet_64
+  - first:
+      213: 4967434909908805716
+    second: Slime Blue -Sheet_65
+  - first:
+      213: 207573022291888163
+    second: Slime Blue -Sheet_66
+  - first:
+      213: 1388872313594769428
+    second: Slime Blue -Sheet_67
+  - first:
+      213: 8436282849066671795
+    second: Slime Blue -Sheet_68
+  - first:
+      213: -8355219092922093695
+    second: Slime Blue -Sheet_69
+  - first:
+      213: 2721614954613408985
+    second: Slime Blue -Sheet_70
+  - first:
+      213: -4689861101208986351
+    second: Slime Blue -Sheet_71
+  - first:
+      213: 7028279754832738800
+    second: Slime Blue -Sheet_72
+  - first:
+      213: -1343415667515799507
+    second: Slime Blue -Sheet_73
+  - first:
+      213: 8289931033557035959
+    second: Slime Blue -Sheet_74
+  - first:
+      213: -8588555030810480518
+    second: Slime Blue -Sheet_75
+  - first:
+      213: 8620789233038777066
+    second: Slime Blue -Sheet_76
+  - first:
+      213: 7296770055508018095
+    second: Slime Blue -Sheet_77
+  - first:
+      213: -20278094252839547
+    second: Slime Blue -Sheet_78
+  - first:
+      213: -3944162610060616473
+    second: Slime Blue -Sheet_79
+  - first:
+      213: -7645032642023822066
+    second: Slime Blue -Sheet_80
+  - first:
+      213: -1873523391080480088
+    second: Slime Blue -Sheet_81
+  - first:
+      213: -1690399490675531172
+    second: Slime Blue -Sheet_82
+  - first:
+      213: -1193455104496430143
+    second: Slime Blue -Sheet_83
+  - first:
+      213: 1193366180230434281
+    second: Slime Blue -Sheet_84
+  - first:
+      213: 6208070825378968225
+    second: Slime Blue -Sheet_85
+  - first:
+      213: 4285671266800373759
+    second: Slime Blue -Sheet_86
+  - first:
+      213: -6336502591486293723
+    second: Slime Blue -Sheet_87
+  - first:
+      213: 7058281426676965433
+    second: Slime Blue -Sheet_88
+  - first:
+      213: 7438688864875350224
+    second: Slime Blue -Sheet_89
+  - first:
+      213: 6083972784935481169
+    second: Slime Blue -Sheet_90
+  - first:
+      213: 6476187536862435440
+    second: Slime Blue -Sheet_91
+  - first:
+      213: 4990773282767231970
+    second: Slime Blue -Sheet_92
+  - first:
+      213: -1121943832503439894
+    second: Slime Blue -Sheet_93
+  - first:
+      213: 3329168056008102899
+    second: Slime Blue -Sheet_94
+  - first:
+      213: -7991043456588736207
+    second: Slime Blue -Sheet_95
+  - first:
+      213: 9108074234347934680
+    second: Slime Blue -Sheet_96
+  - first:
+      213: -8842648656490609843
+    second: Slime Blue -Sheet_97
+  - first:
+      213: -9014654701366551320
+    second: Slime Blue -Sheet_98
+  - first:
+      213: -8313614910155110799
+    second: Slime Blue -Sheet_99
+  - first:
+      213: -5981021176564500976
+    second: Slime Blue -Sheet_100
+  - first:
+      213: 4863757641702777232
+    second: Slime Blue -Sheet_101
+  - first:
+      213: -1817736535236855955
+    second: Slime Blue -Sheet_102
+  - first:
+      213: -3122564088302369108
+    second: Slime Blue -Sheet_103
+  - first:
+      213: 7485968279711186804
+    second: Slime Blue -Sheet_104
+  - first:
+      213: -4374430130422147222
+    second: Slime Blue -Sheet_105
+  - first:
+      213: -1931312673467675251
+    second: Slime Blue -Sheet_106
+  - first:
+      213: 9784530074660547
+    second: Slime Blue -Sheet_107
+  - first:
+      213: 5604964135385943435
+    second: Slime Blue -Sheet_108
+  - first:
+      213: -8303555105021920612
+    second: Slime Blue -Sheet_109
+  - first:
+      213: 5204587666063526878
+    second: Slime Blue -Sheet_110
+  - first:
+      213: -5388203128387776224
+    second: Slime Blue -Sheet_111
+  - first:
+      213: 3416963188695318449
+    second: Slime Blue -Sheet_112
+  - first:
+      213: 376837369729833500
+    second: Slime Blue -Sheet_113
+  - first:
+      213: -8000927453005490038
+    second: Slime Blue -Sheet_114
+  - first:
+      213: 8825085129082857487
+    second: Slime Blue -Sheet_115
+  - first:
+      213: 8455182741646057211
+    second: Slime Blue -Sheet_116
+  - first:
+      213: 754877898127581288
+    second: Slime Blue -Sheet_117
+  - first:
+      213: 3803206002826156857
+    second: Slime Blue -Sheet_118
+  - first:
+      213: -5784828840661876113
+    second: Slime Blue -Sheet_119
+  - first:
+      213: -2079915628613488083
+    second: Slime Blue -Sheet_120
+  - first:
+      213: -6378138064214896458
+    second: Slime Blue -Sheet_121
+  - first:
+      213: -1635608626289072194
+    second: Slime Blue -Sheet_122
+  - first:
+      213: -1368462512739093718
+    second: Slime Blue -Sheet_123
+  - first:
+      213: -7732670987737215420
+    second: Slime Blue -Sheet_124
+  - first:
+      213: -6089497577419887142
+    second: Slime Blue -Sheet_125
+  - first:
+      213: 4936236493928683790
+    second: Slime Blue -Sheet_126
+  - first:
+      213: 5549402914095504588
+    second: Slime Blue -Sheet_127
+  - first:
+      213: -1621585984146635346
+    second: Slime Blue -Sheet_128
+  - first:
+      213: -8205053024399972431
+    second: Slime Blue -Sheet_129
+  - first:
+      213: 5087095488470568687
+    second: Slime Blue -Sheet_130
+  - first:
+      213: -7035143900077934203
+    second: Slime Blue -Sheet_131
+  - first:
+      213: -5297751651384322676
+    second: Slime Blue -Sheet_132
+  - first:
+      213: -2419113197987072019
+    second: Slime Blue -Sheet_133
+  - first:
+      213: -7045606815943411132
+    second: Slime Blue -Sheet_134
+  - first:
+      213: -1091372541822708318
+    second: Slime Blue -Sheet_135
+  - first:
+      213: 8429368077417199165
+    second: Slime Blue -Sheet_136
+  - first:
+      213: -5560329742851023665
+    second: Slime Blue -Sheet_137
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 831
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462923e4d8950ebe0800000000000000
+      internalID: -1450060616576101788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 831
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c03e08c20ef0cd0800000000000000
+      internalID: -2589604778969199557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 831
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d30234c3d37daee0800000000000000
+      internalID: -1248214168344853552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 831
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1ecdec290306ed0800000000000000
+      internalID: -2422883192431386206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 783
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b72df6739829b470800000000000000
+      internalID: 8410798392912717752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 783
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac34261d9dd1b5910800000000000000
+      internalID: 1827086895186854858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 783
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c319fbe8535865b0800000000000000
+      internalID: -5374954513885490236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 783
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0a2b95bbcd9bcd0800000000000000
+      internalID: -2541757817452060430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 783
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62827ab4a9a7ed70800000000000000
+      internalID: 9072406499328950891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 783
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b726297b008e6ef30800000000000000
+      internalID: 4604622758810378875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 735
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3023cd1faee3a0f20800000000000000
+      internalID: 3389590848350728707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 739
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7073bb6efe912abb0800000000000000
+      internalID: -4926346524230994169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 741
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84cd26f0a1c83fe0800000000000000
+      internalID: -1209003602879855478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 737
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c4aa91cfe2fdb10800000000000000
+      internalID: 2008375619127757840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 735
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1844539d6eea6f200800000000000000
+      internalID: 213550338856535169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 735
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7990dc4c45f95b000800000000000000
+      internalID: 51122157212469655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 639
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962fbd3d7ea8bf9d0800000000000000
+      internalID: -2739443220028329367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 687
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27cd8daad4db229a0800000000000000
+      internalID: -6259232390815097742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 591
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19951497c79182b40800000000000000
+      internalID: 5415606574313986449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 639
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef382e6996c072a10800000000000000
+      internalID: 1884488616720368638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 591
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e128bc5181170560800000000000000
+      internalID: 7279806569971720676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 599
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e717defe914efa0b0800000000000000
+      internalID: -5715098602059239042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 687
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ea71cd1389c37b0800000000000000
+      internalID: -5243148526252741048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 601
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0764e599ab3df31a0800000000000000
+      internalID: -6827505711679912336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 591
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322f841d9b2ad9e40800000000000000
+      internalID: 5664862825265820195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 600
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bd819d01e20a650800000000000000
+      internalID: 6242039733432146689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 592
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a24620807b355f20800000000000000
+      internalID: 3410697647175385762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 598
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50688608054d79d0800000000000000
+      internalID: -2774985894618701730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 687
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102bfa4554d0290f0800000000000000
+      internalID: -1111811566582386175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 639
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1990975f4417d1260800000000000000
+      internalID: 7069931531031611793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 591
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35af390ed6018550800000000000000
+      internalID: 6161213315927221566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 599
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4fcbd2a41711c10800000000000000
+      internalID: 2022522271074940084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 591
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013209ddfe1cb34d0800000000000000
+      internalID: -3153713878084345072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 596
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d53030fb7467340800000000000000
+      internalID: 4861151733507906968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 590
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ee6622870cd7870800000000000000
+      internalID: 8682307278845963846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 687
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add95c63fd47b8cc0800000000000000
+      internalID: -3707741366164021798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 591
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7862eba75c1fd70800000000000000
+      internalID: 9075251855095138251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 597
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afed3948bcde1ef10800000000000000
+      internalID: 2297378743294091002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 594
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ccb8118bcbac5e0800000000000000
+      internalID: -1888489594974122994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 590
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6b6da72bc802b00800000000000000
+      internalID: 801795431864907461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 682
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367125372a24834f0800000000000000
+      internalID: -848855264272443549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 590
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846c728cb4f58f000800000000000000
+      internalID: 69910573309478472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 590
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe63c4a00309fdf0800000000000000
+      internalID: -146082211613675777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 683
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a1b7820e651f830800000000000000
+      internalID: 4103156256263051846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 590
+        width: 78
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3185a3081125baf70800000000000000
+      internalID: 9199536898953598995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 685
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ece4f02cd4504380800000000000000
+      internalID: -8989091551809049375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 543
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bdbc74a116e67d20800000000000000
+      internalID: 3276058742407085488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 543
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5715773d45dc7d690800000000000000
+      internalID: -7577362083818811019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 543
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd740a4b57b60ce0800000000000000
+      internalID: -1439261428186579513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 543
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bde4ce5691711560800000000000000
+      internalID: 7282726963083799990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 495
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f32865067f2aba0800000000000000
+      internalID: -6079024553856450758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 493
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca85813122ad84b40800000000000000
+      internalID: 5424825591051868332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 493
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc1f0ddbe2cbcaa0800000000000000
+      internalID: -6139599348707681090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 494
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a46683db7af8c40800000000000000
+      internalID: 5516812499689032265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 495
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2be2a96ea7cebc0800000000000000
+      internalID: -3752489258658647307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 496
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305bf01154cf1f0800000000000000
+      internalID: -1009856276857551896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 447
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06322d5d5b0f8b0f0800000000000000
+      internalID: -1100865445125020832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 451
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db87584d370b95ee0800000000000000
+      internalID: -1271791408222209859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 453
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c285061ace3a033b0800000000000000
+      internalID: -5534743705323284436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 449
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ce04cd30e8c8fd0800000000000000
+      internalID: -2338337959280841676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 447
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7649a3f1424919a90800000000000000
+      internalID: -7308897837381938073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 447
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8e8a1d3a8bdf4e0800000000000000
+      internalID: -1946196450217498453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 399
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fced7d5ee08aaa210800000000000000
+      internalID: 1345072220662652623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 399
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c58687305624bf80800000000000000
+      internalID: -8091800504507136574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 399
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50117c95a0f9fe270800000000000000
+      internalID: 8282013106562339077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 394
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4582df16bbfdfe440800000000000000
+      internalID: 4967434909908805716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 394
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32889a2609271e200800000000000000
+      internalID: 207573022291888163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 395
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410f03ab204464310800000000000000
+      internalID: 1388872313594769428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 302
+        width: 78
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bed65bcd82b31570800000000000000
+      internalID: 8436282849066671795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 397
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f21d9b08c4c0c80800000000000000
+      internalID: -8355219092922093695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 351
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d48f19a16e15c520800000000000000
+      internalID: 2721614954613408985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 351
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d14882d244aeeb0800000000000000
+      internalID: -4689861101208986351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 351
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9ffd81337798160800000000000000
+      internalID: 7028279754832738800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 303
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28c600719a3b5de0800000000000000
+      internalID: -1343415667515799507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 303
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb67a36a50cb0370800000000000000
+      internalID: 8289931033557035959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 311
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70b5ae14b25fc880800000000000000
+      internalID: -8588555030810480518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 313
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aead9cee12233a770800000000000000
+      internalID: 8620789233038777066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 303
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3434e94b5534560800000000000000
+      internalID: 7296770055508018095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 312
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d66534e25f7bff0800000000000000
+      internalID: -20278094252839547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec95f2d0058349c0800000000000000
+      internalID: -3944162610060616473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 311
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d67e3315367e590800000000000000
+      internalID: -7645032642023822066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 308
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a24344f668eff5e0800000000000000
+      internalID: -1873523391080480088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 303
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52a8cd8e9e7a88e0800000000000000
+      internalID: -1690399490675531172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 309
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c31d19d7eeff6fe0800000000000000
+      internalID: -1193455104496430143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 302
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed899bd730bf8010800000000000000
+      internalID: 1193366180230434281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 302
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2fd2f168f772650800000000000000
+      internalID: 6208070825378968225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 304
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff0cb98f43c97b30800000000000000
+      internalID: 4285671266800373759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 303
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5290e1c17783018a0800000000000000
+      internalID: -6336502591486293723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 303
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93061d9af8d04f160800000000000000
+      internalID: 7058281426676965433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 302
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d88c895c188b3760800000000000000
+      internalID: 7438688864875350224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 306
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f293d730d9e6450800000000000000
+      internalID: 6083972784935481169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 302
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0785f71a04a00e950800000000000000
+      internalID: 6476187536862435440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 255
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebd9d1cbd9c24540800000000000000
+      internalID: 4990773282767231970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 255
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed21b5570e0e60f0800000000000000
+      internalID: -1121943832503439894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 255
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3d0ff45b4933e20800000000000000
+      internalID: 3329168056008102899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 255
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1399159805c1a1190800000000000000
+      internalID: -7991043456588736207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 203
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3523e6241666e70800000000000000
+      internalID: 9108074234347934680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 204
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43ca44b5e9984580800000000000000
+      internalID: -8842648656490609843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecdd309f4385e280800000000000000
+      internalID: -9014654701366551320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 206
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17640d0694b10ac80800000000000000
+      internalID: -8313614910155110799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 206
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016b8c0cde42ffca0800000000000000
+      internalID: -5981021176564500976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 204
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091294b4ec98f7340800000000000000
+      internalID: 4863757641702777232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 159
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6735f1804a16c6e0800000000000000
+      internalID: -1817736535236855955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 163
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca68858718c6aa4d0800000000000000
+      internalID: -3122564088302369108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 165
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ff600fc7083e760800000000000000
+      internalID: 7485968279711186804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 161
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a671c6d19f6ea43c0800000000000000
+      internalID: -4374430130422147222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 159
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dcfb32b599235e0800000000000000
+      internalID: -1931312673467675251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 159
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cee46f6af2c22000800000000000000
+      internalID: 9784530074660547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 111
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8dcb7c4f25d8cd40800000000000000
+      internalID: 5604964135385943435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 61
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a794840a8d3cc80800000000000000
+      internalID: -8303555105021920612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 15
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb881e38e86a3840800000000000000
+      internalID: 5204587666063526878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 111
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0215cca7dc14935b0800000000000000
+      internalID: -5388203128387776224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 15
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf35c09aed7b6f20800000000000000
+      internalID: 3416963188695318449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 23
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ad6d8579bca3500800000000000000
+      internalID: 376837369729833500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 62
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88dfe94fdef6f090800000000000000
+      internalID: -8000927453005490038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08e097ea20097a70800000000000000
+      internalID: 8825085129082857487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 15
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe93d2f7e7d65570800000000000000
+      internalID: 8455182741646057211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 24
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86020b6e27dd97a00800000000000000
+      internalID: 754877898127581288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 111
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b161695b3b7c430800000000000000
+      internalID: 3803206002826156857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 16
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f620ae991d828bfa0800000000000000
+      internalID: -5784828840661876113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22b5b171c7a223e0800000000000000
+      internalID: -2079915628613488083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 63
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0d212393d4c77a0800000000000000
+      internalID: -6378138064214896458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 15
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7a976ce962d49e0800000000000000
+      internalID: -1635608626289072194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 23
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a237fb7589e320de0800000000000000
+      internalID: -1368462512739093718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 15
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e44f2c4b800b490800000000000000
+      internalID: -7732670987737215420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 20
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add29458732cd7ba0800000000000000
+      internalID: -6089497577419887142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 14
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0950fb10f8018440800000000000000
+      internalID: 4936236493928683790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 111
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc1e226c80730d40800000000000000
+      internalID: 5549402914095504588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 15
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea500329328fe79e0800000000000000
+      internalID: -1621585984146635346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 21
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7256d1fbbc12e80800000000000000
+      internalID: -8205053024399972431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 18
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feec7c8e46ef89640800000000000000
+      internalID: 5087095488470568687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 14
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589391c85e52e5e90800000000000000
+      internalID: -7035143900077934203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 111
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c859ff611fa9a76b0800000000000000
+      internalID: -5297751651384322676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 14
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7758a0d559d6ed0800000000000000
+      internalID: -2419113197987072019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 14
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a3f9c1ee9f83e90800000000000000
+      internalID: -7045606815943411132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 111
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5da0f947aaad0f0800000000000000
+      internalID: -1091372541822708318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 14
+        width: 78
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36387f0b912bf470800000000000000
+      internalID: 8429368077417199165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Blue -Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 111
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc535b0f8db5d2b0800000000000000
+      internalID: -5560329742851023665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Slime Blue -Sheet_0: -1450060616576101788
+      Slime Blue -Sheet_1: -2589604778969199557
+      Slime Blue -Sheet_10: 3389590848350728707
+      Slime Blue -Sheet_100: -5981021176564500976
+      Slime Blue -Sheet_101: 4863757641702777232
+      Slime Blue -Sheet_102: -1817736535236855955
+      Slime Blue -Sheet_103: -3122564088302369108
+      Slime Blue -Sheet_104: 7485968279711186804
+      Slime Blue -Sheet_105: -4374430130422147222
+      Slime Blue -Sheet_106: -1931312673467675251
+      Slime Blue -Sheet_107: 9784530074660547
+      Slime Blue -Sheet_108: 5604964135385943435
+      Slime Blue -Sheet_109: -8303555105021920612
+      Slime Blue -Sheet_11: -4926346524230994169
+      Slime Blue -Sheet_110: 5204587666063526878
+      Slime Blue -Sheet_111: -5388203128387776224
+      Slime Blue -Sheet_112: 3416963188695318449
+      Slime Blue -Sheet_113: 376837369729833500
+      Slime Blue -Sheet_114: -8000927453005490038
+      Slime Blue -Sheet_115: 8825085129082857487
+      Slime Blue -Sheet_116: 8455182741646057211
+      Slime Blue -Sheet_117: 754877898127581288
+      Slime Blue -Sheet_118: 3803206002826156857
+      Slime Blue -Sheet_119: -5784828840661876113
+      Slime Blue -Sheet_12: -1209003602879855478
+      Slime Blue -Sheet_120: -2079915628613488083
+      Slime Blue -Sheet_121: -6378138064214896458
+      Slime Blue -Sheet_122: -1635608626289072194
+      Slime Blue -Sheet_123: -1368462512739093718
+      Slime Blue -Sheet_124: -7732670987737215420
+      Slime Blue -Sheet_125: -6089497577419887142
+      Slime Blue -Sheet_126: 4936236493928683790
+      Slime Blue -Sheet_127: 5549402914095504588
+      Slime Blue -Sheet_128: -1621585984146635346
+      Slime Blue -Sheet_129: -8205053024399972431
+      Slime Blue -Sheet_13: 2008375619127757840
+      Slime Blue -Sheet_130: 5087095488470568687
+      Slime Blue -Sheet_131: -7035143900077934203
+      Slime Blue -Sheet_132: -5297751651384322676
+      Slime Blue -Sheet_133: -2419113197987072019
+      Slime Blue -Sheet_134: -7045606815943411132
+      Slime Blue -Sheet_135: -1091372541822708318
+      Slime Blue -Sheet_136: 8429368077417199165
+      Slime Blue -Sheet_137: -5560329742851023665
+      Slime Blue -Sheet_14: 213550338856535169
+      Slime Blue -Sheet_15: 51122157212469655
+      Slime Blue -Sheet_16: -2739443220028329367
+      Slime Blue -Sheet_17: -6259232390815097742
+      Slime Blue -Sheet_18: 5415606574313986449
+      Slime Blue -Sheet_19: 1884488616720368638
+      Slime Blue -Sheet_2: -1248214168344853552
+      Slime Blue -Sheet_20: 7279806569971720676
+      Slime Blue -Sheet_21: -5715098602059239042
+      Slime Blue -Sheet_22: -5243148526252741048
+      Slime Blue -Sheet_23: -6827505711679912336
+      Slime Blue -Sheet_24: 5664862825265820195
+      Slime Blue -Sheet_25: 6242039733432146689
+      Slime Blue -Sheet_26: 3410697647175385762
+      Slime Blue -Sheet_27: -2774985894618701730
+      Slime Blue -Sheet_28: -1111811566582386175
+      Slime Blue -Sheet_29: 7069931531031611793
+      Slime Blue -Sheet_3: -2422883192431386206
+      Slime Blue -Sheet_30: 6161213315927221566
+      Slime Blue -Sheet_31: 2022522271074940084
+      Slime Blue -Sheet_32: -3153713878084345072
+      Slime Blue -Sheet_33: 4861151733507906968
+      Slime Blue -Sheet_34: 8682307278845963846
+      Slime Blue -Sheet_35: -3707741366164021798
+      Slime Blue -Sheet_36: 9075251855095138251
+      Slime Blue -Sheet_37: 2297378743294091002
+      Slime Blue -Sheet_38: -1888489594974122994
+      Slime Blue -Sheet_39: 801795431864907461
+      Slime Blue -Sheet_4: 8410798392912717752
+      Slime Blue -Sheet_40: -848855264272443549
+      Slime Blue -Sheet_41: 69910573309478472
+      Slime Blue -Sheet_42: -146082211613675777
+      Slime Blue -Sheet_43: 4103156256263051846
+      Slime Blue -Sheet_44: 9199536898953598995
+      Slime Blue -Sheet_45: -8989091551809049375
+      Slime Blue -Sheet_46: 3276058742407085488
+      Slime Blue -Sheet_47: -7577362083818811019
+      Slime Blue -Sheet_48: -1439261428186579513
+      Slime Blue -Sheet_49: 7282726963083799990
+      Slime Blue -Sheet_5: 1827086895186854858
+      Slime Blue -Sheet_50: -6079024553856450758
+      Slime Blue -Sheet_51: 5424825591051868332
+      Slime Blue -Sheet_52: -6139599348707681090
+      Slime Blue -Sheet_53: 5516812499689032265
+      Slime Blue -Sheet_54: -3752489258658647307
+      Slime Blue -Sheet_55: -1009856276857551896
+      Slime Blue -Sheet_56: -1100865445125020832
+      Slime Blue -Sheet_57: -1271791408222209859
+      Slime Blue -Sheet_58: -5534743705323284436
+      Slime Blue -Sheet_59: -2338337959280841676
+      Slime Blue -Sheet_6: -5374954513885490236
+      Slime Blue -Sheet_60: -7308897837381938073
+      Slime Blue -Sheet_61: -1946196450217498453
+      Slime Blue -Sheet_62: 1345072220662652623
+      Slime Blue -Sheet_63: -8091800504507136574
+      Slime Blue -Sheet_64: 8282013106562339077
+      Slime Blue -Sheet_65: 4967434909908805716
+      Slime Blue -Sheet_66: 207573022291888163
+      Slime Blue -Sheet_67: 1388872313594769428
+      Slime Blue -Sheet_68: 8436282849066671795
+      Slime Blue -Sheet_69: -8355219092922093695
+      Slime Blue -Sheet_7: -2541757817452060430
+      Slime Blue -Sheet_70: 2721614954613408985
+      Slime Blue -Sheet_71: -4689861101208986351
+      Slime Blue -Sheet_72: 7028279754832738800
+      Slime Blue -Sheet_73: -1343415667515799507
+      Slime Blue -Sheet_74: 8289931033557035959
+      Slime Blue -Sheet_75: -8588555030810480518
+      Slime Blue -Sheet_76: 8620789233038777066
+      Slime Blue -Sheet_77: 7296770055508018095
+      Slime Blue -Sheet_78: -20278094252839547
+      Slime Blue -Sheet_79: -3944162610060616473
+      Slime Blue -Sheet_8: 9072406499328950891
+      Slime Blue -Sheet_80: -7645032642023822066
+      Slime Blue -Sheet_81: -1873523391080480088
+      Slime Blue -Sheet_82: -1690399490675531172
+      Slime Blue -Sheet_83: -1193455104496430143
+      Slime Blue -Sheet_84: 1193366180230434281
+      Slime Blue -Sheet_85: 6208070825378968225
+      Slime Blue -Sheet_86: 4285671266800373759
+      Slime Blue -Sheet_87: -6336502591486293723
+      Slime Blue -Sheet_88: 7058281426676965433
+      Slime Blue -Sheet_89: 7438688864875350224
+      Slime Blue -Sheet_9: 4604622758810378875
+      Slime Blue -Sheet_90: 6083972784935481169
+      Slime Blue -Sheet_91: 6476187536862435440
+      Slime Blue -Sheet_92: 4990773282767231970
+      Slime Blue -Sheet_93: -1121943832503439894
+      Slime Blue -Sheet_94: 3329168056008102899
+      Slime Blue -Sheet_95: -7991043456588736207
+      Slime Blue -Sheet_96: 9108074234347934680
+      Slime Blue -Sheet_97: -8842648656490609843
+      Slime Blue -Sheet_98: -9014654701366551320
+      Slime Blue -Sheet_99: -8313614910155110799
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

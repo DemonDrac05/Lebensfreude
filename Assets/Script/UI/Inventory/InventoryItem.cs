@@ -45,21 +45,8 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
     public void InitialiseItem<T>(T newItem) where T : BaseItem
     {
         item = newItem;
-        switch (newItem)
-        {
-            case Product product:
-                image.sprite = product.image;
-                break;
-            case Plant plant:
-                image.sprite = plant.image;
-                break;
-            case Tool tool:
-                image.sprite = tool.image;
-                break;
-            case CraftingItem craftingItem:
-                image.sprite= craftingItem.image;
-                break;
-        }
+        // Mọi BaseItem đều có .image -> set trực tiếp (tự hỗ trợ Artifact, Consumable & item mới sau này).
+        image.sprite = newItem.image;
         ActivateSlider(newItem);
     }
 

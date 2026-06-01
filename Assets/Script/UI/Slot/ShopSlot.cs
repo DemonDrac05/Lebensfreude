@@ -25,8 +25,7 @@ public class ShopSlot : BaseSlot
             {
                 if (shopType.CanSellItem(cachedItem.GetItem<BaseItem>()))
                 {
-                    InventoryManager.token += (cachedItem.GetItem<BaseItem>().sellingPrice * cachedItem.count);
-                    Destroy(cachedItem.gameObject);
+                    SellCachedItem(cachedItem);
                 }
             }
         }
@@ -71,5 +70,28 @@ public class ShopSlot : BaseSlot
                 cachedItem.image.color = color;
             }
         }
+    }
+
+    // ─────────────────────────────────────────
+    // SELL  (giá động nếu có VillageMarket, ngược lại giữ giá tĩnh)
+    // ─────────────────────────────────────────
+    // Nếu làng gắn VillageMarket -> bán theo GIÁ ĐỘNG (EconomicSimulator) + ghi nhận để giá rớt + demand bonus.
+    // Nếu CHƯA gắn VillageMarket -> fallback giá tĩnh sellingPrice như cũ (tương thích ngược 100%).
+    // Dùng trong: ShopSlot.OnPointerClick().
+    private void SellCachedItem(InventoryItem soldSlotItem)
+    {
+        BaseItem soldItem = soldSlotItem.GetItem<BaseItem>();
+        var market = GetComponentInParent<VillageMarket>();
+        if (market != null)
+        {
+            int coins = market.RegisterSale(soldItem, soldSlotItem.count);
+            if (coins <= 0) return;   // hết hạn mức ngày / làng chưa mua món này -> KHÔNG bán, giữ item
+            InventoryManager.token += coins;
+        }
+        else
+        {
+            InventoryManager.token += soldItem.sellingPrice * soldSlotItem.count;
+        }
+        Destroy(soldSlotItem.gameObject);
     }
 }
