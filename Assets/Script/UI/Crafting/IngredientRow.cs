@@ -66,7 +66,7 @@ public class IngredientRow : MonoBehaviour
 
         // Nhãn fuel giúp phân biệt với nguyên liệu chính
         string fuelTag = _isFuel ? " [fuel]" : "";
-        materialText.text  = $"{_material.name} × {_quantity}  (có: {have}){fuelTag}";
+        materialText.text  = $"{_material.name} × {_quantity} \n(have: {have}){fuelTag}";
         materialText.color  = enough ? colorEnough : colorNotEnough;
     }
 }

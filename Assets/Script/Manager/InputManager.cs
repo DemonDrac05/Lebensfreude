@@ -59,6 +59,8 @@ public class InputManager : MonoBehaviour
     {
         // Đóng CraftingStationUI nếu đang mở (mở bằng click world, không qua keyMappings)
         CraftingStationUI.CloseIfOpen();
+        ProcessingStationUI.CloseIfOpen();
+        VillageMarketUI.CloseIfOpen();
         GameObject uiToToggle = UIInput;
 
         // Đang mở đúng panel này -> đóng lại

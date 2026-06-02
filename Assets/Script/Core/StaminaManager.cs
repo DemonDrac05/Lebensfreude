@@ -31,7 +31,7 @@ public class StaminaManager : MonoBehaviour
     // DATA
     // ─────────────────────────────────────────
     [SerializeField] private float maxStamina = 100f;
-    private float currentStamina;
+    public float currentStamina;
 
     public float Current => currentStamina;
     public float Max     => maxStamina;
@@ -99,6 +99,13 @@ public class StaminaManager : MonoBehaviour
     public void RestoreFull()
     {
         currentStamina = maxStamina;
+        OnStaminaChanged?.Invoke(currentStamina, maxStamina);
+    }
+
+    // Đặt stamina khi load. Dùng trong: SaveManager.Load().
+    public void LoadStamina(float value)
+    {
+        currentStamina = Mathf.Clamp(value, 0f, maxStamina);
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 }

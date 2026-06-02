@@ -115,7 +115,7 @@ public class CraftingStationUI : MonoBehaviour
         foreach (var output in _station.Outputs)
         {
             if (output == null) continue;
-
+            
             var go = Instantiate(craftingSlotPrefab, slotsContainer);
             var slot = go.GetComponent<CraftingSlot>();
             if (slot == null)
@@ -126,6 +126,8 @@ public class CraftingStationUI : MonoBehaviour
             }
             slot.Setup(output, _station);
             _slots.Add(slot);
+            
+            Debug.Log(slot.name);
         }
     }
 

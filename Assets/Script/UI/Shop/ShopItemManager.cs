@@ -54,6 +54,8 @@ public class ShopItemManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
+        InventoryManager.Instance.SyncFirstRowFromToolbar(); // hàng đầu khớp toolbar trước khi copy
+
         for (int i = 0; i < InventoryManager.Instance.MainInventorySlots.Length; i++)
         {
             var copySlot = copySlots[i];

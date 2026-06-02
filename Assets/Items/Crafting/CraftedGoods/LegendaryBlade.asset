@@ -21,8 +21,8 @@ MonoBehaviour:
     inputs:
     - material: {fileID: 11400000, guid: 0678420d953d1cd43bd5dadf15e0b13e, type: 2}
       quantity: 3
-    - material: {fileID: 11400000, guid: 6e8a7fb11db901b49a8830ef1ad0353f, type: 2}
-      quantity: 1
+    - material: {fileID: 11400000, guid: 20a83c5ba6be64c44ba22c3d0c87612e, type: 2}
+      quantity: 2
     - material: {fileID: 11400000, guid: a5a1f8c20e7d4ed4e8ba731a964342cc, type: 2}
       quantity: 1
     outputAmount: 1

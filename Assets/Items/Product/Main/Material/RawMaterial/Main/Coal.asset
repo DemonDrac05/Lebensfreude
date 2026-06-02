@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80903dc95a979d04297e3f0ff0034bc9, type: 3}
   m_Name: Coal
   m_EditorClassIdentifier: 
-  image: {fileID: 4867794069187047327, guid: a04cfdab9fd1e084f97924b1fe3e03da, type: 3}
+  image: {fileID: 21300000, guid: 7a301bbaded7fdb4ebadb173346ebba3, type: 3}
   buyingPrice: -1
   sellingPrice: 4
   isPurchaseable: 1

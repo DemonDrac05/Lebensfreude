@@ -121,4 +121,53 @@ public class ProcessingStation : MonoBehaviour
         if (collected > 0) OnStateChanged?.Invoke();
         return collected;
     }
+
+    // Tổng hợp sản phẩm đã xong (gom theo item + số lượng) cho UI hiển thị. Dùng trong: ProcessingStationUI.
+    public Dictionary<BaseItem, int> GetReadySummary()
+    {
+        var d = new Dictionary<BaseItem, int>();
+        foreach (var it in _ready)
+        {
+            if (it == null) continue;
+            d.TryGetValue(it, out int n);
+            d[it] = n + 1;
+        }
+        return d;
+    }
+
+    // ── TIME INFO (cho UI hiển thị, chỉ ĐỌC — không đổi state) ──
+    // Giây còn lại tới khi mẻ SỚM NHẤT xong (0 nếu không nấu gì). Dùng trong: ProcessingStationUI.Update().
+    public float NextFinishRemaining
+    {
+        get
+        {
+            if (_cookingFinish.Count == 0) return 0f;
+            float soonest = float.MaxValue;
+            foreach (var t in _cookingFinish) if (t < soonest) soonest = t;
+            return Mathf.Max(0f, soonest - Time.time);
+        }
+    }
+
+    // Tiến độ 0..1 của mẻ sớm nhất (cho slider). Dùng trong: ProcessingStationUI.Update().
+    public float NextBatchProgress01
+    {
+        get
+        {
+            if (_cookingFinish.Count == 0 || _currentRecipe == null || _currentRecipe.recipe == null) return 0f;
+            float ct = Mathf.Max(0.1f, _currentRecipe.recipe.craftTimeSeconds);
+            return Mathf.Clamp01(1f - NextFinishRemaining / ct);
+        }
+    }
+
+    // Giây tới khi TẤT CẢ mẻ xong (mẻ trễ nhất). Dùng trong: ProcessingStationUI (nếu muốn hiện tổng).
+    public float TotalRemaining
+    {
+        get
+        {
+            if (_cookingFinish.Count == 0) return 0f;
+            float latest = 0f;
+            foreach (var t in _cookingFinish) if (t > latest) latest = t;
+            return Mathf.Max(0f, latest - Time.time);
+        }
+    }
 }

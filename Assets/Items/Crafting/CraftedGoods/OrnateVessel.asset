@@ -20,19 +20,11 @@ MonoBehaviour:
     station: 1
     inputs:
     - material: {fileID: 11400000, guid: 843bbb5689bd0364cad79b8990a829fa, type: 2}
-      quantity: 2
-    - material: {fileID: 11400000, guid: 34040ceecb722f64bbd9fdd88c5a7aea, type: 2}
-      quantity: 1
-    - material: {fileID: 11400000, guid: a5a1f8c20e7d4ed4e8ba731a964342cc, type: 2}
-      quantity: 1
+      quantity: 5
     - material: {fileID: 11400000, guid: 087d1769182bca24eb1443453ce166e3, type: 2}
       quantity: 2
-    - material: {fileID: 11400000, guid: 3fe46d96b142fd9418664d9c81c54b0a, type: 2}
-      quantity: 4
-    - material: {fileID: 11400000, guid: d5a0eb79731b6aa469446e8744fc405c, type: 2}
-      quantity: 8
-    - material: {fileID: 11400000, guid: 20a83c5ba6be64c44ba22c3d0c87612e, type: 2}
-      quantity: 16
+    - material: {fileID: 11400000, guid: a5a1f8c20e7d4ed4e8ba731a964342cc, type: 2}
+      quantity: 1
     outputAmount: 1
     craftTimeSeconds: 100
     fuel: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}

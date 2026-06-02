@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chest : MonoBehaviour
 {
@@ -23,39 +24,40 @@ public class Chest : MonoBehaviour
     private const float YOffset = 0.5f;
 
     private PlayerController tileControl;
+    private Collider2D _col;
 
-    private void Awake() => tileControl = FindObjectOfType<PlayerController>();
+    private void Awake()
+    {
+        tileControl = FindObjectOfType<PlayerController>();
+        _col = GetComponent<Collider2D>();
+    }
 
     private void Start() => chestIndex = 0;
 
     private void Update()
     {
-        if (IsChestOnGround() && Input.GetMouseButtonDown(1))
+        if (InputBlocker.IsBlocked) return; // đang ngủ/overlay -> không tương tác rương
+
+        if (Input.GetMouseButtonDown(1) && IsMouseOverChest())
         {
-            TryOpenChest();
+            StartCoroutine(OpenChest());
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E))
+        if (isOpen && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)))
         {
             StartCoroutine(CloseChest());
         }
     }
 
-    // Check if the chest is on the ground (using alpha channel)
-    private bool IsChestOnGround()
+    // Chuột có nằm trên collider của rương ĐÃ ĐẶT không?
+    // Dùng Collider2D.OverlapPoint thay vì so alpha + vị trí chính xác -> KHÔNG phụ thuộc
+    // offset đặt đồ hay alpha animation (sửa bug: đóng rương xong không mở lại được = "bị disable").
+    private bool IsMouseOverChest()
     {
-        return GetComponent<SpriteRenderer>().color.a == 1f;
-    }
-
-    private void TryOpenChest()
-    {
-        Vector3 checkPosition = tileControl.mousePosUpdate;
-        checkPosition.y -= YOffset;
-
-        if (checkPosition == transform.position)
-        {
-            StartCoroutine(OpenChest());
-        }
+        if (_col == null || !_col.enabled) return false; // ghost preview có collider tắt -> bỏ qua
+        Vector3 m = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        m.z = 0f;
+        return _col.OverlapPoint(m);
     }
 
     private IEnumerator OpenChest()
@@ -213,6 +215,8 @@ public class Chest : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
+        InventoryManager.Instance.SyncFirstRowFromToolbar(); // hàng đầu khớp toolbar trước khi copy
+
         for (int i = 0; i < InventoryManager.Instance.MainInventorySlots.Length; i++)
         {
             var copySlot = copySlots[i];
@@ -235,18 +239,18 @@ public class Chest : MonoBehaviour
             // includeInactive=true: cùng lý do như InventoryManager.MirrorSlots —
             // slot nguồn có thể nằm trong panel đang inactive → phải tìm cả inactive.
             var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>(true);
+            if (sourceItem == null) return;
+            
+            var newItem = Instantiate(sourceItem, targetSlot.transform);
+            
+            newItem.InitialiseItem(sourceItem.GetItem<BaseItem>());
+            newItem.count = sourceItem.count;
+            newItem.RefreshCount();
 
-            if (sourceItem != null)
-            {
-                var newItem = Instantiate(sourceItem.gameObject, targetSlot.transform);
-                newItem.GetComponent<InventoryItem>().InitialiseItem(sourceItem.GetItem<BaseItem>());
-                newItem.GetComponent<InventoryItem>().count = sourceItem.count;
-                newItem.GetComponent<InventoryItem>().RefreshCount();
-
-                newItem.name = sourceItem.gameObject.name.Replace("(Clone)", "");
-
-                newItem.SetActive(true);
-            }
+            newItem.name = sourceItem.gameObject.name.Replace("(Clone)", "");
+            
+            newItem.GetComponent<Image>().enabled = true;
+            newItem.enabled = true;
         }
     }
 }

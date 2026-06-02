@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80903dc95a979d04297e3f0ff0034bc9, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  image: {fileID: 4867794069187047327, guid: a04cfdab9fd1e084f97924b1fe3e03da, type: 3}
+  image: {fileID: 21300000, guid: f10317a827a0c9a4da221187c138d71e, type: 3}
   buyingPrice: -1
   sellingPrice: 30
   isPurchaseable: 1

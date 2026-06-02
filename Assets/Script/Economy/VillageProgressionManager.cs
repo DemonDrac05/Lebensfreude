@@ -228,4 +228,13 @@ public class VillageProgressionManager : MonoBehaviour
         if (!_demandDoneThisPhase.ContainsKey(id)) _demandDoneThisPhase[id] = 0;
         if (!_revivalUnlocked.ContainsKey(id)) _revivalUnlocked[id] = false;
     }
+
+    // Khôi phục phase + revival cho 1 làng khi load. Dùng trong: SaveManager.Load().
+    public void LoadState(VillageId id, VillagePhase phase, bool revivalUnlocked)
+    {
+        EnsureBuckets(id);
+        _phase[id] = phase;
+        _revivalUnlocked[id] = revivalUnlocked;
+        OnPhaseAdvanced?.Invoke(id, phase); // để VillageVisual đổi ảnh đúng phase
+    }
 }

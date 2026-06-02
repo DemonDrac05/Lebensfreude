@@ -268,7 +268,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetPrefabProperties(GameObject prefab, bool colliderState, float alpha)
     {
-        prefab.GetComponent<BoxCollider2D>().enabled = colliderState;
+        prefab.GetComponent<Collider2D>().enabled = colliderState;
 
         Color color = prefab.GetComponent<SpriteRenderer>().color;
         color.a = alpha;

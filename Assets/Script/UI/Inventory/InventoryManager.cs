@@ -31,7 +31,7 @@ public class InventoryManager : MonoBehaviour
 
     // Theo dõi trạng thái bật/tắt của toolbar để CHỈ mirror khi đổi trạng thái
     // (trước đây mirror mỗi frame khiến item ra ảnh mặc định, mất số lượng/tên và gây lag).
-    private bool _toolbarWasActive = true;
+    private bool _invWasOpen = false; // theo trạng thái BIG INVENTORY, không theo toolbar
 
     private void Awake()
     {
@@ -220,16 +220,25 @@ public class InventoryManager : MonoBehaviour
     // Dùng trong: InventoryManager.LateUpdate().
     private void HandleSlotsMirror()
     {
-        bool toolbarActive = toolbar.activeSelf;
-        if (toolbarActive == _toolbarWasActive) return; // không đổi trạng thái -> bỏ qua
+        // Key theo BIG INVENTORY (mainInventory), KHÔNG theo toolbar — vì rương/shop cũng tắt/bật
+        // toolbar; nếu key theo toolbar thì mirror này chạy NHẦM lúc mở/đóng rương, đụng độ với
+        // mirror riêng của rương/shop -> item bị disable luân phiên / trùng item.
+        if (mainInventory == null) return;
+        bool invOpen = mainInventory.activeSelf;
+        if (invOpen == _invWasOpen) return;
 
-        if (toolbarActive)
-            MirrorFirstRowToToolbar();   // Vừa ĐÓNG inventory: trả hàng đầu (đã sắp xếp) về toolbar
+        if (invOpen)
+            MirrorToolbarToFirstRow();   // Vừa MỞ big inventory: đẩy toolbar lên hàng đầu
         else
-            MirrorToolbarToFirstRow();   // Vừa MỞ inventory: đẩy toolbar lên hàng đầu để hiển thị
+            MirrorFirstRowToToolbar();   // Vừa ĐÓNG big inventory: trả hàng đầu về toolbar
 
-        _toolbarWasActive = toolbarActive;
+        _invWasOpen = invOpen;
     }
+
+    // Đồng bộ thủ công cho Chest/Shop (chúng tự gọi trước khi copy để hàng đầu luôn tươi).
+    // Dùng trong: Chest.CopyInventory(), ShopItemManager.CopyInventory().
+    public void SyncFirstRowFromToolbar() => MirrorToolbarToFirstRow();
+    public void SyncToolbarFromFirstRow() => MirrorFirstRowToToolbar();
 
     private void MirrorToolbarToFirstRow()
     {
@@ -277,6 +286,15 @@ public class InventoryManager : MonoBehaviour
                 newItem.name = sourceItem.gameObject.name.Replace("(Clone)", "");
 
                 newItem.SetActive(true);
+
+                // Defensive: clone đôi khi bị tắt component Image/script -> bật lại cho chắc
+                // (sửa bug "inventoryitem bị disabled image với script" khi mirror qua chest/shop).
+                var clonedItem = newItem.GetComponent<InventoryItem>();
+                if (clonedItem != null)
+                {
+                    clonedItem.enabled = true;
+                    if (clonedItem.image != null) clonedItem.image.enabled = true;
+                }
             }
         }
     }
@@ -342,5 +360,28 @@ public class InventoryManager : MonoBehaviour
         if (token < amount) return false;
         token -= amount;
         return true;
+    }
+
+    // ── SAVE/LOAD helpers ──
+    // Liệt kê tất cả item trong kho (item + count). Dùng trong: SaveManager.Save().
+    public List<KeyValuePair<BaseItem, int>> GetAllStacks()
+    {
+        var list = new List<KeyValuePair<BaseItem, int>>();
+        foreach (var slot in GetRealStorageSlots())
+        {
+            var it = slot.GetComponentInChildren<InventoryItem>(true);
+            if (it != null) { var bi = it.GetItem<BaseItem>(); if (bi != null) list.Add(new KeyValuePair<BaseItem, int>(bi, it.count)); }
+        }
+        return list;
+    }
+
+    // Xóa sạch kho (trước khi load). Dùng trong: SaveManager.Load().
+    public void ClearAll()
+    {
+        foreach (var slot in GetRealStorageSlots())
+        {
+            var it = slot.GetComponentInChildren<InventoryItem>(true);
+            if (it != null) Destroy(it.gameObject);
+        }
     }
 }

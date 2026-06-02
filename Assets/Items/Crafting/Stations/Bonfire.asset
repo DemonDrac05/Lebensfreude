@@ -30,7 +30,7 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 0}
+  gameObj: {fileID: 1669352974138669298, guid: 1a96f790244a25640a5b498edcd91d9f, type: 3}
   column: 1
   row: 1
   placeable: 1
