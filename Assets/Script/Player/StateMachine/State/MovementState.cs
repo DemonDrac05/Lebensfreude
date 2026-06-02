@@ -20,7 +20,17 @@ public class MovementState : PlayerState
             player.movementInput.x = Input.GetAxisRaw("Horizontal");
             player.movementInput.y = Input.GetAxisRaw("Vertical");
             float staminaMult = StaminaManager.Instance != null ? StaminaManager.Instance.MoveSpeedMultiplier : 1f;
-            player.rb2d.MovePosition(player.rb2d.position + player.movementInput.normalized * player.movementSpeed * staminaMult * Time.fixedDeltaTime);
+
+            // ── Di chuyển CÓ CHẶN Ô (tile-based) ─────────────────────────
+            // Kiểm tra theo TỪNG TRỤC: ô đích trên trục X bị chặn thì bỏ X,
+            // trục Y bị chặn thì bỏ Y -> player vẫn TRƯỢT DỌC tường mượt.
+            // Chỉ là HashSet lookup O(1) -> không physics, không drop FPS.
+            Vector2 delta = player.movementInput.normalized * player.movementSpeed * staminaMult * Time.fixedDeltaTime;
+            Vector2 pos = player.rb2d.position;
+            Vector2 dest = pos;
+            if (delta.x != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(pos.x + delta.x, pos.y, 0f))) dest.x = pos.x + delta.x;
+            if (delta.y != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(dest.x, pos.y + delta.y, 0f))) dest.y = pos.y + delta.y;
+            player.rb2d.MovePosition(dest);
 
             UsingToolState();
         }
