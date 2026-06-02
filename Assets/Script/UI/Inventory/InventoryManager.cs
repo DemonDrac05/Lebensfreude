@@ -35,7 +35,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        token = 500;
+        token = 15000;
         Instance = this;
     }
 
@@ -356,9 +356,11 @@ public class InventoryManager : MonoBehaviour
     public static void AddToken(int amount) => token += Mathf.Max(0, amount);
     public static bool SpendToken(int amount)
     {
+        Debug.Log("Start spending token");
         if (amount <= 0) return true;
         if (token < amount) return false;
         token -= amount;
+        Debug.Log(token);
         return true;
     }
 

@@ -8,7 +8,7 @@ using UnityEngine;
 [Serializable]
 public class ItemMarketData
 {
-    public int currentStock;   // tồn kho hiện tại (người chơi bán vào -> tăng)
+    public int currentStock;   // tồn kho còn lại (player bán vào -> GIẢM; phục hồi mỗi ngày về basketSize)
     public int basketSize;     // rổ tham chiếu cố định
     public int lastSaleDay;    // ngày (TotalDays) của lần bán gần nhất
     public int dailySold;      // số đã bán trong NGÀY hiện tại (giới hạn giao dịch)
@@ -107,11 +107,13 @@ public class MarketState
         return data.dailySold + amount <= dailyTransactionLimit;
     }
 
-    // Ghi nhận bán -> tồn kho tăng, giá giảm. Dùng trong: VillageMarket.RegisterSale().
+    // Ghi nhận bán: tồn kho GIẢM (demand bị hấp thụ) → (Stock/Basket) < 1 → giá rớt đúng chiều.
+    // BUG CŨ: += amount khiến stock tăng → ratio > 1 → giá TĂNG → lạm phát.
+    // Dùng trong: VillageMarket.RegisterSale().
     public void RecordSale(BaseItem item, int amount)
     {
         if (item == null || !items.TryGetValue(item, out var data)) return;
-        data.currentStock += amount;
+        data.currentStock  = Mathf.Max(0, data.currentStock - amount); // GIẢM, không tăng
         data.dailySold    += amount;
         data.lastSaleDay   = currentDay;
     }
@@ -140,12 +142,13 @@ public class MarketState
     {
         currentDay = newDay;
 
-        // Chiều player bán: reset hạn mức + hồi tồn kho 15%/ngày -> giá dần phục hồi.
+        // Chiều player bán: reset hạn mức ngày + hồi tồn kho 15%/ngày về basketSize -> giá phục hồi.
+        // BUG CŨ: currentStock - recovery (giảm dần về 0) thay vì + recovery (tăng về basket).
         foreach (var data in items.Values)
         {
             data.dailySold = 0;
-            int recovery = Mathf.RoundToInt(data.basketSize * 0.15f);
-            data.currentStock = Mathf.Max(0, data.currentStock - recovery);
+            int recovery = Mathf.Max(1, Mathf.RoundToInt(data.basketSize * 0.15f));
+            data.currentStock = Mathf.Min(data.basketSize, data.currentStock + recovery); // TĂNG về basket
         }
 
         // Chiều làng bán: roll lại món xuất hiện + nạp lại hạn mức ngày.

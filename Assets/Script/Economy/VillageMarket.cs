@@ -19,7 +19,7 @@ public class VillageMarket : MonoBehaviour
     // ─────────────────────────────────────────
     [Header("=== Định danh làng ==========")]
     public VillageId villageId;
-    public string displayName = "Sylvan";
+    public string displayName => villageId.ToString();
 
     [Header("=== Hàng làng MUA của player (player bán) ==========")]
     [SerializeField] private List<VillageItemConfig> items = new();
@@ -172,7 +172,7 @@ public class VillageMarket : MonoBehaviour
         if (!Sells(item)) return false;
         if (_state.RemainingSellStock(item) < qty) return false;
 
-        int cost = GetBuyPrice(item) * qty;
+        int cost = Mathf.Abs(GetBuyPrice(item) * qty);
         if (InventoryManager.token < cost) return false;
 
         if (!_state.TryConsumeSellStock(item, qty)) return false;   // trừ kho trước

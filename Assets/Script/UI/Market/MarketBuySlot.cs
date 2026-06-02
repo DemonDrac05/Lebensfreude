@@ -23,7 +23,7 @@ public class MarketBuySlot : MonoBehaviour, IPointerClickHandler
     {
         if (_item == null || _market == null) return;
         if (priceText != null) priceText.text = _market.GetBuyPrice(_item) + " ¢";
-        if (stockText != null) stockText.text = "Còn: " + (_market.State != null ? _market.State.RemainingSellStock(_item) : 0);
+        if (stockText != null) stockText.text = $"(Remaining: {(_market.State != null ? _market.State.RemainingSellStock(_item) : 0)})";
     }
 
     public void OnPointerClick(PointerEventData e)

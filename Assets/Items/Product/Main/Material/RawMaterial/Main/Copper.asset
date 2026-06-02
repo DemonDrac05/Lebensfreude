@@ -28,5 +28,5 @@ MonoBehaviour:
     failByproductAmount: 1
     craftOnce: 0
     unlocksMerchantJournal: 0
-  gameObj: {fileID: 0}
+  gameObj: {fileID: 2549877012668460062, guid: 463ed0760d4b0aa4bace29800b8a5097, type: 3}
   productType: 1

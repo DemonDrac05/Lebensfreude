@@ -29,6 +29,12 @@ public class VillageMarketInteractor : MonoBehaviour
         m.z = 0f;
         if (!_col.OverlapPoint(m)) return;
         if (uiPanel.IsOpen && uiPanel.IsShowing(_market)) uiPanel.Close();
-        else { InputManager.Instance?.ForceCloseActivePanel(); uiPanel.Open(_market); }
+        else
+        {
+            InputManager.Instance?.ForceCloseActivePanel();
+            // Lần đầu tiếp xúc làng (Abandoned) → chuyển sang Trust ngay khi mở UI.
+            VillageProgressionManager.Instance?.Discover(_market.villageId);
+            uiPanel.Open(_market);
+        }
     }
 }

@@ -37,11 +37,29 @@ public class VillageMarketUI : MonoBehaviour
     // ─────────────────────────────────────────
     // OPEN / CLOSE
     // ─────────────────────────────────────────
+    // Mở panel cho làng chỉ định.
+    // Edge-case quan trọng: nếu panel ĐÃ ACTIVE và đổi sang làng khác,
+    // SetActive(true) là no-op → OnEnable không fire → Populate() không chạy → tên/nội dung cũ.
+    // → Phải cập nhật subscription + Populate() thủ công.
+    // Dùng trong: VillageMarketInteractor.TryToggle().
     public void Open(VillageMarket market)
     {
         if (market == null) return;
         if (CurrentOpen != null && CurrentOpen != this) CurrentOpen.Close();
-        _market = market; gameObject.SetActive(true);
+
+        if (gameObject.activeSelf && _market != market)
+        {
+            // Panel đang mở, chuyển sang làng khác → cập nhật event + re-populate
+            if (_market != null) _market.OnSaleCompleted -= OnSale;
+            _market = market;
+            _market.OnSaleCompleted += OnSale;
+            Populate();
+        }
+        else
+        {
+            _market = market;
+            gameObject.SetActive(true); // → OnEnable → Populate
+        }
     }
     public void Close() => gameObject.SetActive(false);
     public static void CloseIfOpen() { if (CurrentOpen != null && CurrentOpen.IsOpen) CurrentOpen.Close(); }
@@ -116,8 +134,8 @@ public class VillageMarketUI : MonoBehaviour
         {
             var evt = DemandEventManager.Instance != null ? DemandEventManager.Instance.GetActiveEvent(_market.villageId) : null;
             demandText.text = (evt != null && evt.item != null)
-                ? $"⭐ Đơn: {evt.item.name} ×{evt.requiredAmount} (đã {evt.filledAmount}) — thưởng {evt.bonusMultiplier:0.#}× — hạn ngày {evt.deadlineDay}"
-                : "Hôm nay không có đơn đặc biệt.";
+                ? $"\u2b50 Request: {evt.item.name} \xd7{evt.requiredAmount} (has {evt.filledAmount}) \u2014 award {evt.bonusMultiplier:0.#}\xd7 \u2014 until {evt.deadlineDay}"
+                : "No special request today";
         }
     }
 

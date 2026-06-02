@@ -24,7 +24,7 @@ public class MarketSellSlot : MonoBehaviour, IPointerClickHandler
         if (_item == null || _market == null) return;
         if (priceText != null) priceText.text = _market.GetSellPrice(_item) + " ¢";
         int owned = InventoryManager.Instance != null ? InventoryManager.Instance.CountItem(_item) : 0;
-        if (ownedText != null) ownedText.text = "Có: " + owned;
+        if (ownedText != null) ownedText.text = $"(Have: {owned})";
     }
 
     public void OnPointerClick(PointerEventData e)

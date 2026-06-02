@@ -1,0 +1,763 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef8634434985a459fb217704bc1128, type: 3}
+  m_Name: OreGemTable
+  m_EditorClassIdentifier: Assembly-CSharp::OreGemTable
+  entries:
+  - label: Stone
+    depositPrefab: {fileID: 4699537141254443359, guid: 0b738760375b1d844ac72a58e04fa274, type: 3}
+    dropItem: {fileID: 11400000, guid: e0c86381f9f5c2149971ad9578ba1399, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 12
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 12
+        inSlope: -0.41860333
+        outSlope: -0.41860333
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 8
+        inSlope: -1.1859915
+        outSlope: -1.1859915
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 3
+  - label: IronOre
+    depositPrefab: {fileID: 4699537141254443359, guid: a568adf946bae404e97efbeffe51a3e6, type: 3}
+    dropItem: {fileID: 0}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 7
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 8
+        inSlope: 0.067024246
+        outSlope: 0.067024246
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 10
+        inSlope: 0.15117314
+        outSlope: 0.15117314
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.23742318
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 6
+        inSlope: -2.8297403
+        outSlope: -2.8297403
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.07355948
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: -2
+        outSlope: -2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 2
+  - label: CopperOre
+    depositPrefab: {fileID: 4699537141254443359, guid: f724288f71547c94cb31c650bc49f164, type: 3}
+    dropItem: {fileID: 11400000, guid: af85b5de47cb5c346bc6ed6f9bd145b4, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 6
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 7
+        inSlope: 0.07062499
+        outSlope: 0.07062499
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 8
+        inSlope: 0.022571167
+        outSlope: 0.022571167
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 4
+        inSlope: -1.0178766
+        outSlope: -1.0178766
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.09376518
+      - serializedVersion: 3
+        time: 10
+        value: 1
+        inSlope: -2
+        outSlope: -2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 2
+  - label: CoalOre
+    depositPrefab: {fileID: 4699537141254443359, guid: b7a94c5f8874197468dbc485fb096f06, type: 3}
+    dropItem: {fileID: 11400000, guid: 4afdfe04228164a40a800df3077d38e2, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 5
+        inSlope: -0.125
+        outSlope: -0.125
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 4
+        inSlope: -0.225
+        outSlope: -0.225
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 3
+        inSlope: -0.2
+        outSlope: -0.2
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 4
+  - label: SilverOre
+    depositPrefab: {fileID: 4699537141254443359, guid: d800938cfc050a44eb4f98a0c9f5b407, type: 3}
+    dropItem: {fileID: 11400000, guid: eb76c195680a8fb4d84e5e8ffe86eaaa, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.75
+        outSlope: 0.75
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 3
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 5
+        inSlope: 0.3333333
+        outSlope: 0.3333333
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8
+        value: 4
+        inSlope: -0.6666667
+        outSlope: -0.6666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: -1
+        outSlope: -1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 2
+  - label: GoldOre
+    depositPrefab: {fileID: 4699537141254443359, guid: fa2b7decb5176224cb3fbcd6ceaf7c2b, type: 3}
+    dropItem: {fileID: 11400000, guid: 08772dde84d7d5244b28f4fe504828b6, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0.20000002
+        outSlope: 0.20000002
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.3
+        inSlope: 0.1875
+        outSlope: 0.1875
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0.4625
+        outSlope: 0.4625
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 2.5
+        inSlope: 0.625
+        outSlope: 0.625
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 4
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: JadeiteOre
+    depositPrefab: {fileID: 4699537141254443359, guid: a6ef89faa05ce7c4ba15b858418a1d2b, type: 3}
+    dropItem: {fileID: 11400000, guid: 7490cd59c0076e04db40b2080a5a4918, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.2
+        inSlope: 0.10000001
+        outSlope: 0.10000001
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.3
+        inSlope: 0.225
+        outSlope: 0.225
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 1
+        inSlope: 0.34166667
+        outSlope: 0.34166667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 2
+        inSlope: 0.16666667
+        outSlope: 0.16666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: EmeraldOre
+    depositPrefab: {fileID: 4699537141254443359, guid: b7b1615b3fe5e0c48b730ff0a5570ff4, type: 3}
+    dropItem: {fileID: 11400000, guid: c4c0784bc8fd46e4e92ac7e82c4c5d43, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.05
+        outSlope: 0.05
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 0.1
+        inSlope: 0.125
+        outSlope: 0.125
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 0.5
+        inSlope: 0.26666668
+        outSlope: 0.26666668
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 1.5
+        inSlope: 0.25
+        outSlope: 0.25
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: 0.16666667
+        outSlope: 0.16666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: RubyOre
+    depositPrefab: {fileID: 4699537141254443359, guid: 6128a22bce6f6b1448526710734610ad, type: 3}
+    dropItem: {fileID: 11400000, guid: 3ca3b8698e9f0e8409b076a1d9bb1d5e, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.033333335
+        outSlope: 0.033333335
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 0.1
+        inSlope: 0.11666667
+        outSlope: 0.11666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 0.5
+        inSlope: 0.35
+        outSlope: 0.35
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 1.5
+        inSlope: 0.33333334
+        outSlope: 0.33333334
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: 0.16666667
+        outSlope: 0.16666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: SapphireOre
+    depositPrefab: {fileID: 4699537141254443359, guid: 3dbffefd5ad50b14b90a1494e1e44f5e, type: 3}
+    dropItem: {fileID: 11400000, guid: 7eb97b14e3c713f4ea8776aec386927b, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.025
+        outSlope: 0.025
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4
+        value: 0.1
+        inSlope: 0.112500004
+        outSlope: 0.112500004
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 0.5
+        inSlope: 0.35
+        outSlope: 0.35
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8
+        value: 1.5
+        inSlope: 0.375
+        outSlope: 0.375
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: 0.25
+        outSlope: 0.25
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: DiamondOre
+    depositPrefab: {fileID: 4699537141254443359, guid: 7eb51a46bba16914c9e623f052f0de9d, type: 3}
+    dropItem: {fileID: 11400000, guid: 20a83c5ba6be64c44ba22c3d0c87612e, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.01
+        outSlope: 0.01
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5
+        value: 0.05
+        inSlope: 0.0675
+        outSlope: 0.0675
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 0.3
+        inSlope: 0.1875
+        outSlope: 0.1875
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 9
+        value: 0.8
+        inSlope: 0.475
+        outSlope: 0.475
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 1.5
+        inSlope: 0.7
+        outSlope: 0.7
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: RedBerylOre
+    depositPrefab: {fileID: 4699537141254443359, guid: 9633b83e070124c4889140594073a7cd, type: 3}
+    dropItem: {fileID: 11400000, guid: 087d1769182bca24eb1443453ce166e3, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.008333334
+        outSlope: 0.008333334
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 6
+        value: 0.05
+        inSlope: 0.04087621
+        outSlope: 0.04087621
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.19260812
+      - serializedVersion: 3
+        time: 8
+        value: 0.3
+        inSlope: 0.2375
+        outSlope: 0.2375
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 1
+        inSlope: 0.35
+        outSlope: 0.35
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: AlexandriteOre
+    depositPrefab: {fileID: 4699537141254443359, guid: d0dfa6ad3409dd54f83ed8d827c57f30, type: 3}
+    dropItem: {fileID: 11400000, guid: d5a0eb79731b6aa469446e8744fc405c, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.007142857
+        outSlope: 0.007142857
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 7
+        value: 0.05
+        inSlope: 0.06607143
+        outSlope: 0.06607143
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 9
+        value: 0.3
+        inSlope: 0.3125
+        outSlope: 0.3125
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 0.8
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
+  - label: PainiteOre
+    depositPrefab: {fileID: 4699537141254443359, guid: 67241ed6e843c504983cd467ea81c7ce, type: 3}
+    dropItem: {fileID: 11400000, guid: 3fe46d96b142fd9418664d9c81c54b0a, type: 2}
+    weightByFloor:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.0025
+        outSlope: 0.0025
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 8
+        value: 0.02
+        inSlope: 0.041249998
+        outSlope: 0.041249998
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 9
+        value: 0.1
+        inSlope: 0.14000002
+        outSlope: 0.14000002
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 10
+        value: 0.3
+        inSlope: 0.20000002
+        outSlope: 0.20000002
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    dropAmountMin: 1
+    dropAmountMax: 1
