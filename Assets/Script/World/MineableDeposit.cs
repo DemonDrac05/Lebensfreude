@@ -97,7 +97,6 @@ public class MineableDeposit : MonoBehaviour
     // ─────────────────────────────────────────
     private void Break()
     {
-        // Văng piece ra vòng quanh (như Axe.TreeDown)
         GameObject prefab = pieceOverride != null
             ? pieceOverride
             : (dropItem is Product p ? p.gameObj : null);
@@ -105,13 +104,24 @@ public class MineableDeposit : MonoBehaviour
         if (prefab != null)
             ResourceDropper.Drop(prefab, dropAmount, transform.position, this);
 
-        // Giải phóng tile — player có thể đặt vật lên ô này trong lúc deposit đang hồi
+        // Giải phóng ô chiếm đóng
         if (_registered && _tileCtrl != null)
             _tileCtrl.itemsOnGround.Remove(_tilePos);
 
         if (_sr  != null) _sr.enabled  = false;
         if (_col != null) _col.enabled = false;
-        StartCoroutine(Respawn());
+
+        // Nếu đang ở trong Dungeon, báo hiệu để rải thang đi tiếp (không hồi sinh quặng ở tầng hiện tại)
+        if (DungeonManager.Instance != null && DungeonManager.Instance.currentDepth > 0)
+        {
+            DungeonGenerator.Instance?.OnOreMined(transform.position);
+            // Hủy hẳn object khi đã thu hoạch xong trong dungeon
+            Destroy(gameObject, 1f); 
+        }
+        else
+        {
+            StartCoroutine(Respawn()); // Ở Overworld thì tiến hành hồi sinh bình thường
+        }
     }
 
     // ─────────────────────────────────────────

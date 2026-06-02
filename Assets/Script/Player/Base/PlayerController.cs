@@ -279,6 +279,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && currentItem != null && currentHitBoxPrefab == greenHitBoxPrefab)
         {
+            // Kiểm tra trạng thái hầm ngục
+            if (DungeonManager.Instance != null && DungeonManager.Instance.currentDepth > 0)
+            {
+                Debug.Log("[PlayerController] Bạn không thể đặt đồ vật dưới hầm ngục tối!");
+                return;
+            }
+
             GameObject newObject = Instantiate(itemPrefab, itemPosUpdate, Quaternion.identity);
             SetPrefabProperties(newObject, true, 1f);
             itemsOnGround.Add(itemPosUpdate);

@@ -2,66 +2,57 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-// ╔══════════════════════════════════════════════════════════════════╗
-// ║  WorldGenerator — SINH THẾ GIỚI OVERWORLD                         ║
-// ╠══════════════════════════════════════════════════════════════════╣
-// ║  Biome bằng 2 lớp Perlin noise (độ cao + độ ẩm):                  ║
-// ║    water < cát < (đất / cỏ / hoa / rừng) < đá < núi               ║
-// ║  - Cỏ: random từ 1 LIST tile cho đa dạng.                         ║
-// ║  - Hoa: xác suất nhỏ rải trên cỏ.                                 ║
-// ║  - Rừng: vùng ẩm cao (tile cỏ đậm hơn).                           ║
-// ║  - Viền bản đồ = đại dương (water) để nhốt player.                ║
-// ║  CHẶN player: water + đá + núi -> ghi vào WorldBlocking.          ║
-// ║  Cây/bụi/nấm KHÔNG sinh ở đây — để OverworldObjectSpawner lo,     ║
-// ║  dùng danh sách ô-có-thể-sinh (cỏ/rừng) mà file này phơi ra.      ║
-// ╚══════════════════════════════════════════════════════════════════╝
 public class WorldGenerator : MonoBehaviour
 {
     [Header("=== Tilemap & Grid ===")]
-    public Grid grid;                  // Grid cha (để WorldBlocking quy đổi cell)
-    public Tilemap groundTilemap;      // tilemap nền (vẽ tile + đánh dấu chặn)
+    public Grid grid;                  
+    public Tilemap groundTilemap;      
 
     [Header("=== Kích thước bản đồ ===")]
-    public int width = 80;
-    public int height = 60;
+    public int width = 120; 
+    public int height = 120;
     [Tooltip("Số ô viền đại dương bao quanh để nhốt player.")]
-    public int oceanBorder = 3;
+    public int oceanBorder = 4;
+
+    [Header("=== Định vị 3 Làng chính ===")]
+    public Transform sylvanVillage;   // Góc Đông Bắc
+    public Transform ironholdVillage; // Góc Tây Nam
+    public Transform aurumVillage;    // Góc Đông Nam
+
+    [Header("=== Định vị Legendary Merchant Hall (Quan trọng) ===")]
+    public Transform legendaryHall;   // Đền thờ cổ kính (Chính Bắc bản đồ)
 
     [Header("=== Noise ===")]
     public int seed = 0;
-    [Tooltip("Càng nhỏ biome càng to/mượt.")]
-    public float elevationScale = 0.08f;
-    public float moistureScale = 0.12f;
+    public float elevationScale = 0.06f;
+    public float moistureScale = 0.10f;
 
-    [Header("=== Ngưỡng độ cao (0..1) ===")]
-    [Range(0, 1)] public float waterLevel = 0.30f;   // < -> water
-    [Range(0, 1)] public float sandLevel = 0.36f;    // < -> cát (bãi biển)
-    [Range(0, 1)] public float landLevel = 0.70f;    // < -> đất liền (cỏ/rừng/hoa/đất)
-    [Range(0, 1)] public float stoneLevel = 0.82f;   // < -> đá ; >= -> núi
+    [Header("=== Ngưỡng độ cao ===")]
+    [Range(0, 1)] public float waterLevel = 0.30f;   
+    [Range(0, 1)] public float sandLevel = 0.35f;    
+    [Range(0, 1)] public float landLevel = 0.72f;    
+    [Range(0, 1)] public float stoneLevel = 0.84f;   
 
-    [Header("=== Ngưỡng độ ẩm cho đất liền (0..1) ===")]
-    [Range(0, 1)] public float forestMoisture = 0.62f; // >= -> rừng
-    [Range(0, 1)] public float dirtMoisture = 0.30f;   // <  -> đất ; giữa -> cỏ
-    [Range(0, 1)] public float flowerChance = 0.06f;   // xác suất hoa trên cỏ
+    [Header("=== Ngưỡng độ ẩm ===")]
+    [Range(0, 1)] public float forestMoisture = 0.60f; 
+    [Range(0, 1)] public float dirtMoisture = 0.28f;   
+    [Range(0, 1)] public float flowerChance = 0.05f;   
 
     [Header("=== Tiles ===")]
-    public List<TileBase> grassTiles = new List<TileBase>(); // cỏ (random đa dạng)
-    public List<TileBase> flowerTiles = new List<TileBase>(); // hoa trên cỏ
-    public TileBase forestTile;       // cỏ rừng (đậm hơn)
+    public List<TileBase> grassTiles = new List<TileBase>(); 
+    public List<TileBase> flowerTiles = new List<TileBase>(); 
+    public TileBase forestTile;       
     public TileBase sandTile;
     public TileBase dirtTile;
     public TileBase waterTile;
     public TileBase stoneTile;
     public TileBase mountainTile;
 
-    [Header("=== Sinh lúc Start? ===")]
     public bool generateOnStart = true;
 
-    // Các ô có thể đặt object (cỏ/rừng) — OverworldObjectSpawner đọc. ──────
     private readonly List<Vector3Int> _spawnableCells = new List<Vector3Int>();
     public IReadOnlyList<Vector3Int> SpawnableCells => _spawnableCells;
 
-    // Ô spawn cho player (giữa bản đồ, chắc chắn đi được). ─────────────────
     public Vector3 PlayerSpawnWorld { get; private set; }
 
     private System.Random _rng;
@@ -71,7 +62,6 @@ public class WorldGenerator : MonoBehaviour
         if (generateOnStart) Generate();
     }
 
-    // ════════════════ SINH THẾ GIỚI ════════════════
     [ContextMenu("Generate World")]
     public void Generate()
     {
@@ -79,7 +69,6 @@ public class WorldGenerator : MonoBehaviour
         if (groundTilemap == null) { Debug.LogError("[WorldGenerator] Thiếu groundTilemap."); return; }
         if (grassTiles == null || grassTiles.Count == 0) { Debug.LogError("[WorldGenerator] grassTiles trống."); return; }
 
-        // Reset
         groundTilemap.ClearAllTiles();
         WorldBlocking.Clear();
         if (grid != null) WorldBlocking.SetGrid(grid);
@@ -87,7 +76,7 @@ public class WorldGenerator : MonoBehaviour
 
         int s = seed != 0 ? seed : Random.Range(1, 999999);
         _rng = new System.Random(s);
-        // offset ngẫu nhiên để mỗi seed cho map khác nhau
+        
         float ox = (float)_rng.NextDouble() * 1000f;
         float oy = (float)_rng.NextDouble() * 1000f;
         float ox2 = (float)_rng.NextDouble() * 1000f;
@@ -99,7 +88,6 @@ public class WorldGenerator : MonoBehaviour
             {
                 Vector3Int cell = new Vector3Int(x, y, 0);
 
-                // Viền đại dương
                 bool border = x < oceanBorder || y < oceanBorder ||
                               x >= width - oceanBorder || y >= height - oceanBorder;
 
@@ -114,12 +102,10 @@ public class WorldGenerator : MonoBehaviour
                 else if (e < sandLevel)        { tile = sandTile; }
                 else if (e < landLevel)
                 {
-                    // Đất liền: phân theo độ ẩm
                     if (m >= forestMoisture)   { tile = forestTile != null ? forestTile : PickGrass(); spawnable = true; }
                     else if (m < dirtMoisture) { tile = dirtTile != null ? dirtTile : PickGrass(); }
                     else
                     {
-                        // Cỏ — có xác suất ra hoa
                         if (flowerTiles.Count > 0 && _rng.NextDouble() < flowerChance) tile = flowerTiles[_rng.Next(flowerTiles.Count)];
                         else tile = PickGrass();
                         spawnable = true;
@@ -134,20 +120,46 @@ public class WorldGenerator : MonoBehaviour
             }
         }
 
+        // Tự động sắp đặt vị trí 3 làng chính xa nhau
+        LocateThreeVillages();
+
+        // Tự động định vị Legendary Merchant Hall ở vùng Chính Bắc xa xôi
+        LocateLegendaryMerchantHall();
+
+        // Tính toán điểm xuất hiện của Player ở vùng trung tâm
         ComputePlayerSpawn();
-        Debug.Log($"[WorldGenerator] Sinh xong {width}x{height} (seed {s}) — chặn {WorldBlocking.BlockedCount} ô, {_spawnableCells.Count} ô sinh object.");
+
+        // FIX LỖI KẸT: Thực thi dịch chuyển người chơi tới điểm an toàn vừa sinh
+        TeleportPlayerToSpawn();
+
+        // Kích hoạt Spawner rải cây dã ngoại và cổng hầm ngục
+        OverworldObjectSpawner spawner = FindObjectOfType<OverworldObjectSpawner>();
+        if (spawner != null)
+        {
+            spawner.SpawnAllOverworldEntities();
+        }
+
+        Debug.Log($"[WorldGenerator] Sinh xong {width}x{height} (seed {s}) — chặn {WorldBlocking.BlockedCount} ô.");
     }
 
     private TileBase PickGrass() => grassTiles[_rng.Next(grassTiles.Count)];
 
-    // Tìm ô đi được gần tâm bản đồ làm điểm spawn player. ──────────────────
+    private void TeleportPlayerToSpawn()
+    {
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            player.transform.position = PlayerSpawnWorld;
+            Camera.main.transform.position = new Vector3(PlayerSpawnWorld.x, PlayerSpawnWorld.y, Camera.main.transform.position.z);
+        }
+    }
+
     private void ComputePlayerSpawn()
     {
         Vector3Int center = new Vector3Int(width / 2, height / 2, 0);
         Vector3Int found = center;
         if (WorldBlocking.IsBlocked(center))
         {
-            // xoắn ốc ra ngoài tìm ô không bị chặn
             for (int r = 1; r < Mathf.Max(width, height); r++)
             {
                 bool ok = false;
@@ -161,5 +173,77 @@ public class WorldGenerator : MonoBehaviour
             }
         }
         PlayerSpawnWorld = groundTilemap.GetCellCenterWorld(found);
+    }
+
+    private void LocateThreeVillages()
+    {
+        PlayerController pc = FindObjectOfType<PlayerController>();
+
+        // 1. Làng Sylvan (Đông Bắc)
+        Vector3 sylvanPos = FindWalkableCellInArea(width * 3 / 4, width - 6, height * 3 / 4, height - 6);
+        if (sylvanVillage != null)
+        {
+            sylvanVillage.position = sylvanPos;
+            if (pc != null) pc.itemsOnGround.Add(sylvanPos);
+        }
+
+        // 2. Làng Ironhold (Tây Nam)
+        Vector3 ironholdPos = FindWalkableCellInArea(6, width / 4, 6, height / 4);
+        if (ironholdVillage != null)
+        {
+            ironholdVillage.position = ironholdPos;
+            if (pc != null) pc.itemsOnGround.Add(ironholdPos);
+        }
+
+        // 3. Làng Aurum (Đông Nam)
+        Vector3 aurumPos = FindWalkableCellInArea(width * 3 / 4, width - 6, 6, height / 4);
+        if (aurumVillage != null)
+        {
+            aurumVillage.position = aurumPos;
+            if (pc != null) pc.itemsOnGround.Add(aurumPos);
+        }
+    }
+
+    // Tự động tìm khu vực đất liền an toàn ở phía Bắc bản đồ để đặt Legendary Merchant Hall
+    private void LocateLegendaryMerchantHall()
+    {
+        PlayerController pc = FindObjectOfType<PlayerController>();
+        
+        // Vùng tìm kiếm: Nằm ở trục dọc trung tâm (giữa X), sát mép trên biên giới bản đồ (Y cao)
+        int xStart = (width / 2) - 10;
+        int xEnd = (width / 2) + 10;
+        int yStart = height - 15;
+        int yEnd = height - 6;
+
+        Vector3 hallPos = FindWalkableCellInArea(xStart, xEnd, yStart, yEnd);
+        if (legendaryHall != null)
+        {
+            legendaryHall.position = hallPos;
+            if (pc != null)
+            {
+                // Thêm vị trí Legendary Hall vào danh sách cấm xây dựng đè đồ vật lên
+                pc.itemsOnGround.Add(hallPos);
+                
+                // Đồng thời khóa cứng vị trí ô này lại trên ma trận để player không đi xuyên qua sảnh
+                Vector3Int cell = groundTilemap.WorldToCell(hallPos);
+                WorldBlocking.Block(cell);
+            }
+        }
+    }
+
+    private Vector3 FindWalkableCellInArea(int xStart, int xEnd, int yStart, int yEnd)
+    {
+        for (int x = xStart; x <= xEnd; x++)
+        {
+            for (int y = yStart; y <= yEnd; y++)
+            {
+                Vector3Int cell = new Vector3Int(x, y, 0);
+                if (!WorldBlocking.IsBlocked(cell))
+                {
+                    return groundTilemap.GetCellCenterWorld(cell);
+                }
+            }
+        }
+        return groundTilemap.GetCellCenterWorld(new Vector3Int(width / 2, height / 2, 0));
     }
 }

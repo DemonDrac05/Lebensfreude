@@ -2,17 +2,11 @@ using System;
 using System.IO;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// SAVE MANAGER  (lưu/đọc state cốt lõi qua JSON file)
-// ─────────────────────────────────────────
-// Lưu: token, ngày, stamina, inventory, phase 3 làng, artifacts (earned+inserted).
-// Singleton bền qua scene. Tự load lúc Start (nếu autoLoad) + tự save mỗi ngày mới (nếu autoSave).
-// Cần gán ItemDatabase (allItems) để load lại item từ tên.
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
     [SerializeField] private ItemDatabase itemDatabase;
-    [SerializeField] private bool autoLoadOnStart = true;
+    [SerializeField] private bool autoLoadOnStart = false; // Tắt tự động nạp để Menu điều hướng chuẩn xác hơn
     [SerializeField] private bool autoSaveOnNewDay = true;
 
     private string Path => Application.persistentDataPath + "/lebensfreude_save.json";
@@ -28,16 +22,20 @@ public class SaveManager : MonoBehaviour
 
     public bool HasSave() => File.Exists(Path);
 
-    // ─────────────────────────────────────────
-    // SAVE
-    // ─────────────────────────────────────────
     public void Save()
     {
+        Player player = FindObjectOfType<Player>();
+        Vector3 playerPos = player != null ? player.transform.position : Vector3.zero;
+
         var d = new GameSaveData
         {
             token     = InventoryManager.token,
             totalDays = TimeManager.TotalDays,
-            stamina   = StaminaManager.Instance != null ? StaminaManager.Instance.Current : 100f
+            stamina   = StaminaManager.Instance != null ? StaminaManager.Instance.Current : 100f,
+            playerX   = playerPos.x,
+            playerY   = playerPos.y,
+            playerZ   = playerPos.z,
+            currentDepth = DungeonManager.Instance != null ? DungeonManager.Instance.currentDepth : 0
         };
 
         if (InventoryManager.Instance != null)
@@ -65,9 +63,6 @@ public class SaveManager : MonoBehaviour
         Debug.Log("[Save] -> " + Path);
     }
 
-    // ─────────────────────────────────────────
-    // LOAD
-    // ─────────────────────────────────────────
     public void Load()
     {
         if (!HasSave()) return;
@@ -97,9 +92,30 @@ public class SaveManager : MonoBehaviour
             foreach (var a in d.artifactsEarned)   ArtifactManager.Instance.Grant((ArtifactType)a);
             foreach (var a in d.artifactsInserted) ArtifactManager.Instance.Insert((ArtifactType)a);
         }
-        Debug.Log("[Load] OK");
+
+        // Khôi phục trạng thái Hầm ngục và vị trí người chơi
+        DungeonManager dm = DungeonManager.Instance;
+        Player player = FindObjectOfType<Player>();
+        
+        if (dm != null)
+        {
+            dm.currentDepth = d.currentDepth;
+            if (d.currentDepth > 0)
+            {
+                // Nếu người chơi thoát game khi đang ở hầm ngục, tự động dựng lại tầng hầm ngục đó
+                dm.dungeonGenerator?.GenerateFloor(d.currentDepth, dm.dungeonOffset);
+            }
+        }
+
+        if (player != null)
+        {
+            Vector3 savedPos = new Vector3(d.playerX, d.playerY, d.playerZ);
+            player.transform.position = savedPos;
+            Camera.main.transform.position = new Vector3(savedPos.x, savedPos.y, Camera.main.transform.position.z);
+        }
+
+        Debug.Log("[Load] Nạp file lưu thành công.");
     }
 
-    // Xóa save (cho nút New Game). Dùng trong: Menu.
     public void DeleteSave() { if (HasSave()) File.Delete(Path); }
 }

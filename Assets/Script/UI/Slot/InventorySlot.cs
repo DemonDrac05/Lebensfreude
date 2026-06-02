@@ -1,8 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-using UnityEditor.Rendering.LookDev;
 
 public class InventorySlot : BaseSlot
 {
