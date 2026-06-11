@@ -2,19 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// DEMAND EVENT MANAGER  (sinh & quản lý các đơn demand)
-// ─────────────────────────────────────────
-// Singleton SỐNG QUA SCENE (DontDestroyOnLoad) để vào dungeon ra làng vẫn giữ đơn.
-// Mỗi ngày: hết hạn đơn cũ + sinh đơn mới cho từng làng (chọn ngẫu nhiên 1 món TRONG list
-// mà làng đang mua -> không hardcode chuỗi như ref). Nghe TimeManager.OnNewDay.
 //
-// Liên kết: VillageMarket (lấy danh sách hàng + ApplyDemandBonus khi bán), TimeManager (ngày).
 public class DemandEventManager : MonoBehaviour
 {
-    // ─────────────────────────────────────────
     // SINGLETON
-    // ─────────────────────────────────────────
     public static DemandEventManager Instance { get; private set; }
 
     private void Awake()
@@ -28,26 +19,20 @@ public class DemandEventManager : MonoBehaviour
     private void OnEnable()  => TimeManager.OnNewDay += HandleNewDay;
     private void OnDisable() => TimeManager.OnNewDay -= HandleNewDay;
 
-    // ─────────────────────────────────────────
     // DATA
-    // ─────────────────────────────────────────
     private readonly Dictionary<VillageId, DemandEvent> _active = new();
 
     public event Action<DemandEvent>      OnEventGenerated;
-    public event Action<DemandEvent, int> OnEventFulfilled;  // (đơn, coins thưởng)
+    public event Action<DemandEvent, int> OnEventFulfilled;
     public event Action<DemandEvent>      OnEventExpired;
 
-    // ─────────────────────────────────────────
     // DAY CYCLE
-    // ─────────────────────────────────────────
-    // Gọi mỗi ngày mới: dọn đơn hết hạn rồi sinh đơn mới.
     private void HandleNewDay()
     {
         ExpireOld();
         GenerateNew();
     }
 
-    // Bỏ các đơn đã quá hạn (chưa hoàn thành). Dùng trong: HandleNewDay.
     private void ExpireOld()
     {
         int day = TimeManager.TotalDays;
@@ -63,8 +48,6 @@ public class DemandEventManager : MonoBehaviour
         foreach (var id in toRemove) _active.Remove(id);
     }
 
-    // Sinh 1 đơn mới cho mỗi làng đang chưa có đơn. Chọn món ngẫu nhiên từ list của làng.
-    // Dùng trong: HandleNewDay.
     private void GenerateNew()
     {
         int day = TimeManager.TotalDays;
@@ -75,7 +58,6 @@ public class DemandEventManager : MonoBehaviour
             if (_active.ContainsKey(market.villageId)) continue;
             if (market.Items == null || market.Items.Count == 0) continue;
 
-            // Lọc các món làng đang thực sự mua ở phase hiện tại.
             var buyable = new List<BaseItem>();
             foreach (var cfg in market.Items)
                 if (cfg != null && cfg.item != null && market.Buys(cfg.item))
@@ -99,11 +81,6 @@ public class DemandEventManager : MonoBehaviour
         }
     }
 
-    // ─────────────────────────────────────────
-    // TRADE HOOK  — áp thưởng khi người chơi bán
-    // ─────────────────────────────────────────
-    // Trả về số COINS THƯỞNG THÊM (ngoài giá gốc) cho phần khớp đơn.
-    // Dùng trong: VillageMarket.RegisterSale().
     public int ApplyDemandBonus(VillageId villageId, BaseItem item, int amount, int unitPrice)
     {
         if (!_active.TryGetValue(villageId, out var evt)) return 0;
@@ -123,9 +100,7 @@ public class DemandEventManager : MonoBehaviour
         return bonus;
     }
 
-    // ─────────────────────────────────────────
     // QUERY
-    // ─────────────────────────────────────────
     public DemandEvent GetActiveEvent(VillageId villageId)
         => _active.TryGetValue(villageId, out var e) ? e : null;
 

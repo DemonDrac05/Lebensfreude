@@ -8,32 +8,32 @@ public class WorldGenerator : MonoBehaviour
     public Grid grid;                  
     public Tilemap groundTilemap;      
 
-    [Header("=== Kích thước bản đồ ===")]
+    [Header("=== Map size ===")]
     public int width = 120; 
     public int height = 120;
-    [Tooltip("Số ô viền đại dương bao quanh để nhốt player.")]
+    [Tooltip("Ocean border cells around the map to contain the player.")]
     public int oceanBorder = 4;
 
-    [Header("=== Định vị 3 Làng chính ===")]
-    public Transform sylvanVillage;   // Góc Đông Bắc
-    public Transform ironholdVillage; // Góc Tây Nam
-    public Transform aurumVillage;    // Góc Đông Nam
+    [Header("=== Placement of the 3 main villages ===")]
+    public Transform sylvanVillage;
+    public Transform ironholdVillage;
+    public Transform aurumVillage;
 
-    [Header("=== Định vị Legendary Merchant Hall (Quan trọng) ===")]
-    public Transform legendaryHall;   // Đền thờ cổ kính (Chính Bắc bản đồ)
+    [Header("=== Placement of the Legendary Merchant Hall (important) ===")]
+    public Transform legendaryHall;
 
     [Header("=== Noise ===")]
     public int seed = 0;
     public float elevationScale = 0.06f;
     public float moistureScale = 0.10f;
 
-    [Header("=== Ngưỡng độ cao ===")]
+    [Header("=== Elevation thresholds ===")]
     [Range(0, 1)] public float waterLevel = 0.30f;   
     [Range(0, 1)] public float sandLevel = 0.35f;    
     [Range(0, 1)] public float landLevel = 0.72f;    
     [Range(0, 1)] public float stoneLevel = 0.84f;   
 
-    [Header("=== Ngưỡng độ ẩm ===")]
+    [Header("=== Moisture thresholds ===")]
     [Range(0, 1)] public float forestMoisture = 0.60f; 
     [Range(0, 1)] public float dirtMoisture = 0.28f;   
     [Range(0, 1)] public float flowerChance = 0.05f;   
@@ -120,19 +120,14 @@ public class WorldGenerator : MonoBehaviour
             }
         }
 
-        // Tự động sắp đặt vị trí 3 làng chính xa nhau
         LocateThreeVillages();
 
-        // Tự động định vị Legendary Merchant Hall ở vùng Chính Bắc xa xôi
         LocateLegendaryMerchantHall();
 
-        // Tính toán điểm xuất hiện của Player ở vùng trung tâm
         ComputePlayerSpawn();
 
-        // FIX LỖI KẸT: Thực thi dịch chuyển người chơi tới điểm an toàn vừa sinh
         TeleportPlayerToSpawn();
 
-        // Kích hoạt Spawner rải cây dã ngoại và cổng hầm ngục
         OverworldObjectSpawner spawner = FindObjectOfType<OverworldObjectSpawner>();
         if (spawner != null)
         {
@@ -179,7 +174,6 @@ public class WorldGenerator : MonoBehaviour
     {
         PlayerController pc = FindObjectOfType<PlayerController>();
 
-        // 1. Làng Sylvan (Đông Bắc)
         Vector3 sylvanPos = FindWalkableCellInArea(width * 3 / 4, width - 6, height * 3 / 4, height - 6);
         if (sylvanVillage != null)
         {
@@ -187,7 +181,6 @@ public class WorldGenerator : MonoBehaviour
             if (pc != null) pc.itemsOnGround.Add(sylvanPos);
         }
 
-        // 2. Làng Ironhold (Tây Nam)
         Vector3 ironholdPos = FindWalkableCellInArea(6, width / 4, 6, height / 4);
         if (ironholdVillage != null)
         {
@@ -195,7 +188,6 @@ public class WorldGenerator : MonoBehaviour
             if (pc != null) pc.itemsOnGround.Add(ironholdPos);
         }
 
-        // 3. Làng Aurum (Đông Nam)
         Vector3 aurumPos = FindWalkableCellInArea(width * 3 / 4, width - 6, 6, height / 4);
         if (aurumVillage != null)
         {
@@ -204,12 +196,10 @@ public class WorldGenerator : MonoBehaviour
         }
     }
 
-    // Tự động tìm khu vực đất liền an toàn ở phía Bắc bản đồ để đặt Legendary Merchant Hall
     private void LocateLegendaryMerchantHall()
     {
         PlayerController pc = FindObjectOfType<PlayerController>();
         
-        // Vùng tìm kiếm: Nằm ở trục dọc trung tâm (giữa X), sát mép trên biên giới bản đồ (Y cao)
         int xStart = (width / 2) - 10;
         int xEnd = (width / 2) + 10;
         int yStart = height - 15;
@@ -221,10 +211,8 @@ public class WorldGenerator : MonoBehaviour
             legendaryHall.position = hallPos;
             if (pc != null)
             {
-                // Thêm vị trí Legendary Hall vào danh sách cấm xây dựng đè đồ vật lên
                 pc.itemsOnGround.Add(hallPos);
                 
-                // Đồng thời khóa cứng vị trí ô này lại trên ma trận để player không đi xuyên qua sảnh
                 Vector3Int cell = groundTilemap.WorldToCell(hallPos);
                 WorldBlocking.Block(cell);
             }

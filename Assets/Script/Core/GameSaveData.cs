@@ -11,12 +11,10 @@ public class GameSaveData
     public int   totalDays;
     public float stamina;
     
-    // Lưu tọa độ người chơi thực tế
     public float playerX;
     public float playerY;
     public float playerZ;
 
-    // Lưu hầm ngục hiện tại
     public int currentDepth;
 
     public List<ItemStackSave> inventory          = new();

@@ -17,7 +17,7 @@ MonoBehaviour:
   sellingPrice: -1
   isPurchaseable: 0
   recipe:
-    station: 5
+    station: 1
     inputs:
     - material: {fileID: 11400000, guid: c329df1fcf4b4594ca41a9e088c40c65, type: 2}
       quantity: 8

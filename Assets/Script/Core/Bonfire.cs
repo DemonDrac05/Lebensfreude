@@ -25,7 +25,6 @@ public class Bonfire : MonoBehaviour
     {
         if (InputBlocker.IsBlocked) return; 
 
-        // Nhấp chuột phải trực tiếp vào Lửa Trại khi đang ở gần
         if (_playerInRange && Input.GetMouseButtonDown(1))
         {
             if (IsMouseOverBonfire())

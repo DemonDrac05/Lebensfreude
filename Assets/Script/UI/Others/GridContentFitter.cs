@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Tự canh chiều cao (hoặc rộng) của Content theo GridLayoutGroup: cellSize + spacing + padding + số con đang active.
-// Gắn lên Content (cùng GO với GridLayoutGroup). Bật autoUpdate hoặc gọi Fit() sau khi thêm/xóa slot.
 [RequireComponent(typeof(RectTransform))]
 [RequireComponent(typeof(GridLayoutGroup))]
 public class GridContentFitter : MonoBehaviour
 {
-    [SerializeField] private bool autoUpdate = true;   // tự canh mỗi frame (tiện, hơi tốn) — tắt thì gọi Fit() thủ công
-    [SerializeField] private bool fitWidthInstead = false; // true: canh chiều RỘNG (grid cuộn ngang)
+    [SerializeField] private bool autoUpdate = true;
+    [SerializeField] private bool fitWidthInstead = false;
 
     private GridLayoutGroup _grid; private RectTransform _rt;
     private void Awake() { _grid = GetComponent<GridLayoutGroup>(); _rt = GetComponent<RectTransform>(); }
@@ -48,7 +46,7 @@ public class GridContentFitter : MonoBehaviour
         if (_grid.constraint == GridLayoutGroup.Constraint.FixedColumnCount) return Mathf.Max(1, _grid.constraintCount);
         if (_grid.constraint == GridLayoutGroup.Constraint.FixedRowCount)
             return Mathf.CeilToInt((float)count / Mathf.Max(1, _grid.constraintCount));
-        float w = _rt.rect.width - _grid.padding.left - _grid.padding.right;            // Flexible -> ước theo bề rộng
+        float w = _rt.rect.width - _grid.padding.left - _grid.padding.right;
         return Mathf.Max(1, Mathf.FloorToInt((w + _grid.spacing.x) / (_grid.cellSize.x + _grid.spacing.x)));
     }
     private int RowsFor(int count)

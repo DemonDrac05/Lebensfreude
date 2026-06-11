@@ -36,7 +36,7 @@ public class Chest : MonoBehaviour
 
     private void Update()
     {
-        if (InputBlocker.IsBlocked) return; // đang ngủ/overlay -> không tương tác rương
+        if (InputBlocker.IsBlocked) return;
 
         if (Input.GetMouseButtonDown(1) && IsMouseOverChest())
         {
@@ -49,12 +49,9 @@ public class Chest : MonoBehaviour
         }
     }
 
-    // Chuột có nằm trên collider của rương ĐÃ ĐẶT không?
-    // Dùng Collider2D.OverlapPoint thay vì so alpha + vị trí chính xác -> KHÔNG phụ thuộc
-    // offset đặt đồ hay alpha animation (sửa bug: đóng rương xong không mở lại được = "bị disable").
     private bool IsMouseOverChest()
     {
-        if (_col == null || !_col.enabled) return false; // ghost preview có collider tắt -> bỏ qua
+        if (_col == null || !_col.enabled) return false;
         Vector3 m = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         m.z = 0f;
         return _col.OverlapPoint(m);
@@ -215,7 +212,7 @@ public class Chest : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        InventoryManager.Instance.SyncFirstRowFromToolbar(); // hàng đầu khớp toolbar trước khi copy
+        InventoryManager.Instance.SyncFirstRowFromToolbar();
 
         for (int i = 0; i < InventoryManager.Instance.MainInventorySlots.Length; i++)
         {
@@ -236,8 +233,6 @@ public class Chest : MonoBehaviour
         }
         if (sourceSlot.transform.childCount > 0)
         {
-            // includeInactive=true: cùng lý do như InventoryManager.MirrorSlots —
-            // slot nguồn có thể nằm trong panel đang inactive → phải tìm cả inactive.
             var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>(true);
             if (sourceItem == null) return;
             

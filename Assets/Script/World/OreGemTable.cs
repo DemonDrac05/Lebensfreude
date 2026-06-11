@@ -2,21 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// ORE GEM TABLE  (bảng spawn quặng/đá quý theo TẦNG)
-// ─────────────────────────────────────────
-// Mỗi entry: item rớt ra + deposit prefab + ĐƯỜNG CONG trọng số theo tầng (AnimationCurve, chỉnh trực quan).
-// Càng xuống sâu: chỉnh curve để quặng thường giảm, gem hiếm tăng dần. Dùng trong: OreGemSpawner.
 [CreateAssetMenu(menuName = "ScriptableObjects/World/OreGemTable")]
 public class OreGemTable : ScriptableObject
 {
     [Serializable]
     public class Entry
     {
-        public string label;                         // ghi chú (vd "Copper", "Painite")
-        public GameObject depositPrefab;             // object đặt xuống (có MineableDeposit)
-        public BaseItem dropItem;                    // piece nhặt được khi đào (Copper, Emerald...)
-        [Tooltip("x = số tầng, y = trọng số spawn. Chỉnh hình curve cho từng loại.")]
+        public string label;
+        public GameObject depositPrefab;
+        public BaseItem dropItem;
+        [Tooltip("x = floor, y = spawn weight. Shape the curve per type.")]
         public AnimationCurve weightByFloor = AnimationCurve.Constant(0, 80, 1f);
         public int dropAmountMin = 1;
         public int dropAmountMax = 2;
@@ -24,7 +19,6 @@ public class OreGemTable : ScriptableObject
 
     public List<Entry> entries = new();
 
-    // Chọn 1 entry theo trọng số tại 'floor'. Dùng trong: OreGemSpawner.Spawn().
     public Entry PickForFloor(int floor, System.Random rng)
     {
         float total = 0f;

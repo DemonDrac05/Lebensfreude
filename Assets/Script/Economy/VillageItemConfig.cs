@@ -1,33 +1,31 @@
 using System;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// VILLAGE ITEM CONFIG  (cấu hình 1 món hàng của làng)
-// ─────────────────────────────────────────
-// Lớp [Serializable] để điền TRỰC TIẾP trong Inspector dưới dạng List trên VillageMarket
-// (đúng hướng "tạo list/array để bỏ vô" — main dùng ScriptableObject thay cho JSON của ref).
 //
-// Mỗi entry nối 1 BaseItem (SO có sẵn của main) với các tham số kinh tế.
-// Dùng trong: VillageMarket (danh sách hàng làng mua/bán), MarketState (khởi tạo tồn kho).
 [Serializable]
 public class VillageItemConfig
 {
-    [Header("=== Tham chiếu vật phẩm ==========")]
-    public BaseItem item;                               // SO vật phẩm trong main (Wood Plank, Iron Bar...)
+    [Header("=== Item reference ==========")]
+    public BaseItem item;
 
-    [Header("=== Tham số kinh tế ==========")]
-    public ElasticityTier tier = ElasticityTier.Basic;  // nhóm co giãn -> EconomicSimulator.GetElasticity
-    [Tooltip("-1 = dùng sellingPrice của chính BaseItem")]
-    public int basePriceOverride = -1;                  // cho phép ghi đè giá gốc nếu muốn
-    [Tooltip("Rổ tham chiếu: tồn kho ban đầu, càng nhỏ giá càng nhạy")]
+    [Header("=== Economic parameters ==========")]
+    public ElasticityTier tier = ElasticityTier.Basic;
+    [Tooltip("-1 = use the BaseItem's own sellingPrice")]
+    public int basePriceOverride = -1;
+    [Tooltip("Reference basket: starting stock; smaller = more price-sensitive")]
     public int basketSize = 10;
 
-    [Header("=== Mở khoá theo phase ==========")]
-    public VillagePhase availableFromPhase = VillagePhase.Trust; // làng mua/bán món này từ phase nào
+    [Header("=== Village specialisation (comparative advantage) ==========")]
+    [Tooltip("Price multiplier for THIS good at THIS village. >1 = specialty (pays more), <1 = outside specialty (pays less). Makes the same good worth different amounts at different villages.")]
+    [Range(0.25f, 3f)] public float priceMultiplier = 1f;
 
-    // Giá gốc thực dùng: ưu tiên override, nếu không thì lấy sellingPrice của SO.
-    // Dùng trong: MarketState, VillageMarket.GetSellPrice().
+    [Header("=== Phase gating ==========")]
+    public VillagePhase availableFromPhase = VillagePhase.Trust;
+
     public int BasePrice => basePriceOverride >= 0
         ? basePriceOverride
         : (item != null ? item.sellingPrice : 0);
+
+    // Base price AFTER the village specialisation multiplier. Used by VillageMarket.GetSellPrice().
+    public int SpecialisedBasePrice => Mathf.Max(1, Mathf.RoundToInt(BasePrice * priceMultiplier));
 }

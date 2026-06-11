@@ -1,9 +1,8 @@
 using UnityEngine;
 
-// World-space: chuột phải vào collider Smelter/Forge -> mở ProcessingStationUI (mirror CraftingStationInteractor).
 public class ProcessingStationInteractor : MonoBehaviour
 {
-    [SerializeField] private ProcessingStationUI uiPanel; // để trống = tự tìm theo stationType
+    [SerializeField] private ProcessingStationUI uiPanel;
     private ProcessingStation _station; private Collider2D _col; private PlayerController _tile;
 
     private void Awake()

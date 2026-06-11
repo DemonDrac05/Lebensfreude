@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// HINT TARGET  (1 làng để chỉ hướng trong giấc mơ)
-// ─────────────────────────────────────────
+// HINT TARGET (one village to point toward in a dream)
 [Serializable]
 public class HintTarget
 {
@@ -13,17 +11,12 @@ public class HintTarget
     [TextArea] public string hintTemplate = "Smoke rises from the {dir}... someone is still alive out there.";
 }
 
-// ─────────────────────────────────────────
-// DREAM HINT SYSTEM  (NỘI DUNG gợi ý — không lo trình bày)
-// ─────────────────────────────────────────
-// Chỉ TRẢ VỀ text; phần hiện overlay/đợi-đóng/chặn-input do SleepManager lo (tách bạch để sync).
-// Tầng nội dung:
-//   • Intro lore  -> thứ ĐẦU TIÊN khi vào game mới (qua SleepManager.ShowIntro).
-//   • Đủ 3 Artifact -> hint VỊ TRÍ CHÍNH XÁC của Hall (hướng + khoảng cách), hiện ở LẦN NGỦ kế.
-//   • Còn lại     -> hint HƯỚNG tới làng gần nhất CHƯA khám phá, theo xác suất hintChance.
-//
-// Liên kết: SleepManager (GetIntroText, RollSleepHint), ArtifactManager (HasAllArtifacts),
-//           VillageProgressionManager (làng đã khám phá chưa).
+// DREAM HINT SYSTEM (hint CONTENT only; presentation is handled by SleepManager).
+// Returns text only; SleepManager shows the overlay, waits for close and blocks input.
+// Content tiers:
+//   - Intro lore        -> shown FIRST on a new game (via SleepManager.ShowIntro).
+//   - All 3 Artifacts    -> hint the EXACT Hall location (direction + distance) on the next sleep.
+//   - Otherwise          -> hint the DIRECTION to the nearest undiscovered village, by hintChance.
 public class DreamHintSystem : MonoBehaviour
 {
     public static DreamHintSystem Instance { get; private set; }
@@ -33,37 +26,31 @@ public class DreamHintSystem : MonoBehaviour
         Instance = this;
     }
 
-    // ─────────────────────────────────────────
-    // CONFIG  (Inspector)
-    // ─────────────────────────────────────────
-    [Header("=== Intro lore (hiện đầu game) ==========")]
+    [Header("=== Intro lore (shown at game start) ==========")]
     [TextArea(3, 6)] public string introLore =
         "The Legendary Merchant Hall has stood sealed for a hundred years. It will open once more — for the one who restores what was lost. Three villages. Three keepers. Three locks. The world is waiting.";
 
-    [Header("=== Hint vị trí Hall (khi đủ 3 Artifact) ==========")]
+    [Header("=== Hall location hint (when all 3 Artifacts collected) ==========")]
     [SerializeField] private Transform hallTarget;
     [TextArea(2, 4)] public string hallLocationTemplate =
         "The Hall stirs. It waits to the {dir}, about {dist} steps away. The door remembers the warmth of commerce. It is time.";
 
-    [Header("=== Hint hướng làng ==========")]
+    [Header("=== Village direction hint ==========")]
     [Range(0f, 1f)] public float hintChance = 0.3f;
-    [SerializeField] private Transform player;            // để trống -> tự tìm Player
+    [SerializeField] private Transform player;            // leave empty -> auto-find Player
     [SerializeField] private List<HintTarget> villageTargets = new();
 
-    // ─────────────────────────────────────────
-    // PUBLIC API  (gọi bởi SleepManager)
-    // ─────────────────────────────────────────
-    // Lore mở màn. Dùng trong: SleepManager.ShowIntro().
+    // PUBLIC API (called by SleepManager)
     public string GetIntroText() => introLore;
 
-    // Trả text hint cho 1 lần ngủ ("" = không có hint, chỉ màn đen). Dùng trong: SleepManager.Sleep().
+    // Returns the hint text for one sleep ("" = no hint, just the black screen).
     public string RollSleepHint()
     {
-        // 1) Đủ 3 Artifact -> luôn hint vị trí Hall (ưu tiên cao nhất).
+        // 1) All 3 Artifacts -> always hint the Hall location (highest priority).
         if (ArtifactManager.Instance != null && ArtifactManager.Instance.HasAllArtifacts && hallTarget != null)
             return BuildHallHint();
 
-        // 2) Hint hướng làng theo xác suất.
+        // 2) Otherwise hint a village direction by chance.
         if (UnityEngine.Random.value > hintChance) return "";
 
         HintTarget t = NearestUndiscovered();
@@ -74,10 +61,6 @@ public class DreamHintSystem : MonoBehaviour
         return (t.hintTemplate ?? "").Replace("{dir}", dir);
     }
 
-    // ─────────────────────────────────────────
-    // HELPERS
-    // ─────────────────────────────────────────
-    // Dựng câu hint vị trí Hall: hướng + khoảng cách (ô). Dùng trong: RollSleepHint.
     private string BuildHallHint()
     {
         Transform p = ResolvePlayer();
@@ -86,7 +69,6 @@ public class DreamHintSystem : MonoBehaviour
         return (hallLocationTemplate ?? "").Replace("{dir}", dir).Replace("{dist}", dist.ToString());
     }
 
-    // Tự tìm Player nếu chưa gán. Dùng trong: RollSleepHint, BuildHallHint, NearestUndiscovered.
     private Transform ResolvePlayer()
     {
         if (player == null)
@@ -97,7 +79,6 @@ public class DreamHintSystem : MonoBehaviour
         return player;
     }
 
-    // Làng gần nhất CHƯA khám phá (phase == Abandoned). Dùng trong: RollSleepHint.
     private HintTarget NearestUndiscovered()
     {
         Transform p = ResolvePlayer();
@@ -117,7 +98,7 @@ public class DreamHintSystem : MonoBehaviour
         => VillageProgressionManager.Instance != null
         && VillageProgressionManager.Instance.GetPhase(id) != VillagePhase.Abandoned;
 
-    // Hướng la bàn 8 phương (y lên = North). Dùng trong: RollSleepHint, BuildHallHint.
+    // 8-point compass (y up = North).
     private static string CompassDirection(Vector2 from, Vector2 to)
     {
         Vector2 d = to - from;

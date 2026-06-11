@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 1 card recipe trong Smelter/Forge: nút "Smelt"/"Forge" -> ProcessingStation.Add(). Giống CraftingSlot nhưng Add thay vì Craft.
 public class ProcessingSlot : MonoBehaviour
 {
     [Header("=== UI ==========")]
@@ -14,7 +13,7 @@ public class ProcessingSlot : MonoBehaviour
     [SerializeField] private Button addButton;
     [SerializeField] private TextMeshProUGUI addButtonText;
 
-    [Header("=== Màu ==========")]
+    [Header("=== Colors ==========")]
     [SerializeField] private Color colorSlotEnough = Color.white, colorSlotNotEnough = new Color(.55f,.55f,.55f,1f);
     [SerializeField] private Color colorBtnEnough  = Color.white, colorBtnLocked     = new Color(.5f,.5f,.5f,1f);
     [SerializeField] private Color colorIngEnough  = Color.white, colorIngNotEnough  = Color.red;

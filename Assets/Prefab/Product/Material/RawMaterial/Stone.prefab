@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2549877012668460048}
   - component: {fileID: 2549877012668460049}
-  - component: {fileID: -4094659112267288133}
+  - component: {fileID: 1158507959114287029}
   m_Layer: 0
   m_Name: Stone
   m_TagString: CollectibleItem
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &-4094659112267288133
+--- !u!58 &1158507959114287029
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,5 +126,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_Radius: 0.5

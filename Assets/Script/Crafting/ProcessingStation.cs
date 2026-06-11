@@ -2,47 +2,32 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// PROCESSING STATION  (chế tạo THEO THỜI GIAN — Smelter, Forge)  [Option 2]
-// ─────────────────────────────────────────
-// Cho vào LIÊN TỤC cùng 1 loại; mỗi lần Add nấu thêm 1 mẻ (trừ nguyên liệu + fuel ngay).
-// Các mẻ xong ở thời điểm KHÁC nhau (theo Time.time thực trong game). Bấm Collect nhặt các mẻ đã xong;
-// KHO ĐẦY thì giữ lại trong lò. Mỗi mẻ roll thành công/thất bại -> ra output hoặc byproduct.
-// Khóa: chỉ nấu 1 loại cho tới khi nấu hết + nhặt hết thì nhả khóa.
 //
-// Liên kết: BaseItem.recipe, InventoryManager (CountItem/RemoveItem/AddItem). Fuel cố định (coal/charcoal).
 public class ProcessingStation : MonoBehaviour
 {
-    [Header("=== Loại station ==========")]
+    [Header("=== Station type ==========")]
     public CraftStation stationType = CraftStation.Smelter;
 
-    [Header("=== Danh sách món nấu được ở đây ==========")]
+    [Header("=== Items cookable here ==========")]
     [SerializeField] private List<BaseItem> outputs = new();
     public IReadOnlyList<BaseItem> Outputs => outputs;
 
-    // ─────────────────────────────────────────
     // RUNTIME STATE
-    // ─────────────────────────────────────────
-    private BaseItem _currentRecipe;                  // loại đang nấu (khóa cùng loại)
-    private readonly List<float>    _cookingFinish = new(); // thời điểm hoàn thành từng mẻ
-    private readonly List<BaseItem> _ready = new();         // kết quả đã xong, chờ nhặt (đã roll)
+    private BaseItem _currentRecipe;
+    private readonly List<float>    _cookingFinish = new();
+    private readonly List<BaseItem> _ready = new();
 
     public BaseItem CurrentRecipe => _currentRecipe;
     public int CookingCount => _cookingFinish.Count;
     public int ReadyCount   => _ready.Count;
-    public event Action OnStateChanged;               // UI nghe để cập nhật (đang nấu / sẵn sàng)
+    public event Action OnStateChanged;
 
-    // ─────────────────────────────────────────
-    // ADD  — cho thêm 1 mẻ
-    // ─────────────────────────────────────────
-    // Đủ điều kiện thêm 1 mẻ món này không? (đúng station, cùng loại đang nấu, đủ nguyên liệu+fuel).
-    // Dùng trong: UI (bật/khóa nút Add), Add().
     public bool CanAdd(BaseItem output)
     {
         if (output == null || InventoryManager.Instance == null) return false;
         var r = output.recipe;
         if (r == null || !r.IsCraftableAt(stationType)) return false;
-        if (_currentRecipe != null && _currentRecipe != output) return false; // chỉ 1 loại/lần
+        if (_currentRecipe != null && _currentRecipe != output) return false;
 
         foreach (var inp in r.inputs)
             if (inp == null || inp.material == null
@@ -53,7 +38,6 @@ public class ProcessingStation : MonoBehaviour
         return true;
     }
 
-    // Trừ nguyên liệu+fuel ngay rồi xếp 1 mẻ vào lò. Dùng trong: UI (nút Add).
     public bool Add(BaseItem output)
     {
         if (!CanAdd(output)) return false;
@@ -70,9 +54,6 @@ public class ProcessingStation : MonoBehaviour
         return true;
     }
 
-    // ─────────────────────────────────────────
-    // COOK  — đến hạn thì chuyển mẻ sang "sẵn sàng" (roll success/fail)
-    // ─────────────────────────────────────────
     private void Update()
     {
         if (_cookingFinish.Count == 0 || _currentRecipe == null) return;
@@ -96,10 +77,6 @@ public class ProcessingStation : MonoBehaviour
         if (changed) OnStateChanged?.Invoke();
     }
 
-    // ─────────────────────────────────────────
-    // COLLECT  — nhặt các mẻ đã xong (kho đầy thì giữ lại)
-    // ─────────────────────────────────────────
-    // Trả về số món đã nhặt được vào kho. Dùng trong: UI (bấm vào ô output).
     public int Collect()
     {
         int collected = 0;
@@ -113,16 +90,14 @@ public class ProcessingStation : MonoBehaviour
                 _ready.RemoveAt(i);
                 collected++;
             }
-            else break; // kho đầy -> giữ phần còn lại trong lò
+            else break;
         }
 
-        // Nấu hết + nhặt hết -> nhả khóa để đổi loại khác.
         if (_cookingFinish.Count == 0 && _ready.Count == 0) _currentRecipe = null;
         if (collected > 0) OnStateChanged?.Invoke();
         return collected;
     }
 
-    // Tổng hợp sản phẩm đã xong (gom theo item + số lượng) cho UI hiển thị. Dùng trong: ProcessingStationUI.
     public Dictionary<BaseItem, int> GetReadySummary()
     {
         var d = new Dictionary<BaseItem, int>();
@@ -135,8 +110,6 @@ public class ProcessingStation : MonoBehaviour
         return d;
     }
 
-    // ── TIME INFO (cho UI hiển thị, chỉ ĐỌC — không đổi state) ──
-    // Giây còn lại tới khi mẻ SỚM NHẤT xong (0 nếu không nấu gì). Dùng trong: ProcessingStationUI.Update().
     public float NextFinishRemaining
     {
         get
@@ -148,7 +121,6 @@ public class ProcessingStation : MonoBehaviour
         }
     }
 
-    // Tiến độ 0..1 của mẻ sớm nhất (cho slider). Dùng trong: ProcessingStationUI.Update().
     public float NextBatchProgress01
     {
         get
@@ -159,7 +131,6 @@ public class ProcessingStation : MonoBehaviour
         }
     }
 
-    // Giây tới khi TẤT CẢ mẻ xong (mẻ trễ nhất). Dùng trong: ProcessingStationUI (nếu muốn hiện tổng).
     public float TotalRemaining
     {
         get

@@ -43,10 +43,8 @@ public class PauseMenuController : MonoBehaviour
 
     private void TryOpenPauseMenu()
     {
-        // Điều kiện: Không có bảng UI nào của hệ thống InputManager đang kích hoạt
         if (InputManager.Instance != null)
         {
-            // Kiểm tra xem toolbar có đang ẩn không (nếu ẩn nghĩa là đang mở rương, shop, craft...)
             if (!InputManager.Instance.toolBar.activeSelf)
             {
                 Debug.Log("[PauseMenu] Không thể mở menu khi đang bận giao dịch hoặc chế tạo.");
@@ -54,7 +52,6 @@ public class PauseMenuController : MonoBehaviour
             }
         }
 
-        // Đóng băng thời gian và khóa cơ chế điều khiển của nhân vật
         _isPaused = true;
         Time.timeScale = 0f;
         InputBlocker.IsBlocked = true;
@@ -73,13 +70,11 @@ public class PauseMenuController : MonoBehaviour
 
     private void SaveAndExit()
     {
-        // 1. Thực thi lưu dữ liệu mốc thời gian hiện tại
         if (SaveManager.Instance != null)
         {
             SaveManager.Instance.Save();
         }
 
-        // 2. Trả lại thời gian hoạt động thường và thoát về Menu chính
         Time.timeScale = 1f;
         InputBlocker.IsBlocked = false;
         SceneManager.LoadScene(mainMenuSceneName);

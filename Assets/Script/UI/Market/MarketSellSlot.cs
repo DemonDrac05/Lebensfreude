@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// 1 dòng món player BÁN cho làng. Click trái = bán 1, click phải = bán 5 (giá động, bán nhiều giá rớt).
 public class MarketSellSlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image itemIcon;
@@ -30,10 +29,9 @@ public class MarketSellSlot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData e)
     {
         int qty = e.button == PointerEventData.InputButton.Right ? 5 : 1;
-        // bán tối đa theo số đang có
         int owned = InventoryManager.Instance != null ? InventoryManager.Instance.CountItem(_item) : 0;
         qty = Mathf.Min(qty, owned);
         if (qty <= 0) return;
-        if (_market.SellFromInventory(_item, qty)) _ui.RefreshAll(); // giá rớt -> build lại
+        if (_market.SellFromInventory(_item, qty)) _ui.RefreshAll();
     }
 }

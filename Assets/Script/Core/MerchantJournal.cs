@@ -1,15 +1,7 @@
 using System;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// MERCHANT JOURNAL  (sổ kế toán: P&L / net worth / tiến độ)
-// ─────────────────────────────────────────
-// Singleton SỐNG QUA SCENE. Ghi nhận thu/chi (VillageMarket gọi trực tiếp -> không miss),
-// reset theo ngày (TimeManager.OnNewDay), tính net worth bằng cách quét kho.
-// MỞ KHÓA 1 LẦN DUY NHẤT & MÃI MÃI qua lần đầu craft (PlayerPrefs). UI do bạn tự build,
-// nghe event OnJournalUpdated để cập nhật.
 //
-// Liên kết: VillageMarket (RecordIncome/RecordExpense), TimeManager (ngày), InventoryManager (token + kho).
 public class MerchantJournal : MonoBehaviour
 {
     public static MerchantJournal Instance { get; private set; }
@@ -25,13 +17,9 @@ public class MerchantJournal : MonoBehaviour
     private void OnEnable()  => TimeManager.OnNewDay += ResetDaily;
     private void OnDisable() => TimeManager.OnNewDay -= ResetDaily;
 
-    // ─────────────────────────────────────────
-    // UNLOCK  (1 lần, vĩnh viễn — qua lần đầu craft Journal)
-    // ─────────────────────────────────────────
     private const string UNLOCK_KEY = "MerchantJournal_Unlocked";
     public bool IsUnlocked => PlayerPrefs.GetInt(UNLOCK_KEY, 0) == 1;
 
-    // Gọi 1 lần khi craft Journal lần đầu (CraftingManager xóa luôn công thức sau đó). Dùng trong: crafting.
     public void Unlock()
     {
         PlayerPrefs.SetInt(UNLOCK_KEY, 1);
@@ -39,16 +27,12 @@ public class MerchantJournal : MonoBehaviour
         OnJournalUpdated?.Invoke();
     }
 
-    // ─────────────────────────────────────────
-    // P&L STATE  (theo NGÀY)
-    // ─────────────────────────────────────────
     private int _earnedToday;
     private int _spentToday;
     private int _bestTradeToday;
 
     public event Action OnJournalUpdated;
 
-    // Ghi thu nhập 1 lần bán. Dùng trong: VillageMarket.RegisterSale().
     public void RecordIncome(int amount)
     {
         if (amount <= 0) return;
@@ -57,7 +41,6 @@ public class MerchantJournal : MonoBehaviour
         OnJournalUpdated?.Invoke();
     }
 
-    // Ghi chi tiêu 1 lần mua. Dùng trong: VillageMarket.BuyFromVillage().
     public void RecordExpense(int amount)
     {
         if (amount <= 0) return;
@@ -65,7 +48,6 @@ public class MerchantJournal : MonoBehaviour
         OnJournalUpdated?.Invoke();
     }
 
-    // Sang ngày -> reset P&L ngày. Dùng trong: TimeManager.OnNewDay.
     private void ResetDaily()
     {
         _earnedToday = 0;
@@ -74,9 +56,7 @@ public class MerchantJournal : MonoBehaviour
         OnJournalUpdated?.Invoke();
     }
 
-    // ─────────────────────────────────────────
     // QUERY  (cho UI)
-    // ─────────────────────────────────────────
     public int EarnedToday    => _earnedToday;
     public int SpentToday     => _spentToday;
     public int NetToday       => _earnedToday - _spentToday;
@@ -86,7 +66,6 @@ public class MerchantJournal : MonoBehaviour
     public int NetWorth       => InventoryManager.token + EstimateInventoryValue();
     public string EndingTierProjection => TierTitle(TimeManager.TotalDays);
 
-    // Ước lượng giá trị kho = Σ count × sellingPrice (bỏ qua món không bán được, vd Artifact giá -1).
     private int EstimateInventoryValue()
     {
         var inv = InventoryManager.Instance;
@@ -95,7 +74,6 @@ public class MerchantJournal : MonoBehaviour
         int total = SumSlots(inv.ToolbarSlots);
         if (inv.MainInventorySlots != null)
         {
-            // Chỉ tính SecondSlots (index >= 12); 0..11 là bản mirror của toolbar -> tránh đếm trùng.
             for (int i = 12; i < inv.MainInventorySlots.Length; i++)
                 total += SlotValue(inv.MainInventorySlots[i]);
         }
@@ -116,11 +94,10 @@ public class MerchantJournal : MonoBehaviour
         var it = slot.GetComponentInChildren<InventoryItem>();
         if (it == null) return 0;
         var bi = it.GetItem<BaseItem>();
-        if (bi == null || bi.sellingPrice <= 0) return 0; // bỏ món không bán được
+        if (bi == null || bi.sellingPrice <= 0) return 0;
         return bi.sellingPrice * it.count;
     }
 
-    // Tier dự kiến theo số ngày (khớp EndingManager). Dùng trong: EndingTierProjection.
     private string TierTitle(int days)
     {
         if (days <= 60)  return "Legendary Merchant";

@@ -29,9 +29,7 @@ public class InventoryManager : MonoBehaviour
     public int selectedSlot = -1;
     [HideInInspector] public static int token;
 
-    // Theo dõi trạng thái bật/tắt của toolbar để CHỈ mirror khi đổi trạng thái
-    // (trước đây mirror mỗi frame khiến item ra ảnh mặc định, mất số lượng/tên và gây lag).
-    private bool _invWasOpen = false; // theo trạng thái BIG INVENTORY, không theo toolbar
+    private bool _invWasOpen = false;
 
     private void Awake()
     {
@@ -50,8 +48,6 @@ public class InventoryManager : MonoBehaviour
         HandleInventoryInput();
     }
 
-    // LateUpdate chạy SAU InputManager.Update (nơi bật/tắt toolbar) trong cùng frame,
-    // nên hàng đầu luôn được đồng bộ kịp trước khi Shop copy inventory ở cuối frame.
     private void LateUpdate()
     {
         HandleSlotsMirror();
@@ -184,7 +180,6 @@ public class InventoryManager : MonoBehaviour
 
     private int GetMaxStackable<T>(T item) where T : BaseItem
     {
-        // MaxStackable là virtual trên BaseItem -> đa hình trả đúng giá trị (Tool=1, Artifact=1, Product=999...).
         return item.MaxStackable;
     }
 
@@ -212,31 +207,20 @@ public class InventoryManager : MonoBehaviour
         return null;
     }
 
-    // ─────────────────────────────────────────
-    // SLOTS MIRROR (Toolbar <-> hàng đầu Main Inventory)
-    // ─────────────────────────────────────────
-    // Đồng bộ 12 ô đầu giữa Toolbar và hàng đầu của Main Inventory.
-    // CHỈ chạy 1 lần mỗi khi mở/đóng inventory thay vì mỗi frame (sửa bug ảnh mặc định + lag).
-    // Dùng trong: InventoryManager.LateUpdate().
     private void HandleSlotsMirror()
     {
-        // Key theo BIG INVENTORY (mainInventory), KHÔNG theo toolbar — vì rương/shop cũng tắt/bật
-        // toolbar; nếu key theo toolbar thì mirror này chạy NHẦM lúc mở/đóng rương, đụng độ với
-        // mirror riêng của rương/shop -> item bị disable luân phiên / trùng item.
         if (mainInventory == null) return;
         bool invOpen = mainInventory.activeSelf;
         if (invOpen == _invWasOpen) return;
 
         if (invOpen)
-            MirrorToolbarToFirstRow();   // Vừa MỞ big inventory: đẩy toolbar lên hàng đầu
+            MirrorToolbarToFirstRow();
         else
-            MirrorFirstRowToToolbar();   // Vừa ĐÓNG big inventory: trả hàng đầu về toolbar
+            MirrorFirstRowToToolbar();
 
         _invWasOpen = invOpen;
     }
 
-    // Đồng bộ thủ công cho Chest/Shop (chúng tự gọi trước khi copy để hàng đầu luôn tươi).
-    // Dùng trong: Chest.CopyInventory(), ShopItemManager.CopyInventory().
     public void SyncFirstRowFromToolbar() => MirrorToolbarToFirstRow();
     public void SyncToolbarFromFirstRow() => MirrorFirstRowToToolbar();
 
@@ -271,9 +255,6 @@ public class InventoryManager : MonoBehaviour
         }
         if (sourceSlot.transform.childCount > 0)
         {
-            // includeInactive=true: toolbar hoặc mainInventory có thể đang inactive khi mirror chạy
-            // (vd toolbar ẩn khi mở chest/shop → GetComponentInChildren mặc định bỏ qua → trả null
-            // → slot đích bị xóa mà không tạo mới → item MẤT). Luôn dùng true để an toàn.
             var sourceItem = sourceSlot.GetComponentInChildren<InventoryItem>(true);
 
             if (sourceItem != null)
@@ -287,8 +268,6 @@ public class InventoryManager : MonoBehaviour
 
                 newItem.SetActive(true);
 
-                // Defensive: clone đôi khi bị tắt component Image/script -> bật lại cho chắc
-                // (sửa bug "inventoryitem bị disabled image với script" khi mirror qua chest/shop).
                 var clonedItem = newItem.GetComponent<InventoryItem>();
                 if (clonedItem != null)
                 {
@@ -299,12 +278,6 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // ─────────────────────────────────────────
-    // ECONOMY HELPERS  (đếm / gỡ vật phẩm + ví token)  [thêm cho hệ thống kinh tế]
-    // ─────────────────────────────────────────
-    // Lấy các ô chứa hàng THẬT: 12 ô toolbar + các ô SecondSlots
-    // (không tính 12 ô đầu của Main Inventory vì đó chỉ là bản mirror của toolbar).
-    // Dùng trong: CountItem, RemoveItem.
     private List<BaseSlot> GetRealStorageSlots()
     {
         var list = new List<BaseSlot>();
@@ -314,8 +287,6 @@ public class InventoryManager : MonoBehaviour
         return list;
     }
 
-    // Đếm tổng số lượng 1 món đang có trong kho.
-    // Dùng trong: VillageMarket.SellFromInventory, MarketUI, FoodSystem.
     public int CountItem(BaseItem item)
     {
         if (item == null) return 0;
@@ -328,8 +299,6 @@ public class InventoryManager : MonoBehaviour
         return total;
     }
 
-    // Gỡ 'amount' món khỏi kho (gom qua nhiều ô). Trả false nếu KHÔNG đủ (và không gỡ gì).
-    // Dùng trong: VillageMarket.SellFromInventory, FoodSystem (ăn), crafting trừ nguyên liệu.
     public bool RemoveItem(BaseItem item, int amount)
     {
         if (item == null || amount <= 0) return false;
@@ -351,8 +320,6 @@ public class InventoryManager : MonoBehaviour
         return true;
     }
 
-    // Ví tiền: 'token' là tiền tệ chung của main (giữ nguyên, không tạo hệ thống tiền mới).
-    // Dùng trong: VillageMarket (bán), ShopItemSlot (mua), MerchantJournal.
     public static void AddToken(int amount) => token += Mathf.Max(0, amount);
     public static bool SpendToken(int amount)
     {
@@ -364,8 +331,6 @@ public class InventoryManager : MonoBehaviour
         return true;
     }
 
-    // ── SAVE/LOAD helpers ──
-    // Liệt kê tất cả item trong kho (item + count). Dùng trong: SaveManager.Save().
     public List<KeyValuePair<BaseItem, int>> GetAllStacks()
     {
         var list = new List<KeyValuePair<BaseItem, int>>();
@@ -377,7 +342,6 @@ public class InventoryManager : MonoBehaviour
         return list;
     }
 
-    // Xóa sạch kho (trước khi load). Dùng trong: SaveManager.Load().
     public void ClearAll()
     {
         foreach (var slot in GetRealStorageSlots())

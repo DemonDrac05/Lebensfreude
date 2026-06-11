@@ -1,15 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// ─────────────────────────────────────────
-// ENDING MANAGER  (chọn tier theo số ngày + hiện record + lưu lại)
-// ─────────────────────────────────────────
-// Singleton SỐNG QUA SCENE. LegendaryHall gọi TriggerEnding() khi đủ 3 seal.
-// Đọc TimeManager.TotalDays -> tier; hiện màn ending (ngày + tier + coins + làng + câu kết) qua MessageOverlay;
-// LƯU record vào PlayerPrefs (mở rộng sau khi bạn làm Menu/Save). Click xong -> về Menu (nếu đã gán scene).
 //
-// Liên kết: LegendaryHall (TriggerEnding), TimeManager (TotalDays), InventoryManager (token),
-//           ArtifactManager (EarnedCount = số làng hồi sinh), MessageOverlay (hiện), SceneManager (về menu).
 public class EndingManager : MonoBehaviour
 {
     public static EndingManager Instance { get; private set; }
@@ -22,15 +14,12 @@ public class EndingManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    [Header("=== Scene Menu (để trống nếu chưa có) ==========")]
+    [Header("=== Menu scene (leave empty if none yet) ==========")]
     [SerializeField] private string mainMenuScene = "";
 
-    private bool _ended; // chống trigger 2 lần
+    private bool _ended;
 
-    // ─────────────────────────────────────────
     // TRIGGER ENDING
-    // ─────────────────────────────────────────
-    // Dùng trong: LegendaryHall.AfterLore() khi AllInserted.
     public void TriggerEnding()
     {
         if (_ended) return;
@@ -52,9 +41,6 @@ public class EndingManager : MonoBehaviour
         MessageOverlay.Instance?.Show(record, GoToMenu);
     }
 
-    // ─────────────────────────────────────────
-    // TIER  (theo Full Design Document, mục 12)
-    // ─────────────────────────────────────────
     private (string title, string flavor) TierFor(int days)
     {
         if (days <= 60)  return ("Legendary Merchant",
@@ -67,9 +53,6 @@ public class EndingManager : MonoBehaviour
             "Some merchants take the long road. The world still needed you. The Hall opens.");
     }
 
-    // ─────────────────────────────────────────
-    // SAVE RECORD  (PlayerPrefs — bản đơn giản, mở rộng sau)
-    // ─────────────────────────────────────────
     private void SaveRecord(int days, int coins, int villages, string title)
     {
         PlayerPrefs.SetInt("Record_LastDays", days);
@@ -77,14 +60,12 @@ public class EndingManager : MonoBehaviour
         PlayerPrefs.SetInt("Record_LastVillages", villages);
         PlayerPrefs.SetString("Record_LastTier", title);
 
-        // Best = số ngày ít nhất (nhanh nhất). 0 = chưa có.
         int best = PlayerPrefs.GetInt("Record_BestDays", 0);
         if (best == 0 || days < best) PlayerPrefs.SetInt("Record_BestDays", days);
 
         PlayerPrefs.Save();
     }
 
-    // Click xong màn ending -> về Menu (nếu đã gán scene). Dùng trong: callback của MessageOverlay.Show.
     private void GoToMenu()
     {
         Time.timeScale = 1f;

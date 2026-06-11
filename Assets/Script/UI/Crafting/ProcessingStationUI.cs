@@ -3,11 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Panel Smelter/Forge: trái = list recipe (nút Smelt/Forge -> Add); phải/dưới = list sản phẩm đã xong + nút Collect.
-// Tái dùng ProcessingSlot (giống CraftingSlot) + IngredientRow (cho dòng nguyên liệu và dòng output).
 public class ProcessingStationUI : MonoBehaviour
 {
-    [Header("=== Loại station ==========")]
+    [Header("=== Station type ==========")]
     [SerializeField] private CraftStation forStationType = CraftStation.Smelter;
     public CraftStation ForStationType => forStationType;
 
@@ -15,13 +13,13 @@ public class ProcessingStationUI : MonoBehaviour
     [SerializeField] private Transform  slotsContainer;
     [SerializeField] private GameObject processingSlotPrefab;
 
-    [Header("=== Bảng sản phẩm xong + Collect ==========")]
+    [Header("=== Finished products + Collect ==========")]
     [SerializeField] private Transform  outputContainer;
-    [SerializeField] private GameObject outputRowPrefab;     // dùng prefab IngredientRow
+    [SerializeField] private GameObject outputRowPrefab;
     [SerializeField] private Button     collectButton;
     [SerializeField] private TextMeshProUGUI statusText;
-    [SerializeField] private TextMeshProUGUI timeText;      // "Mẻ tới: X.Xs" — đếm ngược real-time (tùy chọn)
-    [SerializeField] private Slider          progressSlider; // tiến độ mẻ sớm nhất 0..1 (tùy chọn)
+    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private Slider          progressSlider;
     [SerializeField] private Color colorReady = Color.white;
 
     private ProcessingStation _station;
@@ -57,7 +55,6 @@ public class ProcessingStationUI : MonoBehaviour
         ClearSlots(); ClearOutput(); _station = null;
     }
 
-    // Cập nhật đồng hồ đếm ngược mỗi frame (chỉ đọc + set UI -> nhẹ, không crash).
     private void Update()
     {
         if (_station == null) return;
@@ -85,7 +82,6 @@ public class ProcessingStationUI : MonoBehaviour
         }
     }
 
-    // Mỗi khi lò đổi trạng thái (thêm mẻ / mẻ xong) -> refresh nút + bảng output.
     private void OnStateChanged()
     {
         foreach (var s in _slots) s.Refresh();

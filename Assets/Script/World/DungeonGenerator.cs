@@ -12,8 +12,8 @@ public class DungeonGenerator : MonoBehaviour
     public TileBase wallTile;
 
     [Header("=== Interactive Prefabs ===")]
-    public GameObject stairsDownPrefab; // Thang chui xuống tầng dưới
-    public GameObject exitStairsPrefab; // Thang đi lên mặt đất (Reset về 0)
+    public GameObject stairsDownPrefab;
+    public GameObject exitStairsPrefab;
 
     [Header("=== Spawning Helpers ===")]
     public OreGemSpawner oreGemSpawner;
@@ -24,7 +24,7 @@ public class DungeonGenerator : MonoBehaviour
     public int height = 45;
 
     [Header("=== Staircase Probability ===")]
-    [Range(0f, 1f)] public float stairChance = 0.15f; // Tỷ lệ đập đá ra thang
+    [Range(0f, 1f)] public float stairChance = 0.15f;
 
     public Vector3 PlayerSpawnWorldPos { get; private set; }
 
@@ -42,7 +42,6 @@ public class DungeonGenerator : MonoBehaviour
         Instance = this;
     }
 
-    // Xóa sạch dấu vết tầng cũ
     public void ClearDungeon()
     {
         foreach (Vector3Int cell in _blockedCells)
@@ -53,7 +52,6 @@ public class DungeonGenerator : MonoBehaviour
 
         if (groundTilemap != null)
         {
-            // Dọn sạch Tilemap trong phạm vi phòng Dungeon
             for (int x = -5; x < width + 5; x++)
             {
                 for (int y = -5; y < height + 5; y++)
@@ -73,17 +71,14 @@ public class DungeonGenerator : MonoBehaviour
         _staircaseSpawnedOnCurrentFloor = false;
     }
 
-    // Sinh tầng mới
     public void GenerateFloor(int depth, Vector3Int offset)
     {
         _offset = offset;
         ClearDungeon();
 
-        // Xoay vòng các thuật toán sinh map ngẫu nhiên theo tầng
         int style = depth % 4;
         _grid = GenerateGridByStyle(style);
 
-        // Vẽ gạch nền và định vị các khối đá chặn đường
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -102,18 +97,14 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        // Tạo lớp viền ngoài tuyệt đối an toàn chặn người chơi đi ra ngoài hư vô
         CreateBoundaryOuterWalls(offset);
 
-        // Thu thập các ô đi được
         List<Vector3Int> walkableCells = GetWalkableDungeonCells(offset);
 
-        // 1. Xác định điểm xuất hiện an toàn của người chơi
         Vector3Int spawnCell = walkableCells[Random.Range(0, walkableCells.Count)];
         walkableCells.Remove(spawnCell);
         PlayerSpawnWorldPos = groundTilemap.GetCellCenterWorld(spawnCell);
 
-        // 2. Sinh thang đi lên mặt đất (đặt ở điểm xa spawn)
         Vector3Int exitCell = walkableCells[Random.Range(0, walkableCells.Count)];
         walkableCells.Remove(exitCell);
         Vector3 exitPos = groundTilemap.GetCellCenterWorld(exitCell);
@@ -123,13 +114,11 @@ public class DungeonGenerator : MonoBehaviour
             _spawnedEntities.Add(exitGo);
         }
 
-        // 3. Tiến hành gọi rải quặng
         if (oreGemSpawner != null)
         {
             oreGemSpawner.Spawn(depth);
         }
 
-        // 4. Nhận dạng danh sách các quặng vừa sinh dưới lòng đất
         ScanActiveDungeonOres();
     }
 
@@ -173,7 +162,6 @@ public class DungeonGenerator : MonoBehaviour
         foreach (var ore in ores)
         {
             Vector3 pos = ore.transform.position;
-            // Lọc ra các quặng thuộc phạm vi khu vực Dungeon
             if (pos.x >= _offset.x && pos.x <= _offset.x + width &&
                 pos.y >= _offset.y && pos.y <= _offset.y + height)
             {
@@ -183,7 +171,6 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    // Được gọi từ MineableDeposit khi người chơi đập quặng vỡ
     public void OnOreMined(Vector3 worldPosition)
     {
         _activeOresInLevel.Remove(worldPosition);
@@ -193,7 +180,6 @@ public class DungeonGenerator : MonoBehaviour
         bool hasChance = Random.value <= stairChance;
         bool isLastOne = _activeOresInLevel.Count == 0;
 
-        // Nếu quay trúng thưởng hoặc đập tới khối quặng cuối cùng -> Mở thang đi tiếp 100%
         if (hasChance || isLastOne)
         {
             SpawnStairsDown(worldPosition);
@@ -204,17 +190,47 @@ public class DungeonGenerator : MonoBehaviour
     {
         if (stairsDownPrefab == null) return;
 
-        Vector3Int cell = groundTilemap.WorldToCell(worldPosition);
-        Vector3 snapped = groundTilemap.GetCellCenterWorld(cell);
+        // Spawn the staircase right next to the PLAYER, on the nearest walkable floor cell
+        // (never inside a wall), instead of at the mined ore (which can be far away).
+        Player player = FindObjectOfType<Player>();
+        Vector3 anchor = player != null ? player.transform.position
+                       : (playerController != null ? playerController.transform.position : worldPosition);
+        Vector3Int origin = groundTilemap.WorldToCell(anchor);
+        Vector3Int cell = FindNearestFloorCell(origin);
 
+        Vector3 snapped = groundTilemap.GetCellCenterWorld(cell);
         GameObject stairs = Instantiate(stairsDownPrefab, snapped, Quaternion.identity);
         _spawnedEntities.Add(stairs);
         _staircaseSpawnedOnCurrentFloor = true;
     }
 
-    // ─────────────────────────────────────────
-    // CÁC THUẬT TOÁN HÌNH DẠNG KHÔNG GIAN
-    // ─────────────────────────────────────────
+    // Nearest walkable floor cell to 'origin', searched ring by ring so the staircase lands
+    // right next to the player. Guaranteed to be real floor and not a wall.
+    private Vector3Int FindNearestFloorCell(Vector3Int origin)
+    {
+        for (int r = 1; r <= 8; r++)
+        {
+            for (int dx = -r; dx <= r; dx++)
+            {
+                for (int dy = -r; dy <= r; dy++)
+                {
+                    if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) != r) continue; // only this ring's edge
+                    Vector3Int c = new Vector3Int(origin.x + dx, origin.y + dy, 0);
+                    if (IsFloorCell(c)) return c;
+                }
+            }
+        }
+        return origin;
+    }
+
+    private bool IsFloorCell(Vector3Int cell)
+    {
+        int gx = cell.x - _offset.x;
+        int gy = cell.y - _offset.y;
+        if (gx < 0 || gy < 0 || gx >= width || gy >= height) return false;
+        return _grid[gx, gy] == 1 && !WorldBlocking.IsBlocked(cell);
+    }
+
     private int[,] GenerateGridByStyle(int style)
     {
         switch (style)
@@ -227,7 +243,6 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    // Thuật toán 1: Sinh hang động hữu cơ (Cellular Automata)
     private int[,] StyleOrganicCaves()
     {
         int[,] grid = new int[width, height];
@@ -242,7 +257,6 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        // Thực hiện làm mượt địa hình 3 lần
         for (int i = 0; i < 3; i++)
         {
             int[,] temp = new int[width, height];
@@ -268,14 +282,12 @@ public class DungeonGenerator : MonoBehaviour
         return grid;
     }
 
-    // Thuật toán 2: Sinh phòng trung tâm lớn tỏa nhánh 4 hướng
     private int[,] StyleCentralHubSpokes()
     {
         int[,] grid = new int[width, height];
         int cx = width / 2;
         int cy = height / 2;
 
-        // Sinh sảnh chính tròn lớn ở tâm
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -285,7 +297,6 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
 
-        // Kéo đường đi ra 4 hướng
         DrawDungeonCorridor(grid, cx, cy, 1, 0, 13);
         DrawDungeonCorridor(grid, cx, cy, -1, 0, 13);
         DrawDungeonCorridor(grid, cx, cy, 0, 1, 13);
@@ -305,11 +316,10 @@ public class DungeonGenerator : MonoBehaviour
             if (tx > 2 && tx < width - 3 && ty > 2 && ty < height - 3)
             {
                 grid[tx, ty] = 1;
-                grid[tx + dy, ty + dx] = 1; // Tạo hành lang dày 2 ô
+                grid[tx + dy, ty + dx] = 1;
             }
         }
 
-        // Phòng cuối mỗi nhánh
         for (int rx = tx - 3; rx <= tx + 3; rx++)
         {
             for (int ry = ty - 3; ry <= ty + 3; ry++)
@@ -320,7 +330,6 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    // Thuật toán 3: Sinh đường hầm xoắn ốc sâu dần vào tâm
     private int[,] StyleSpiralTunnel()
     {
         int[,] grid = new int[width, height];
@@ -355,28 +364,23 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    // Thuật toán 4: Hai phòng lớn đối diện nối với nhau qua nhịp cầu zig-zag
     private int[,] StyleChamberBridge()
     {
         int[,] grid = new int[width, height];
 
-        // Buồng bên trái
         for (int x = 4; x < 14; x++)
             for (int y = 10; y < 32; y++)
                 grid[x, y] = 1;
 
-        // Buồng bên phải
         for (int x = 30; x < 40; x++)
             for (int y = 10; y < 32; y++)
                 grid[x, y] = 1;
 
-        // Cầu nối
         int currentY = 21;
         for (int x = 13; x <= 31; x++)
         {
             if (x == 22)
             {
-                // Đoạn bẻ cua dọc dốc đứng
                 for (int y = 14; y <= 28; y++) grid[x, y] = 1;
                 currentY = 14;
             }

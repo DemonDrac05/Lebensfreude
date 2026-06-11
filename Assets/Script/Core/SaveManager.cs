@@ -6,7 +6,7 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
     [SerializeField] private ItemDatabase itemDatabase;
-    [SerializeField] private bool autoLoadOnStart = false; // Tắt tự động nạp để Menu điều hướng chuẩn xác hơn
+    [SerializeField] private bool autoLoadOnStart = false;
     [SerializeField] private bool autoSaveOnNewDay = true;
 
     private string Path => Application.persistentDataPath + "/lebensfreude_save.json";
@@ -93,7 +93,6 @@ public class SaveManager : MonoBehaviour
             foreach (var a in d.artifactsInserted) ArtifactManager.Instance.Insert((ArtifactType)a);
         }
 
-        // Khôi phục trạng thái Hầm ngục và vị trí người chơi
         DungeonManager dm = DungeonManager.Instance;
         Player player = FindObjectOfType<Player>();
         
@@ -102,7 +101,6 @@ public class SaveManager : MonoBehaviour
             dm.currentDepth = d.currentDepth;
             if (d.currentDepth > 0)
             {
-                // Nếu người chơi thoát game khi đang ở hầm ngục, tự động dựng lại tầng hầm ngục đó
                 dm.dungeonGenerator?.GenerateFloor(d.currentDepth, dm.dungeonOffset);
             }
         }

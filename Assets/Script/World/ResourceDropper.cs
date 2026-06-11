@@ -1,15 +1,8 @@
 using System.Collections;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// RESOURCE DROPPER  (văng piece ra + slide animation — dùng chung)
-// ─────────────────────────────────────────
-// Tách cơ chế rớt-đồ kiểu Stardew từ Axe để mining/chặt cây/vứt tay DÙNG CHUNG.
-// piecePrefab nên có Collider2D + tag "CollectibleItem" để PlayerCollision tự lụm.
-// Dùng trong: MineableDeposit.Break() (và có thể refactor Axe/ItemOutOfInventory dùng sau).
 public static class ResourceDropper
 {
-    // Spawn 'count' piece tại center, văng ra vòng tròn bán kính radius bằng slide.
     public static void Drop(GameObject piecePrefab, int count, Vector3 center,
                             MonoBehaviour host, float radius = 0.6f, float duration = 0.6f)
     {
@@ -27,7 +20,7 @@ public static class ResourceDropper
         if (t == null) yield break;
         Vector2 start = t.position;
         var col = t.GetComponent<Collider2D>();
-        if (col != null) col.enabled = false;   // tắt lúc đang bay -> tránh lụm sớm
+        if (col != null) col.enabled = false;
         float e = 0f;
         while (e < dur && t != null)
         {
@@ -35,6 +28,6 @@ public static class ResourceDropper
             t.position = Vector2.Lerp(start, target, e / dur);
             yield return null;
         }
-        if (col != null) col.enabled = true;     // hạ cánh -> bật collider để lụm
+        if (col != null) col.enabled = true;
     }
 }

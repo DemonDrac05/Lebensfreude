@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80903dc95a979d04297e3f0ff0034bc9, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  image: {fileID: 1946452051, guid: 81acb9b95eb861b4888c55dd24d7a61d, type: 3}
+  image: {fileID: 21300000, guid: d56a2b3e8b3552a43a62930f133d19eb, type: 3}
   buyingPrice: -1
   sellingPrice: 2
   isPurchaseable: 1

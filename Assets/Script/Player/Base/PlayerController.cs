@@ -39,14 +39,12 @@ public class PlayerController : MonoBehaviour
         UpdateHitbox(snappedMousePos, initialMousePos);
 
         itemPosUpdate = snappedMousePos;
-        // Căn tâm sprite theo số tile chiếm (pivot = center): row mở sang phải, column mở xuống.
-        // Ví dụ 2×2: x += 0.5, y -= 0.5 → sprite ở tâm 4 tile thay vì tile đầu tiên.
         if (currentCraftingItem != null)
         {
             itemPosUpdate.x += (currentCraftingItem.row    - 1) * 0.5f;
             itemPosUpdate.y -= (currentCraftingItem.column - 1) * 0.5f;
         }
-        itemPosUpdate.y -= 0.5f; // visual offset: pivot center → dịch xuống nửa tile
+        itemPosUpdate.y -= 0.5f;
 
         if (currentItem != null)
         {
@@ -220,16 +218,11 @@ public class PlayerController : MonoBehaviour
         return redHitBoxPrefab;
     }
 
-    // Kiểm tra item CraftingItem đang cầm → tạo/đổi ghost prefab tương ứng.
-    // Sửa bug: thêm điều kiện currentCraftingItem != itemInHand → scroll sang item KHÁC
-    // (vd Workbench → Chest) sẽ destroy ghost cũ và tạo ghost mới ngay lập tức.
-    // Dùng trong: PlayerController.Update().
     private void CheckForItemPrefab()
     {
         var itemInHand = InventoryManager.Instance.GetSelectedItem<CraftingItem>(false);
         if (itemInHand != null && itemInHand.placeable)
         {
-            // Tạo mới khi: chưa có prefab, hoặc item trong tay VỪA ĐỔI sang loại khác
             if (itemPrefab == null || currentItem == null || currentCraftingItem != itemInHand)
             {
                 currentCraftingItem = itemInHand;
@@ -279,7 +272,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && currentItem != null && currentHitBoxPrefab == greenHitBoxPrefab)
         {
-            // Kiểm tra trạng thái hầm ngục
             if (DungeonManager.Instance != null && DungeonManager.Instance.currentDepth > 0)
             {
                 Debug.Log("[PlayerController] Bạn không thể đặt đồ vật dưới hầm ngục tối!");

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80903dc95a979d04297e3f0ff0034bc9, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  image: {fileID: -2096729097, guid: 81acb9b95eb861b4888c55dd24d7a61d, type: 3}
+  image: {fileID: 21300000, guid: 49f47fb388e531c4bb0fdf4b4d799f21, type: 3}
   buyingPrice: -1
   sellingPrice: 2
   isPurchaseable: 1

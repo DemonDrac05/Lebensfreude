@@ -20,8 +20,6 @@ namespace DG.Tweening
     /// - DOTSPRITE
     /// - DOTUI
     /// Extra defines set and used for implementation of external assets:
-    /// - DOTWEEN_TMP ► TextMesh Pro
-    /// - DOTWEEN_TK2D ► 2D Toolkit
     /// </summary>
 	public static class DOTweenModuleUtils
     {
@@ -78,9 +76,6 @@ namespace DG.Tweening
         }
 #endif
 
-        // █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-        // ███ INTERNAL CLASSES ████████████████████████████████████████████████████████████████████████████████████████████████
-        // █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
         public static class Physics
         {

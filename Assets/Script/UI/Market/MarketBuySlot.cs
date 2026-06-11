@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// 1 dòng món làng BÁN cho player. Click trái = mua 1, click phải = mua 5 (giá tăng theo khan hiếm).
 public class MarketBuySlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image itemIcon;

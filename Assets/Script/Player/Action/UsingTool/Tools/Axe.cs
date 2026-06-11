@@ -28,7 +28,7 @@ public class Axe
                 var treeProduct = plant.GetProduct(ProductType.Material);
                 control.StartCoroutine(TreeDown(plantIndex, treeProduct));
             }
-        }
+        } 
     }
 
     private IEnumerator TreeDown(int plantIndex, ProductModifier treeProduct)

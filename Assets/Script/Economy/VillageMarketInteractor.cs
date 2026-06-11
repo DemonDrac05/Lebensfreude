@@ -1,9 +1,8 @@
 using UnityEngine;
 
-// Chuột phải vào collider làng -> mở VillageMarketUI cho làng đó. Mirror ProcessingStationInteractor.
 public class VillageMarketInteractor : MonoBehaviour
 {
-    [SerializeField] private VillageMarketUI uiPanel; // 1 panel dùng chung; gán cho mọi làng
+    [SerializeField] private VillageMarketUI uiPanel;
     private VillageMarket _market; private Collider2D _col; private PlayerController _tile;
 
     private void Awake()
@@ -32,7 +31,6 @@ public class VillageMarketInteractor : MonoBehaviour
         else
         {
             InputManager.Instance?.ForceCloseActivePanel();
-            // Lần đầu tiếp xúc làng (Abandoned) → chuyển sang Trust ngay khi mở UI.
             VillageProgressionManager.Instance?.Discover(_market.villageId);
             uiPanel.Open(_market);
         }

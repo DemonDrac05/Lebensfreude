@@ -12,7 +12,7 @@ public class MovementState : PlayerState
 
     public override void FrameUpdate()
     {
-        if (InputBlocker.IsBlocked) return; // đang ngủ/overlay -> đứng yên, không nhận input di chuyển
+        if (InputBlocker.IsBlocked) return;
 
         bool freezeAnimation = !InventoryManager.Instance.toolbar.activeSelf;
         if (!freezeAnimation)
@@ -21,15 +21,21 @@ public class MovementState : PlayerState
             player.movementInput.y = Input.GetAxisRaw("Vertical");
             float staminaMult = StaminaManager.Instance != null ? StaminaManager.Instance.MoveSpeedMultiplier : 1f;
 
-            // ── Di chuyển CÓ CHẶN Ô (tile-based) ─────────────────────────
-            // Kiểm tra theo TỪNG TRỤC: ô đích trên trục X bị chặn thì bỏ X,
-            // trục Y bị chặn thì bỏ Y -> player vẫn TRƯỢT DỌC tường mượt.
-            // Chỉ là HashSet lookup O(1) -> không physics, không drop FPS.
             Vector2 delta = player.movementInput.normalized * player.movementSpeed * staminaMult * Time.fixedDeltaTime;
             Vector2 pos = player.rb2d.position;
             Vector2 dest = pos;
-            if (delta.x != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(pos.x + delta.x, pos.y, 0f))) dest.x = pos.x + delta.x;
-            if (delta.y != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(dest.x, pos.y + delta.y, 0f))) dest.y = pos.y + delta.y;
+            // Anti-stuck: if the player is somehow already inside a blocked cell, allow free
+            // movement so they can always escape (prevents getting wedged between tiles).
+            if (WorldBlocking.IsBlockedWorld(new Vector3(pos.x, pos.y, 0f)))
+            {
+                dest = pos + delta;
+            }
+            else
+            {
+                // Per-axis check: cancel only the blocked axis so the player slides along walls.
+                if (delta.x != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(pos.x + delta.x, pos.y, 0f))) dest.x = pos.x + delta.x;
+                if (delta.y != 0f && !WorldBlocking.IsBlockedWorld(new Vector3(dest.x, pos.y + delta.y, 0f))) dest.y = pos.y + delta.y;
+            }
             player.rb2d.MovePosition(dest);
 
             UsingToolState();

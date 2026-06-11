@@ -28,7 +28,6 @@ public class OreGemSpawner : MonoBehaviour
         if (table == null || groundTilemap == null) return;
         var rng = new System.Random(seed + floorLevel * 1000);
 
-        // Thu thập các ô đất KHÔNG BỊ CHẶN (Không nằm đè lên Wall Tile)
         var cells = new List<Vector3Int>();
         foreach (var pos in groundTilemap.cellBounds.allPositionsWithin)
         {

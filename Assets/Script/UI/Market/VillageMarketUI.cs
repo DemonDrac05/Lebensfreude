@@ -2,22 +2,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// ─────────────────────────────────────────
-// VILLAGE MARKET UI  (1 panel dùng chung cho cả 3 làng)
-// ─────────────────────────────────────────
-// VillageMarketInteractor.Open(market) -> hiện 2 bảng: SELL (hàng làng MUA của player) + BUY (hàng làng BÁN),
-// + dòng demand event. Bảng trống nếu phase chưa mở (Buys/Sells tự lọc theo phase). Giá là GIÁ ĐỘNG.
-// Refresh sau mỗi giao dịch (OnSaleCompleted) và mỗi ngày mới (OnNewDay -> giá/đơn đổi).
 //
-// Liên kết: VillageMarket (Items/SellsToPlayer/Buys/Sells/GetSellPrice/GetBuyPrice/SellFromInventory/BuyFromVillage),
 //           DemandEventManager (GetActiveEvent), MarketSellSlot/MarketBuySlot, InputManager (toolbar).
 public class VillageMarketUI : MonoBehaviour
 {
-    [Header("=== Bảng SELL (làng mua của player) ==========")]
+    [Header("=== SELL table (village buys from player) ==========")]
     [SerializeField] private Transform  sellContainer;
     [SerializeField] private GameObject sellSlotPrefab;
 
-    [Header("=== Bảng BUY (làng bán cho player) ==========")]
+    [Header("=== BUY table (village sells to player) ==========")]
     [SerializeField] private Transform  buyContainer;
     [SerializeField] private GameObject buySlotPrefab;
 
@@ -34,14 +27,7 @@ public class VillageMarketUI : MonoBehaviour
     public static VillageMarketUI CurrentOpen { get; private set; }
     public bool IsOpen => gameObject.activeSelf;
 
-    // ─────────────────────────────────────────
     // OPEN / CLOSE
-    // ─────────────────────────────────────────
-    // Mở panel cho làng chỉ định.
-    // Edge-case quan trọng: nếu panel ĐÃ ACTIVE và đổi sang làng khác,
-    // SetActive(true) là no-op → OnEnable không fire → Populate() không chạy → tên/nội dung cũ.
-    // → Phải cập nhật subscription + Populate() thủ công.
-    // Dùng trong: VillageMarketInteractor.TryToggle().
     public void Open(VillageMarket market)
     {
         if (market == null) return;
@@ -49,7 +35,6 @@ public class VillageMarketUI : MonoBehaviour
 
         if (gameObject.activeSelf && _market != market)
         {
-            // Panel đang mở, chuyển sang làng khác → cập nhật event + re-populate
             if (_market != null) _market.OnSaleCompleted -= OnSale;
             _market = market;
             _market.OnSaleCompleted += OnSale;
@@ -58,7 +43,7 @@ public class VillageMarketUI : MonoBehaviour
         else
         {
             _market = market;
-            gameObject.SetActive(true); // → OnEnable → Populate
+            gameObject.SetActive(true);
         }
     }
     public void Close() => gameObject.SetActive(false);
@@ -84,16 +69,12 @@ public class VillageMarketUI : MonoBehaviour
 
     private void OnSale(VillageMarket m, BaseItem i, int q, int c) => RefreshAll();
 
-    // ─────────────────────────────────────────
     // POPULATE / REFRESH
-    // ─────────────────────────────────────────
-    // Dựng lại 2 bảng (giá/stock đổi sau mỗi giao dịch nên build lại cho chắc). Dùng trong: OnEnable, RefreshAll.
     private void Populate()
     {
         ClearAll();
         if (_market == null) return;
 
-        // SELL: các món làng MUA ở phase hiện tại
         if (sellContainer != null && sellSlotPrefab != null)
             foreach (var cfg in _market.Items)
             {
@@ -104,7 +85,6 @@ public class VillageMarketUI : MonoBehaviour
                 slot.Setup(cfg.item, _market, this); _sellSlots.Add(slot);
             }
 
-        // BUY: các món làng BÁN hôm nay (đúng phase + còn hàng)
         if (buyContainer != null && buySlotPrefab != null)
             foreach (var cfg in _market.GetItemsForSaleNow())
             {
@@ -118,7 +98,6 @@ public class VillageMarketUI : MonoBehaviour
         RefreshHeader();
     }
 
-    // Gọi từ slot sau mỗi mua/bán. Build lại để giá động + stock cập nhật chuẩn.
     public void RefreshAll()
     {
         Populate();

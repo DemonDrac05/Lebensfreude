@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2719714399087630400}
   - component: {fileID: 8360041584482178349}
-  - component: {fileID: -342778165082042450}
+  - component: {fileID: 4111854833463135201}
   m_Layer: 0
   m_Name: Wood
   m_TagString: CollectibleItem
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &-342778165082042450
+--- !u!58 &4111854833463135201
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,5 +126,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_Radius: 0.5

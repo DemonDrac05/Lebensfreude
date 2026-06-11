@@ -37,7 +37,7 @@ public class ToolUsedManager : MonoBehaviour
     [SerializeField] protected Color soiledGroundColor;
     [SerializeField] protected Color wateredGroundColor;
 
-    [Header("== Stamina (drain mỗi lần dùng tool) ==========")]
+    [Header("== Stamina (drain per tool use) ==========")]
     [SerializeField] private float staminaPerToolUse = 10f;
 
     [Header("== Action With Tools ==========")]
@@ -78,17 +78,16 @@ public class ToolUsedManager : MonoBehaviour
 
     private void Update()
     {
-        if (InputBlocker.IsBlocked) return; // đang ngủ/overlay -> không dùng tool
+        if (InputBlocker.IsBlocked) return;
 
         if (Input.GetMouseButtonDown(0) && isReadyToUse)
         {
             var toolItem = InventoryManager.Instance.GetSelectedItem<Tool>(false);
-            // Chặn dùng tool khi kiệt sức (Exhausted/Collapsed). Null-safe nếu chưa có StaminaManager.
             if (toolItem != null && usingTime == usingDuration
                 && (StaminaManager.Instance == null || StaminaManager.Instance.CanUseTool))
             {
                 HandleToolAction(toolItem);
-                StaminaManager.Instance?.Drain(staminaPerToolUse); // tiêu hao stamina mỗi lần dùng tool
+                StaminaManager.Instance?.Drain(staminaPerToolUse);
 
                 int currenIndex = InventoryManager.Instance.selectedSlot;
                 var currentSlot = InventoryManager.Instance.ToolbarSlots[currenIndex];
