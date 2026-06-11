@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 //
 public class StaminaManager : MonoBehaviour
@@ -14,11 +15,14 @@ public class StaminaManager : MonoBehaviour
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
         currentStamina = maxStamina;
+        staminaSlider.maxValue = maxStamina;
+        staminaSlider.value = maxStamina;
     }
 
     // DATA
     [SerializeField] private float maxStamina = 100f;
     public float currentStamina;
+    public Slider staminaSlider;
 
     public float Current => currentStamina;
     public float Max     => maxStamina;
@@ -55,6 +59,7 @@ public class StaminaManager : MonoBehaviour
         if (amount <= 0f) return;
         float before = currentStamina;
         currentStamina = Mathf.Max(0f, currentStamina - amount);
+        staminaSlider.value = currentStamina;
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
         if (before > 0f && currentStamina <= 0f) OnExhausted?.Invoke();
     }
@@ -63,18 +68,21 @@ public class StaminaManager : MonoBehaviour
     {
         if (amount <= 0f) return;
         currentStamina = Mathf.Min(maxStamina, currentStamina + amount);
+        staminaSlider.value = currentStamina;
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 
     public void RestoreFull()
     {
         currentStamina = maxStamina;
+        staminaSlider.value = currentStamina;
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 
     public void LoadStamina(float value)
     {
         currentStamina = Mathf.Clamp(value, 0f, maxStamina);
+        staminaSlider.value = currentStamina;
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 }
