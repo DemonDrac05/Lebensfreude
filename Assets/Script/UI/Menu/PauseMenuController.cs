@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -74,16 +74,26 @@ public class PauseMenuController : MonoBehaviour
         {
             SaveManager.Instance.Save();
         }
+        else
+        {
+            Debug.LogError("[PauseMenu] Không tìm thấy SaveManager trong scene - chưa lưu được.");
+        }
 
-        Time.timeScale = 1f;
-        InputBlocker.IsBlocked = false;
-        SceneManager.LoadScene(mainMenuSceneName);
+        ReturnToMenu();
     }
 
     private void ExitWithoutSaving()
     {
+        ReturnToMenu();
+    }
+
+    private void ReturnToMenu()
+    {
+        // Always hand control back to the menu in a clean global state: time running,
+        // input unblocked, and no stale load intent so the next New Game starts fresh.
         Time.timeScale = 1f;
         InputBlocker.IsBlocked = false;
+        GameSession.IsLoadingSave = false;
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,40 +18,29 @@ public class MainMenuController : MonoBehaviour
         if (btnLoadGame != null)
         {
             btnLoadGame.onClick.AddListener(LoadGame);
-            btnLoadGame.interactable = SaveManager.Instance != null && SaveManager.Instance.HasSave();
+            // Ask the file directly. The menu has no SaveManager instance, and relying on one
+            // meant the Load button stayed greyed out on a fresh launch even with a save present.
+            btnLoadGame.interactable = SaveManager.SaveFileExists();
         }
         if (btnExit != null) btnExit.onClick.AddListener(ExitGame);
     }
 
     public void NewGame()
     {
-        if (SaveManager.Instance != null)
-        {
-            SaveManager.Instance.DeleteSave();
-        }
-
+        // Fresh start: the gameplay scene will seed InventoryManager.initialItems.
+        GameSession.IsLoadingSave = false;
+        SaveManager.DeleteSaveFile();
         InventoryManager.token = 15000;
-
         SceneManager.LoadScene(gameplaySceneName);
     }
 
     public void LoadGame()
     {
-        if (SaveManager.Instance != null && SaveManager.Instance.HasSave())
-        {
-            SceneManager.sceneLoaded += OnGameplaySceneLoaded;
-            SceneManager.LoadScene(gameplaySceneName);
-        }
-    }
-
-    private void OnGameplaySceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        SceneManager.sceneLoaded -= OnGameplaySceneLoaded;
-
-        if (SaveManager.Instance != null)
-        {
-            SaveManager.Instance.Load();
-        }
+        if (!SaveManager.SaveFileExists()) return;
+        // Tell the gameplay scene to restore from disk instead of seeding initial items.
+        // The SaveManager that loads with that scene performs the actual restore.
+        GameSession.IsLoadingSave = true;
+        SceneManager.LoadScene(gameplaySceneName);
     }
 
     public void ExitGame()

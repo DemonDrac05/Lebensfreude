@@ -40,7 +40,9 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         ChangeSelectedSlot(0);
-        AddItems(initialItems);
+        // A loaded game restores its own items from the save file; New Game seeds these.
+        if (!GameSession.IsLoadingSave)
+            AddItems(initialItems);
     }
 
     private void Update()

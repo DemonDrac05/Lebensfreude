@@ -10,13 +10,18 @@ public class StaminaManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        // Recreated with the gameplay scene. NOT DontDestroyOnLoad: a persistent instance
+        // would survive back to the menu and into the next play session still holding the
+        // PREVIOUS scene's (now destroyed) slider. Writing to that dead slider threw and
+        // aborted the whole load. A fresh per-scene instance always has a live slider.
         Instance = this;
-        transform.SetParent(null);
-        DontDestroyOnLoad(gameObject);
+
         currentStamina = maxStamina;
-        staminaSlider.maxValue = maxStamina;
-        staminaSlider.value = maxStamina;
+        if (staminaSlider != null)
+        {
+            staminaSlider.maxValue = maxStamina;
+            staminaSlider.value = maxStamina;
+        }
     }
 
     // DATA
@@ -54,12 +59,17 @@ public class StaminaManager : MonoBehaviour
 
     public bool CanUseTool => State == StaminaState.Normal || State == StaminaState.Tired;
 
+    private void SetSlider(float value)
+    {
+        if (staminaSlider != null) staminaSlider.value = value;
+    }
+
     public void Drain(float amount)
     {
         if (amount <= 0f) return;
         float before = currentStamina;
         currentStamina = Mathf.Max(0f, currentStamina - amount);
-        staminaSlider.value = currentStamina;
+        SetSlider(currentStamina);
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
         if (before > 0f && currentStamina <= 0f) OnExhausted?.Invoke();
     }
@@ -68,21 +78,21 @@ public class StaminaManager : MonoBehaviour
     {
         if (amount <= 0f) return;
         currentStamina = Mathf.Min(maxStamina, currentStamina + amount);
-        staminaSlider.value = currentStamina;
+        SetSlider(currentStamina);
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 
     public void RestoreFull()
     {
         currentStamina = maxStamina;
-        staminaSlider.value = currentStamina;
+        SetSlider(currentStamina);
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 
     public void LoadStamina(float value)
     {
         currentStamina = Mathf.Clamp(value, 0f, maxStamina);
-        staminaSlider.value = currentStamina;
+        SetSlider(currentStamina);
         OnStaminaChanged?.Invoke(currentStamina, maxStamina);
     }
 }

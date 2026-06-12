@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 795496286861172560}
   - component: {fileID: 795496286861172563}
   - component: {fileID: 1004039661776059471}
-  - component: {fileID: 2683245960894697142}
+  - component: {fileID: -8766896148475716543}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -130,7 +130,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &2683245960894697142
+--- !u!114 &-8766896148475716543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,16 +139,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 795496286861172561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c72be0dff5e4f9a8911e216e5759174, type: 3}
+  m_Script: {fileID: 11500000, guid: c9d93d27f986a0e44b92862138c001b5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HarvestableObject
-  objectType: 0
+  m_EditorClassIdentifier: Assembly-CSharp::MineableDeposit
+  dropItem: {fileID: 11400000, guid: e0c86381f9f5c2149971ad9578ba1399, type: 2}
+  pieceOverride: {fileID: 0}
+  dropAmount: 1
   requiredAction: 5
   hitsToBreak: 3
-  dropItem: {fileID: 11400000, guid: e0c86381f9f5c2149971ad9578ba1399, type: 2}
-  dropCount: 1
-  shakeAmount: 0.1
-  shakeDuration: 0.15
+  respawnSeconds: 120
 --- !u!1 &8105741209447421304
 GameObject:
   m_ObjectHideFlags: 0
